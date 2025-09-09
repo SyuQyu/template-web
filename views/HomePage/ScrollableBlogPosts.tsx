@@ -14,6 +14,43 @@ interface ScrollableBlogPostsProps {
   posts: SingleArticle[];
 }
 
+// Data dummy posts
+const dummyPosts: SingleArticle[] = [
+  {
+    slug: 'getting-started-with-nextjs',
+    meta: {
+      title: 'Getting Started with Next.js 15',
+      description: 'Learn how to build modern web applications with the latest version of Next.js framework.',
+      imageUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop',
+      tags: "test",
+      date: '2024-01-15'
+    },
+    content: ''
+  },
+  {
+    slug: 'typescript-best-practices',
+    meta: {
+      title: 'TypeScript Best Practices for 2024',
+      description: 'Discover the latest TypeScript patterns and practices to write better, more maintainable code.',
+      imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=250&fit=crop',
+      tags: "awesome",
+      date: '2024-01-10'
+    },
+    content: ''
+  },
+  {
+    slug: 'modern-css-techniques',
+    meta: {
+      title: 'Modern CSS Techniques Every Developer Should Know',
+      description: 'Explore cutting-edge CSS features like container queries, CSS Grid, and custom properties.',
+      imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop',
+      tags: "['CSS', 'Frontend', 'Design']",
+      date: '2024-01-08'
+    },
+    content: ''
+  },
+];
+
 export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps) {
   const [hasMounted, setHasMounted] = useState(false);
   const { ref, width = 1 } = useResizeObserver<HTMLDivElement>();
@@ -37,7 +74,7 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
       <SwiperContainer ref={ref}>
         {hasMounted && (
           <Swiper modules={[A11y]} slidesPerView={noOfItems} spaceBetween={10} loop>
-            {posts.map((singlePost, idx) => (
+            {dummyPosts.map((singlePost, idx) => (
               <SwiperSlide key={singlePost.meta.title}>
                 <ArticleCard
                   title={singlePost.meta.title}

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
 import Link from 'components/Link';
 import { EnvVars } from 'env';
-import { getAllPosts } from 'utils/postsFetcher';
 import Cta from 'views/HomePage/Cta';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
@@ -86,10 +85,3 @@ const WhiteBackgroundContainer = styled.div`
   }
 `;
 
-export async function getStaticProps() {
-  return {
-    props: {
-      posts: await getAllPosts(),
-    },
-  };
-}

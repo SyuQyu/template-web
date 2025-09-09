@@ -4,11 +4,9 @@ import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { media } from 'utils/media';
 
 export default function WaveCta() {
-  const { setIsModalOpened } = useNewsletterModalContext();
 
   return (
     <>
@@ -23,7 +21,7 @@ export default function WaveCta() {
         <Container>
           <Title>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</Title>
           <CustomButtonGroup>
-            <Button onClick={() => setIsModalOpened(true)}>
+            <Button >
               Subscribe to the newsletter <span>&rarr;</span>
             </Button>
             <NextLink href="/features" passHref>
