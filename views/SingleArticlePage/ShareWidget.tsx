@@ -43,11 +43,11 @@ const Wrapper = styled.div`
     margin-top: 2rem;
   }
 
-  ${media('<=largeDesktop')} {
+  ${media('<=desktop')} {
     transform: translateY(-50%) scale(0.8);
   }
 
-  ${media('<=desktop')} {
+  ${media('<=tablet')} {
     display: none;
   }
 `;

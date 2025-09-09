@@ -6,7 +6,10 @@ import InformationSection from 'views/ContactPage/InformationSection';
 
 export default function ContactPage() {
   return (
-    <Page title="Contact" description="Minim sint aliquip nostrud excepteur cupidatat amet do laborum exercitation cupidatat ea proident.">
+    <Page 
+      title="Contact - PT. Mitra Kawan Bersama" 
+      description="Hubungi PT. Mitra Kawan Bersama untuk konsultasi kebutuhan industri Anda. Tim profesional kami siap memberikan solusi terbaik."
+    >
       <ContactContainer>
         <InformationSection />
         <FormSection />

@@ -19,14 +19,14 @@ export default function WaveCta() {
       </svg>
       <CtaWrapper>
         <Container>
-          <Title>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</Title>
+          <Title>Siap untuk berkembang bersama mitra terpercaya? Hubungi kami sekarang!</Title>
           <CustomButtonGroup>
             <Button >
-              Subscribe to the newsletter <span>&rarr;</span>
+              Hubungi Kami <span>&rarr;</span>
             </Button>
-            <NextLink href="/features" passHref>
+            <NextLink href="/about" passHref>
               <OutlinedButton transparent>
-                Features <span>&rarr;</span>
+                Tentang Kami <span>&rarr;</span>
               </OutlinedButton>
             </NextLink>
           </CustomButtonGroup>

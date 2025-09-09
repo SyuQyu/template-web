@@ -111,13 +111,17 @@ const NavItemList = styled.div`
   display: flex;
   list-style: none;
 
-  ${media('<desktop')} {
+  ${media('<=desktop')} {
     display: none;
   }
 `;
 
 const HamburgerMenuWrapper = styled.div`
-  ${media('>=desktop')} {
+  ${media('<=desktop')} {
+    display: block;
+  }
+
+  ${media('>desktop')} {
     display: none;
   }
 `;

@@ -12,19 +12,19 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>Your Trusted Industrial Partner Since 2010</CustomOverTitle>
+        <Heading>PT. Mitra Kawan Bersama</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          Menyediakan solusi terpadu untuk kebutuhan industri Anda dengan komitmen pada kualitas, inovasi, dan pelayanan terbaik. 
+          Kami adalah mitra terpercaya dalam distribusi produk-produk industri berkualitas tinggi.
         </Description>
         <CustomButtonGroup>
           <Button onClick={() => console.log("click")}>
-            Subscribe to the newsletter <span>&rarr;</span>
+            Hubungi Kami <span>&rarr;</span>
           </Button>
-          <NextLink href="#whitepaper" passHref>
+          <NextLink href="#services" passHref>
             <Button transparent>
-              Features <span>&rarr;</span>
+              Layanan Kami <span>&rarr;</span>
             </Button>
           </NextLink>
         </CustomButtonGroup>

@@ -17,35 +17,68 @@ interface ScrollableBlogPostsProps {
 // Data dummy posts
 const dummyPosts: SingleArticle[] = [
   {
-    slug: 'getting-started-with-nextjs',
+    slug: 'industrial-equipment-solutions',
     meta: {
-      title: 'Getting Started with Next.js 15',
-      description: 'Learn how to build modern web applications with the latest version of Next.js framework.',
-      imageUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop',
-      tags: "test",
+      title: 'Solusi Peralatan Industri Terpadu',
+      description: 'Temukan berbagai peralatan industri berkualitas tinggi untuk meningkatkan efisiensi operasional perusahaan Anda.',
+      imageUrl: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=250&fit=crop',
+      tags: "Industrial Equipment, Manufacturing, Technology",
       date: '2024-01-15'
     },
     content: ''
   },
   {
-    slug: 'typescript-best-practices',
+    slug: 'chemical-products-distribution',
     meta: {
-      title: 'TypeScript Best Practices for 2024',
-      description: 'Discover the latest TypeScript patterns and practices to write better, more maintainable code.',
-      imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=250&fit=crop',
-      tags: "awesome",
+      title: 'Distribusi Produk Kimia Industri',
+      description: 'Layanan distribusi bahan kimia industri dengan standar keamanan dan kualitas internasional.',
+      imageUrl: 'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=400&h=250&fit=crop',
+      tags: "Chemical Products, Safety, Quality",
       date: '2024-01-10'
     },
     content: ''
   },
   {
-    slug: 'modern-css-techniques',
+    slug: 'safety-equipment-importance',
     meta: {
-      title: 'Modern CSS Techniques Every Developer Should Know',
-      description: 'Explore cutting-edge CSS features like container queries, CSS Grid, and custom properties.',
-      imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop',
-      tags: "['CSS', 'Frontend', 'Design']",
+      title: 'Pentingnya Peralatan Keselamatan Kerja',
+      description: 'Mengapa investasi dalam peralatan keselamatan kerja adalah prioritas utama untuk setiap industri.',
+      imageUrl: 'https://images.unsplash.com/photo-1580834619485-aaa1bb6e1696?w=400&h=250&fit=crop',
+      tags: "Safety Equipment, PPE, Workplace Safety",
       date: '2024-01-08'
+    },
+    content: ''
+  },
+  {
+    slug: 'partnership-success-stories',
+    meta: {
+      title: 'Kisah Sukses Kemitraan MKB',
+      description: 'Bagaimana PT. Mitra Kawan Bersama membantu perusahaan mencapai efisiensi operasional yang optimal.',
+      imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=250&fit=crop',
+      tags: "Partnership, Success Story, Industrial Solutions",
+      date: '2024-01-05'
+    },
+    content: ''
+  },
+  {
+    slug: 'technical-support-excellence',
+    meta: {
+      title: 'Keunggulan Dukungan Teknis MKB',
+      description: 'Layanan dukungan teknis profesional dan responsif untuk memastikan operasional yang lancar.',
+      imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=250&fit=crop',
+      tags: "Technical Support, Professional Service, Customer Care",
+      date: '2024-01-03'
+    },
+    content: ''
+  },
+  {
+    slug: 'supply-chain-management',
+    meta: {
+      title: 'Manajemen Supply Chain yang Efisien',
+      description: 'Sistem distribusi terpadu dengan jaringan luas untuk memastikan ketersediaan produk yang optimal.',
+      imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop',
+      tags: "Supply Chain, Distribution, Logistics",
+      date: '2024-01-01'
     },
     content: ''
   },
@@ -66,8 +99,8 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
     <Section>
       <Container>
         <Content>
-          <OverTitle>features</OverTitle>
-          <SectionTitle>What are you signing in for?</SectionTitle>
+          <OverTitle>Our Expertise</OverTitle>
+          <SectionTitle>Layanan & Solusi Terpadu</SectionTitle>
         </Content>
       </Container>
 
@@ -119,7 +152,7 @@ const SwiperContainer = styled(Container)`
     margin-top: 4rem;
   }
 
-  ${media('<=largeDesktop')} {
+  ${media('<=desktop')} {
     max-width: 100%;
     padding: 0;
   }

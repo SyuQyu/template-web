@@ -18,10 +18,11 @@ import WaveCta from 'components/WaveCta';
 import { NavItems } from 'types';
 
 const navItems: NavItems = [
-  { title: 'Awesome SaaS Features', href: '/features' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'Contact', href: '/contact' },
-  { title: 'Sign up', href: '/sign-up', outlined: true },
+  { title: 'About Us', href: '/about' },
+  { title: 'Our Services', href: '/services' },
+  { title: 'Products', href: '/products' },
+  { title: 'Partnership', href: '/partnership' },
+  { title: 'Contact', href: '/contact', outlined: true },
 ];
 
 
@@ -29,6 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>PT. Mitra Kawan Bersama - Your Trusted Industrial Partner</title>
+        <meta name="description" content="PT. Mitra Kawan Bersama adalah perusahaan distribusi produk industri terpercaya sejak 2010. Menyediakan solusi terpadu untuk kebutuhan industri Anda dengan kualitas dan pelayanan terbaik." />
+        <meta name="keywords" content="distribusi industri, produk industri, industrial equipment, chemical products, safety equipment, Indonesia" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="icon" type="image/png" href="/favicon.png" />
