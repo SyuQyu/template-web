@@ -10,10 +10,10 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Our Services - PT. Mitra Kawan Bersama</title>
+        <title>Services - PT. Mitra Kawan Bersama</title>
         <meta
           name="description"
-          content="Layanan terpadu PT. Mitra Kawan Bersama meliputi trading & distribution, technical support, dan custom solutions untuk kebutuhan industri Anda."
+          content="Layanan terpadu PT. Mitra Kawan Bersama: Equipment Rental, Rig Move & Relocation, Maintenance & Repair, Manpower Supply, dan CCPM/QAQC Support."
         />
       </Head>
       
@@ -21,117 +21,151 @@ export default function ServicesPage() {
         <Container>
           <HeaderSection>
             <OverTitle>Our Services</OverTitle>
-            <SectionTitle>Layanan Terpadu untuk Industri</SectionTitle>
+            <SectionTitle>Comprehensive Heavy Equipment Services</SectionTitle>
             <Description>
-              PT. Mitra Kawan Bersama menyediakan layanan komprehensif untuk memenuhi berbagai kebutuhan 
-              industri dengan standar kualitas dan pelayanan terbaik.
+              PT. Mitra Kawan Bersama menyediakan layanan komprehensif untuk mendukung proyek konstruksi 
+              dan infrastruktur dengan standar kualitas dan safety terbaik.
             </Description>
           </HeaderSection>
         </Container>
 
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
-          title="Trading & Distribution" 
+          title="Equipment Rental" 
           overTitle="Core Service"
         >
           <ServiceDescription>
-            <h4>Distribusi Produk Industri Berkualitas Tinggi</h4>
+            <h4>Heavy Equipment Rental Solutions</h4>
             <ServiceList>
-              <li>Distribusi produk-produk industri dengan standar internasional</li>
-              <li>Jaringan distribusi yang luas dan terpercaya di seluruh Indonesia</li>
-              <li>Manajemen supply chain yang efisien dan terorganisir</li>
-              <li>Sistem inventory management yang terintegrasi</li>
-              <li>Delivery tracking dan monitoring real-time</li>
+              <li>Rental mobile cranes, crawler cranes, dan lifting equipment</li>
+              <li>Lowbed trucks dan specialized transportation equipment</li>
+              <li>Bulldozers, excavators, dan earthmoving equipment</li>
+              <li>Flexible rental terms: daily, weekly, monthly, long-term</li>
+              <li>Comprehensive insurance coverage untuk semua equipment</li>
+              <li>Certified operators dan experienced crew included</li>
             </ServiceList>
           </ServiceDescription>
         </BasicSection>
 
         <BasicSection 
           imageUrl="/demo-illustration-2.svg" 
-          title="Technical Support" 
-          overTitle="Professional Service"
+          title="Rig Move & Relocation Support" 
+          overTitle="Specialized Service"
           reversed
         >
           <ServiceDescription>
-            <h4>Dukungan Teknis Profesional</h4>
+            <h4>Professional Rig Moving Services</h4>
             <ServiceList>
-              <li>Konsultasi teknis dari tim ahli berpengalaman</li>
-              <li>After-sales service yang responsif dan berkualitas</li>
-              <li>Training dan edukasi produk untuk klien</li>
-              <li>Troubleshooting dan maintenance support</li>
-              <li>Technical documentation dan user manual</li>
+              <li>Rig dismantle, transportation, dan re-assembly services</li>
+              <li>Route survey dan engineering analysis untuk safe transport</li>
+              <li>Heavy lift operations dengan specialized cranes</li>
+              <li>Multi-modal transportation: land, sea, dan barge transport</li>
+              <li>Project management dan coordination dengan authorities</li>
+              <li>Emergency rig move services 24/7 availability</li>
             </ServiceList>
           </ServiceDescription>
         </BasicSection>
 
         <BasicSection 
           imageUrl="/demo-illustration-3.png" 
-          title="Custom Solutions" 
-          overTitle="Tailored Service"
+          title="Maintenance & Repair Services" 
+          overTitle="Support Service"
         >
           <ServiceDescription>
-            <h4>Solusi Khusus Sesuai Kebutuhan</h4>
+            <h4>Comprehensive Maintenance Solutions</h4>
             <ServiceList>
-              <li>Analisis kebutuhan industri yang mendalam</li>
-              <li>Rekomendasi produk yang tepat dan optimal</li>
-              <li>Project management support end-to-end</li>
-              <li>Custom packaging dan labeling solutions</li>
-              <li>Flexible payment terms dan financing options</li>
+              <li>Preventive maintenance programs untuk equipment longevity</li>
+              <li>Emergency repair services dengan response time &lt; 4 hours</li>
+              <li>On-site field service team dengan mobile workshop</li>
+              <li>Genuine spare parts supply dan inventory management</li>
+              <li>Equipment overhaul dan refurbishment services</li>
+              <li>Condition monitoring dan predictive maintenance</li>
             </ServiceList>
           </ServiceDescription>
         </BasicSection>
 
         <Container>
+          <AdditionalServicesSection>
+            <OverTitle>Additional Services</OverTitle>
+            <SectionTitle>Manpower & Quality Assurance</SectionTitle>
+            
+            <ServicesGrid>
+              <ServiceCard>
+                <ServiceIcon>👨‍🔧</ServiceIcon>
+                <ServiceTitle>Manpower Supply</ServiceTitle>
+                <ServiceDetails>
+                  <li>Certified crane operators dengan pengalaman 10+ tahun</li>
+                  <li>Skilled technicians dan mechanics untuk maintenance</li>
+                  <li>Professional drivers untuk heavy equipment transportation</li>
+                  <li>Safety officers dan project supervisors</li>
+                  <li>Training dan certification programs untuk crew</li>
+                </ServiceDetails>
+              </ServiceCard>
+              
+              <ServiceCard>
+                <ServiceIcon>📋</ServiceIcon>
+                <ServiceTitle>CCPM / QAQC System Management</ServiceTitle>
+                <ServiceDetails>
+                  <li>Construction Project Management (CCPM) support</li>
+                  <li>Quality Assurance & Quality Control (QAQC) implementation</li>
+                  <li>HSE (Health, Safety, Environment) management system</li>
+                  <li>Project documentation dan progress reporting</li>
+                  <li>Compliance monitoring dan regulatory support</li>
+                </ServiceDetails>
+              </ServiceCard>
+            </ServicesGrid>
+          </AdditionalServicesSection>
+
           <AdvantagesSection>
-            <OverTitle>Why Choose Us</OverTitle>
+            <OverTitle>Why Choose Our Services</OverTitle>
             <SectionTitle>Keunggulan Layanan Kami</SectionTitle>
             
             <AdvantagesGrid>
               <AdvantageCard>
-                <AdvantageIcon>🎯</AdvantageIcon>
-                <AdvantageTitle>Pengalaman Terpercaya</AdvantageTitle>
+                <AdvantageIcon>🛡️</AdvantageIcon>
+                <AdvantageTitle>Safety First</AdvantageTitle>
                 <AdvantageDescription>
-                  Lebih dari 13 tahun pengalaman dalam industri distribusi produk industri
+                  Zero accident policy dengan comprehensive safety management system dan certified crew
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
                 <AdvantageIcon>⚡</AdvantageIcon>
-                <AdvantageTitle>Respon Cepat</AdvantageTitle>
+                <AdvantageTitle>Rapid Response</AdvantageTitle>
                 <AdvantageDescription>
-                  Tim customer service yang responsif dengan response time kurang dari 2 jam
+                  Emergency response team siap 24/7 dengan mobilization time kurang dari 4 jam
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
                 <AdvantageIcon>🔧</AdvantageIcon>
-                <AdvantageTitle>Tim Profesional</AdvantageTitle>
+                <AdvantageTitle>Expert Team</AdvantageTitle>
                 <AdvantageDescription>
-                  Didukung oleh tim technical yang berpengalaman dan tersertifikasi
+                  Tim operator dan teknisi bersertifikat dengan pengalaman puluhan tahun
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
                 <AdvantageIcon>🌐</AdvantageIcon>
-                <AdvantageTitle>Jaringan Luas</AdvantageTitle>
+                <AdvantageTitle>Nationwide Coverage</AdvantageTitle>
                 <AdvantageDescription>
-                  Coverage area yang mencakup seluruh Indonesia dengan distribution center strategis
+                  Coverage area seluruh Indonesia dengan logistics network yang kuat
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
-                <AdvantageIcon>✅</AdvantageIcon>
-                <AdvantageTitle>Kualitas Terjamin</AdvantageTitle>
+                <AdvantageIcon>📊</AdvantageIcon>
+                <AdvantageTitle>Quality Assurance</AdvantageTitle>
                 <AdvantageDescription>
-                  Produk berkualitas tinggi dengan sertifikasi internasional dan garansi resmi
+                  ISO certified quality management system dengan continuous improvement
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
-                <AdvantageIcon>🤝</AdvantageIcon>
-                <AdvantageTitle>Partnership Oriented</AdvantageTitle>
+                <AdvantageIcon>💼</AdvantageIcon>
+                <AdvantageTitle>Project Management</AdvantageTitle>
                 <AdvantageDescription>
-                  Membangun hubungan jangka panjang yang saling menguntungkan dengan semua klien
+                  End-to-end project management dengan dedicated project coordinator
                 </AdvantageDescription>
               </AdvantageCard>
             </AdvantagesGrid>
@@ -238,4 +272,67 @@ const AdvantageDescription = styled.p`
   font-size: 1.4rem;
   line-height: 1.5;
   color: var(--text-secondary);
+`;
+
+const AdditionalServicesSection = styled.div`
+  text-align: center;
+  margin: 8rem 0;
+`;
+
+const ServicesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+  
+  ${media('<=tablet')} {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+`;
+
+const ServiceCard = styled.div`
+  background: var(--cardBackground);
+  padding: 3rem 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+const ServiceIcon = styled.div`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+`;
+
+const ServiceTitle = styled.h3`
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+`;
+
+const ServiceDetails = styled.ul`
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  
+  li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    
+    &:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+  }
 `;

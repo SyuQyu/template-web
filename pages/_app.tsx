@@ -19,10 +19,11 @@ import { NavItems } from 'types';
 
 const navItems: NavItems = [
   { title: 'About Us', href: '/about' },
-  { title: 'Our Services', href: '/services' },
-  { title: 'Products', href: '/products' },
-  { title: 'Partnership', href: '/partnership' },
-  { title: 'Contact', href: '/contact', outlined: true },
+  { title: 'Fleet / Equipment', href: '/fleet' },
+  { title: 'Services', href: '/services' },
+  { title: 'Projects', href: '/projects' },
+  { title: 'News', href: '/news' },
+  { title: 'Contact Us', href: '/contact', outlined: true },
 ];
 
 
