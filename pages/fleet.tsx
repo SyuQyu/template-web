@@ -75,7 +75,7 @@ const EQUIPMENT_CATEGORIES = [
 ];
 
 export default function FleetPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   
@@ -99,10 +99,142 @@ export default function FleetPage() {
   return (
     <>
       <Head>
-        <title>{t('fleet.title')} - PT. Mitra Kawan Bersama</title>
+        <title>{language === 'id' ? 'Armada Heavy Equipment - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama' : 'Heavy Equipment Fleet - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama'}</title>
         <meta
           name="description"
-          content={t('fleet.subtitle')}
+          content={language === 'id' ? 'Armada lengkap heavy equipment PT. Mitra Kawan Bersama dengan 200+ unit peralatan premium termasuk crane Liebherr hingga 2300 ton, excavator, bulldozer, dan lowbed truck untuk proyek konstruksi besar.' : 'Complete heavy equipment fleet of PT. Mitra Kawan Bersama with 200+ premium equipment units including Liebherr cranes up to 2300 tons, excavators, bulldozers, and lowbed trucks for major construction projects.'}
+        />
+        <meta name="keywords" content={language === 'id' ? 'armada heavy equipment, crane Liebherr, excavator, bulldozer, lowbed truck, heavy equipment Jakarta, construction equipment rental' : 'heavy equipment fleet, Liebherr crane, excavator, bulldozer, lowbed truck, heavy equipment Jakarta, construction equipment rental'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'Armada Heavy Equipment - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama' : 'Heavy Equipment Fleet - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama'} />
+        <meta property="og:description" content={language === 'id' ? 'Armada lengkap heavy equipment dengan 200+ unit peralatan premium untuk proyek konstruksi besar.' : 'Complete heavy equipment fleet with 200+ premium equipment units for major construction projects.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mitrakawanbersama.co.id/fleet" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={language === 'id' ? 'Armada Heavy Equipment | PT. Mitra Kawan Bersama' : 'Heavy Equipment Fleet | PT. Mitra Kawan Bersama'} />
+        <meta name="twitter:description" content={language === 'id' ? 'Armada lengkap heavy equipment dengan 200+ unit peralatan premium.' : 'Complete heavy equipment fleet with 200+ premium equipment units.'} />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <link rel="canonical" href="https://mitrakawanbersama.co.id/fleet" />
+        
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PT. Mitra Kawan Bersama",
+              "url": "https://mitrakawanbersama.co.id",
+              "logo": "https://mitrakawanbersama.co.id/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+62-21-578-0505",
+                "contactType": "customer service"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "ID",
+                "addressLocality": "Jakarta",
+                "streetAddress": "The East Building Lt.39 Unit 3912-3914, Jl. Dr. Ide Anak Agung Gde Agung Lot 8.6-8.7 Kawasan Mega Kuningan"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Heavy Equipment Rental Services",
+                "itemListElement": [
+                  {
+                    "@type": "Product",
+                    "name": "Mobile Cranes Rental",
+                    "description": "Premium mobile cranes 15-2300 ton capacity for construction projects"
+                  },
+                  {
+                    "@type": "Product", 
+                    "name": "Crawler Cranes Rental",
+                    "description": "Heavy duty crawler cranes 70-750 ton capacity for heavy lifting"
+                  },
+                  {
+                    "@type": "Product",
+                    "name": "Lowbed Trucks Rental", 
+                    "description": "Specialized lowbed and heavy haul trucks 40-200 ton capacity"
+                  }
+                ]
+              }
+            })
+          }}
+        />
+      </Head>
+        <meta name="twitter:description" content="Sewa heavy equipment terlengkap: mobile cranes 750+ ton, bulldozers, excavators dengan operator berpengalaman." />
+        <meta name="twitter:image" content="https://mkb.co.id/demo-illustration-1.svg" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <meta name="language" content="Indonesian" />
+        <meta name="geo.region" content="ID-JK" />
+        <meta name="geo.placename" content="Jakarta" />
+        <meta name="geo.position" content="-6.209465;106.830833" />
+        <meta name="ICBM" content="-6.209465, 106.830833" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://mkb.co.id/fleet" />
+        
+        {/* Structured Data - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EquipmentRental",
+              "name": "PT. Mitra Kawan Bersama - Heavy Equipment Rental",
+              "description": "Heavy equipment rental services including mobile cranes, crawler cranes, lowbed trucks, bulldozers, and excavators for construction, oil & gas, and mining projects in Indonesia.",
+              "url": "https://mkb.co.id/fleet",
+              "telephone": "+62-21-5799-0701",
+              "email": "info@mkb.co.id",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "The East Building, 18th Floor, Jl. Dr. Ide Anak Agung Gde Agung",
+                "addressLocality": "Jakarta Selatan",
+                "addressRegion": "DKI Jakarta",
+                "postalCode": "12950",
+                "addressCountry": "ID"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.209465,
+                "longitude": 106.830833
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/mkb-indonesia"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Heavy Equipment Rental Catalog",
+                "itemListElement": [
+                  {
+                    "@type": "Product",
+                    "name": "Mobile Cranes Rental",
+                    "description": "All Terrain and Rough Terrain mobile cranes 50-220 ton capacity"
+                  },
+                  {
+                    "@type": "Product", 
+                    "name": "Crawler Cranes Rental",
+                    "description": "Heavy duty crawler cranes 70-750 ton capacity for heavy lifting"
+                  },
+                  {
+                    "@type": "Product",
+                    "name": "Lowbed Trucks Rental", 
+                    "description": "Specialized lowbed and heavy haul trucks 40-200 ton capacity"
+                  }
+                ]
+              }
+            })
+          }}
         />
       </Head>
       

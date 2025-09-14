@@ -8,15 +8,71 @@ import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function ServicesPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
       <Head>
-        <title>{t('services.title')} - PT. Mitra Kawan Bersama</title>
+        <title>{language === 'id' ? 'Layanan Heavy Equipment | Sewa Crane, Heavy Lift, Support Konstruksi | PT. Mitra Kawan Bersama' : 'Heavy Equipment Services | Crane Rental, Heavy Lift, Construction Support | PT. Mitra Kawan Bersama'}</title>
         <meta
           name="description"
-          content={t('services.subtitle')}
+          content={language === 'id' ? 'Layanan heavy equipment komprehensif di Indonesia: sewa crane, operasi heavy lift, transportasi equipment, maintenance support, rigging services. Support profesional 24/7 untuk proyek oil & gas, mining, power plant & konstruksi.' : 'Comprehensive heavy equipment services in Indonesia: crane rental, heavy lift operations, equipment transportation, maintenance support, rigging services. 24/7 professional support for oil & gas, mining, power plant & construction projects.'}
+        />
+        <meta name="keywords" content={language === 'id' ? 'layanan sewa crane, operasi heavy lift, transportasi equipment, rigging services, maintenance support, layanan konstruksi, support oil gas, layanan mining, konstruksi power plant' : 'crane rental services, heavy lift operations, equipment transportation, rigging services, maintenance support, construction services, oil gas support, mining services, power plant construction'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'Layanan Heavy Equipment | Sewa Crane & Operasi Heavy Lift | PT. MKB' : 'Heavy Equipment Services | Crane Rental & Heavy Lift Operations | PT. MKB'} />
+        <meta property="og:description" content={language === 'id' ? 'Layanan heavy equipment komprehensif: sewa crane, operasi heavy lift, transportasi equipment dengan support profesional 24/7 di seluruh Indonesia.' : 'Comprehensive heavy equipment services: crane rental, heavy lift operations, equipment transportation with 24/7 professional support across Indonesia.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mitrakawanbersama.co.id/services" />
+        <meta property="og:image" content="https://mitrakawanbersama.co.id/demo-illustration-2.svg" />
+        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={language === 'id' ? 'Layanan Heavy Equipment | PT. Mitra Kawan Bersama' : 'Heavy Equipment Services | PT. Mitra Kawan Bersama'} />
+        <meta name="twitter:description" content={language === 'id' ? 'Sewa crane profesional, operasi heavy lift & transportasi equipment dengan support 24/7.' : 'Professional crane rental, heavy lift operations & equipment transportation services with 24/7 support.'} />
+        <meta name="twitter:image" content="https://mitrakawanbersama.co.id/demo-illustration-2.svg" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <link rel="canonical" href="https://mitrakawanbersama.co.id/services" />
+        
+        {/* Structured Data - Service */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Heavy Equipment Rental Services",
+              "description": "Comprehensive heavy equipment rental and support services including crane rental, heavy lift operations, equipment transportation, and maintenance support.",
+              "provider": {
+                "@type": "Organization",
+                "name": "PT. Mitra Kawan Bersama",
+                "url": "https://mkb.co.id"
+              },
+              "areaServed": {
+                "@type": "Country", 
+                "name": "Indonesia"
+              },
+              "serviceType": [
+                "Crane Rental",
+                "Heavy Lift Operations", 
+                "Equipment Transportation",
+                "Maintenance Support",
+                "Rigging Services",
+                "Construction Support"
+              ],
+              "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2010-01-01"
+              }
+            })
+          }}
         />
       </Head>
       

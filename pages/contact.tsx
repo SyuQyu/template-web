@@ -10,15 +10,75 @@ import FormSection from 'views/ContactPage/FormSection';
 import InformationSection from 'views/ContactPage/InformationSection';
 
 export default function ContactPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   return (
     <>
       <Head>
-        <title>{t('contact.page.title')} - PT. Mitra Kawan Bersama</title>
+        <title>{language === 'id' ? 'Kontak Kami - Hubungi PT. Mitra Kawan Bersama untuk Sewa Heavy Equipment' : 'Contact Us - Reach PT. Mitra Kawan Bersama for Heavy Equipment Rental'}</title>
         <meta
           name="description"
-          content={t('contact.page.subtitle')}
+          content={language === 'id' ? 'Hubungi PT. Mitra Kawan Bersama untuk kebutuhan sewa heavy equipment. Kantor Jakarta di The East Building, Mega Kuningan. Telp: +62-21-578-0505. Emergency support 24/7 tersedia untuk semua proyek.' : 'Contact PT. Mitra Kawan Bersama for heavy equipment rental needs. Jakarta office at The East Building, Mega Kuningan. Tel: +62-21-578-0505. 24/7 emergency support available for all projects.'}
+        />
+        <meta name="keywords" content={language === 'id' ? 'kontak mkb, hubungi mitra kawan bersama, sewa crane jakarta, kontak heavy equipment, alamat mkb jakarta, telpon mkb, emergency crane support' : 'contact mkb, reach mitra kawan bersama, crane rental jakarta, heavy equipment contact, mkb jakarta address, mkb phone, emergency crane support'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'Kontak Kami - PT. Mitra Kawan Bersama | Heavy Equipment Rental' : 'Contact Us - PT. Mitra Kawan Bersama | Heavy Equipment Rental'} />
+        <meta property="og:description" content={language === 'id' ? 'Hubungi PT. Mitra Kawan Bersama untuk kebutuhan sewa heavy equipment. Kantor Jakarta, support 24/7.' : 'Contact PT. Mitra Kawan Bersama for heavy equipment rental needs. Jakarta office, 24/7 support.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mitrakawanbersama.co.id/contact" />
+        <meta property="og:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
+        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={language === 'id' ? 'Kontak PT. Mitra Kawan Bersama | Heavy Equipment Rental' : 'Contact PT. Mitra Kawan Bersama | Heavy Equipment Rental'} />
+        <meta name="twitter:description" content={language === 'id' ? 'Hubungi kami untuk kebutuhan sewa heavy equipment. Support 24/7.' : 'Contact us for heavy equipment rental needs. 24/7 support available.'} />
+        <meta name="twitter:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <link rel="canonical" href="https://mitrakawanbersama.co.id/contact" />
+        
+        {/* Structured Data - Organization Contact */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PT. Mitra Kawan Bersama",
+              "url": "https://mitrakawanbersama.co.id",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "The East Building Lt.39 Unit 3912-3914, Jl. Dr. Ide Anak Agung Gde Agung Lot 8.6-8.7 Kawasan Mega Kuningan",
+                "addressLocality": "Jakarta Selatan",
+                "addressRegion": "DKI Jakarta",
+                "postalCode": "12950",
+                "addressCountry": "ID"
+              },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+62-21-578-0505",
+                  "contactType": "customer service",
+                  "areaServed": "ID"
+                },
+                {
+                  "@type": "ContactPoint", 
+                  "telephone": "+62-812-3456-7890",
+                  "contactType": "emergency",
+                  "areaServed": "ID"
+                }
+              ],
+              "openingHours": "Mo,Tu,We,Th,Fr 08:00-17:00",
+              "sameAs": [
+                "https://www.linkedin.com/company/pt-mitra-kawan-bersama"
+              ]
+            })
+          }}
         />
       </Head>
       

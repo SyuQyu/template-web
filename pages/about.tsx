@@ -8,15 +8,77 @@ import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
       <Head>
-        <title>{t('about.title')} - PT. Mitra Kawan Bersama</title>
+        <title>{language === 'id' ? 'Tentang PT. Mitra Kawan Bersama | Perusahaan Sewa Heavy Equipment Indonesia | Pengalaman 15+ Tahun' : 'About PT. Mitra Kawan Bersama | Heavy Equipment Rental Company Indonesia | 15+ Years Experience'}</title>
         <meta
           name="description"
-          content={t('about.subtitle')}
+          content={language === 'id' ? 'PT. Mitra Kawan Bersama - Perusahaan sewa heavy equipment terpercaya sejak 2010. Pengalaman 15+ tahun, 150+ proyek selesai, operator bersertifikat. Penyedia terkemuka untuk proyek oil & gas, mining, power plant & konstruksi di seluruh Indonesia.' : 'PT. Mitra Kawan Bersama - Established heavy equipment rental company since 2010. 15+ years experience, 150+ completed projects, certified operators. Leading provider for oil & gas, mining, power plant & construction projects across Indonesia.'}
+        />
+        <meta name="keywords" content={language === 'id' ? 'tentang mkb indonesia, perusahaan heavy equipment, perusahaan sewa crane, jasa konstruksi indonesia, kontraktor oil gas, penyedia equipment mining, support power plant' : 'about mkb indonesia, heavy equipment company, crane rental company, construction services indonesia, oil gas contractor, mining equipment provider, power plant support'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'Tentang PT. Mitra Kawan Bersama | Perusahaan Sewa Heavy Equipment Indonesia' : 'About PT. Mitra Kawan Bersama | Heavy Equipment Rental Company Indonesia'} />
+        <meta property="og:description" content={language === 'id' ? 'Perusahaan sewa heavy equipment terpercaya sejak 2010. Pengalaman 15+ tahun, 150+ proyek selesai dengan operator bersertifikat di seluruh Indonesia.' : 'Established heavy equipment rental company since 2010. 15+ years experience, 150+ completed projects with certified operators across Indonesia.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mitrakawanbersama.co.id/about" />
+        <meta property="og:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
+        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={language === 'id' ? 'Tentang PT. Mitra Kawan Bersama | Perusahaan Heavy Equipment' : 'About PT. Mitra Kawan Bersama | Heavy Equipment Company'} />
+        <meta name="twitter:description" content={language === 'id' ? 'Perusahaan sewa heavy equipment terpercaya sejak 2010. Pengalaman 15+ tahun.' : 'Established heavy equipment rental company since 2010. 15+ years experience.'} />
+        <meta name="twitter:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <link rel="canonical" href="https://mitrakawanbersama.co.id/about" />
+        
+        {/* Structured Data - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PT. Mitra Kawan Bersama",
+              "foundingDate": "2010",
+              "description": language === 'id' ? "Perusahaan sewa heavy equipment terkemuka di Indonesia dengan pengalaman 15+ tahun spesialisasi dalam sewa crane, operasi heavy lift, dan layanan support konstruksi." : "Leading heavy equipment rental company in Indonesia with 15+ years of experience specializing in crane rental, heavy lift operations, and construction support services.",
+              "url": "https://mitrakawanbersama.co.id/about",
+              "logo": "https://mitrakawanbersama.co.id/mkb_logo_png_new.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "The East Building Lt.39 Unit 3912-3914, Jl. Dr. Ide Anak Agung Gde Agung Lot 8.6-8.7 Kawasan Mega Kuningan",
+                "addressLocality": "Jakarta Selatan",
+                "addressRegion": "DKI Jakarta", 
+                "postalCode": "12950",
+                "addressCountry": "ID"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+62-21-578-0505",
+                "contactType": "customer service"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Indonesia"
+              },
+              "knowsAbout": [
+                "Heavy Equipment Rental",
+                "Crane Operations",
+                "Construction Support", 
+                "Oil & Gas Services",
+                "Mining Equipment",
+                "Power Plant Construction"
+              ]
+            })
+          }}
         />
       </Head>
       

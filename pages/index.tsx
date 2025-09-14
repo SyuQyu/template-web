@@ -12,15 +12,136 @@ import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
 
 export default function Homepage({ posts }: any) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
       <Head>
-        <title>PT. Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support</title>
+        <title>{language === 'id' ? 'PT. Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'}</title>
         <meta
           name="description"
-          content="PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 150+ completed projects. Crane rental, heavy lift operations, dan construction support untuk oil & gas, power plant, dan industrial projects."
+          content={language === 'id' ? 'PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman. Melayani crane rental, heavy lift operations untuk oil & gas, power plant, dan industrial projects.' : 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.'}
+        />
+        <meta name="keywords" content={language === 'id' ? 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia' : 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'PT. Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'} />
+        <meta property="og:description" content={language === 'id' ? 'PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={language === 'id' ? 'PT. Mitra Kawan Bersama - Heavy Equipment Rental Terpercaya' : 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental'} />
+        <meta name="twitter:description" content={language === 'id' ? 'Perusahaan heavy equipment rental dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'Heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://mitrakawanbersama.co.id/" />
+      </Head>
+        <meta property="og:url" content="https://mkb.co.id" />
+        <meta property="og:image" content="https://mkb.co.id/mkb_logo_png_new.png" />
+        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:locale" content="id_ID" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PT. Mitra Kawan Bersama | Heavy Equipment Rental Indonesia" />
+        <meta name="twitter:description" content="Leading heavy equipment rental with 150+ completed projects. Professional crane rental & construction support services." />
+        <meta name="twitter:image" content="https://mkb.co.id/mkb_logo_png_new.png" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <meta name="language" content="Indonesian" />
+        <meta name="geo.region" content="ID-JK" />
+        <meta name="geo.placename" content="Jakarta" />
+        <meta name="geo.position" content="-6.209465;106.830833" />
+        <meta name="ICBM" content="-6.209465, 106.830833" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://mkb.co.id" />
+        
+        {/* Structured Data - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PT. Mitra Kawan Bersama",
+              "alternateName": "MKB Indonesia",
+              "description": "Leading heavy equipment rental company in Indonesia specializing in crane rental, heavy lift operations, and construction support services for oil & gas, power plant, and industrial projects.",
+              "url": "https://mkb.co.id",
+              "logo": "https://mkb.co.id/mkb_logo_png_new.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+62-21-5799-0701",
+                "contactType": "customer service",
+                "areaServed": "ID",
+                "availableLanguage": ["Indonesian", "English"]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "The East Building, 18th Floor, Jl. Dr. Ide Anak Agung Gde Agung",
+                "addressLocality": "Jakarta Selatan", 
+                "addressRegion": "DKI Jakarta",
+                "postalCode": "12950",
+                "addressCountry": "ID"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.209465,
+                "longitude": 106.830833
+              },
+              "foundingDate": "2010",
+              "numberOfEmployees": "150+",
+              "sameAs": [
+                "https://www.linkedin.com/company/mkb-indonesia"
+              ],
+              "makesOffer": {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Heavy Equipment Rental Services",
+                  "description": "Comprehensive heavy equipment rental including mobile cranes, crawler cranes, lowbed trucks, bulldozers, and excavators with professional operators"
+                }
+              }
+            })
+          }}
+        />
+        
+        {/* Structured Data - LocalBusiness */}
+        <script
+          type="application/ld+json" 
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "PT. Mitra Kawan Bersama",
+              "image": "https://mkb.co.id/mkb_logo_png_new.png",
+              "telephone": "+62-21-5799-0701",
+              "email": "info@mkb.co.id",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "The East Building, 18th Floor, Jl. Dr. Ide Anak Agung Gde Agung",
+                "addressLocality": "Jakarta Selatan",
+                "addressRegion": "DKI Jakarta", 
+                "postalCode": "12950",
+                "addressCountry": "ID"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.209465,
+                "longitude": 106.830833
+              },
+              "url": "https://mkb.co.id",
+              "priceRange": "$$$$",
+              "openingHours": "Mo-Su 00:00-23:59"
+            })
+          }}
         />
       </Head>
       <HomepageWrapper>

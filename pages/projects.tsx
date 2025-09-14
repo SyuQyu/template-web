@@ -86,15 +86,77 @@ const STATISTICS = [
 ];
 
 export default function ProjectsPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
       <Head>
-        <title>{t('projects.page.title')} - PT. Mitra Kawan Bersama</title>
+        <title>{language === 'id' ? 'Portfolio Proyek Heavy Equipment | Oil & Gas, Mining, Power Plant | PT. Mitra Kawan Bersama' : 'Major Projects Portfolio | Oil & Gas, Mining, Power Plant | PT. Mitra Kawan Bersama'}</title>
         <meta
           name="description"
-          content={t('projects.page.subtitle')}
+          content={language === 'id' ? '150+ proyek heavy equipment berhasil diselesaikan di seluruh Indonesia. Klien utama: BP Indonesia, Pertamina, PLN, Freeport. LNG plant, power plant, operasi mining, oil refinery. Lihat track record & case studies kami.' : '150+ successfully completed heavy equipment projects across Indonesia. Major clients: BP Indonesia, Pertamina, PLN, Freeport. LNG plants, power plants, mining operations, oil refineries. View our proven track record & case studies.'}
+        />
+        <meta name="keywords" content={language === 'id' ? 'proyek heavy equipment indonesia, konstruksi lng plant, proyek power plant, ekspansi oil refinery, operasi mining, proyek pertamina, bp indonesia, proyek pln, case studies konstruksi' : 'heavy equipment projects indonesia, lng plant construction, power plant projects, oil refinery expansion, mining operations, pertamina projects, bp indonesia, pln projects, construction case studies'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'Portfolio Proyek Heavy Equipment | Oil & Gas, Mining, Power Plant | PT. MKB' : 'Major Projects Portfolio | Oil & Gas, Mining, Power Plant | PT. MKB'} />
+        <meta property="og:description" content={language === 'id' ? '150+ proyek heavy equipment berhasil diselesaikan. Klien utama: BP Indonesia, Pertamina, PLN, Freeport. Lihat proven track record kami.' : '150+ successfully completed heavy equipment projects. Major clients: BP Indonesia, Pertamina, PLN, Freeport. View our proven track record.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mitrakawanbersama.co.id/projects" />
+        <meta property="og:image" content="https://mitrakawanbersama.co.id/demo-illustration-3.png" />
+        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Major Projects Portfolio | PT. Mitra Kawan Bersama" />
+        <meta name="twitter:description" content="150+ completed projects for BP Indonesia, Pertamina, PLN, Freeport. Proven track record in heavy equipment operations." />
+        <meta name="twitter:image" content="https://mkb.co.id/demo-illustration-3.png" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <link rel="canonical" href="https://mkb.co.id/projects" />
+        
+        {/* Structured Data - Portfolio */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CreativeWork",
+              "name": "Heavy Equipment Projects Portfolio",
+              "description": "Portfolio of major heavy equipment rental projects including LNG plants, power plants, oil refineries, and mining operations across Indonesia.",
+              "creator": {
+                "@type": "Organization",
+                "name": "PT. Mitra Kawan Bersama"
+              },
+              "url": "https://mkb.co.id/projects",
+              "workExample": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "LNG Plant Construction - Tangguh Papua",
+                  "client": "BP Indonesia", 
+                  "description": "Heavy lift operations using 750-ton crawler cranes for LNG plant expansion",
+                  "dateCompleted": "2023"
+                },
+                {
+                  "@type": "CreativeWork", 
+                  "name": "Power Plant Construction - PLTU Jawa-7",
+                  "client": "PT. PLN (Persero)",
+                  "description": "Equipment rental and rig move support for 1000 MW power plant construction",
+                  "dateCompleted": "2023"
+                },
+                {
+                  "@type": "CreativeWork",
+                  "name": "Oil Refinery Expansion - Kilang Cilacap", 
+                  "client": "PT. Pertamina (Persero)",
+                  "description": "Heavy equipment rental and maintenance support for refinery capacity expansion",
+                  "dateCompleted": "2022"
+                }
+              ]
+            })
+          }}
         />
       </Head>
       

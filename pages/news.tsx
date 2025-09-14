@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { formatDate } from 'utils/formatDate';
 import { media } from 'utils/media';
 
@@ -129,6 +130,7 @@ const CATEGORIES = [
 ];
 
 export default function NewsPage() {
+  const { language } = useLanguage();
   const featuredPosts = NEWS_POSTS.filter(post => post.featured);
   const recentPosts = NEWS_POSTS.filter(post => !post.featured).slice(0, 6);
 
@@ -155,13 +157,35 @@ export default function NewsPage() {
   return (
     <>
       <Head>
-        <title>News - PT. Mitra Kawan Bersama</title>
+        <title>{language === 'id' ? 'Berita & Update Industri Terbaru | Insight Heavy Equipment | PT. Mitra Kawan Bersama' : 'Latest News & Industry Updates | Heavy Equipment Insights | PT. Mitra Kawan Bersama'}</title>
         <meta
           name="description"
-          content="Latest news, project updates, industry insights dari PT. Mitra Kawan Bersama. Stay informed dengan perkembangan terbaru heavy equipment rental industry."
+          content={language === 'id' ? 'Berita terbaru PT. Mitra Kawan Bersama: update proyek, pengembangan armada, penghargaan safety, insight industri heavy equipment. Tetap update dengan perkembangan terkini perusahaan dan industri konstruksi Indonesia.' : 'Latest news from PT. Mitra Kawan Bersama: project updates, fleet expansion, safety awards, heavy equipment industry insights. Stay updated with company developments and Indonesian construction industry trends.'}
         />
+        <meta name="keywords" content={language === 'id' ? 'berita mkb, news heavy equipment, update proyek konstruksi, pengembangan armada crane, safety award, insight industri, berita konstruksi indonesia, heavy equipment news' : 'mkb news, heavy equipment news, construction project updates, crane fleet expansion, safety awards, industry insights, indonesia construction news, heavy equipment industry'} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={language === 'id' ? 'Berita & Update Industri Terbaru | Heavy Equipment Insights | PT. MKB' : 'Latest News & Industry Updates | Heavy Equipment Insights | PT. MKB'} />
+        <meta property="og:description" content={language === 'id' ? 'Berita terbaru: update proyek, pengembangan armada, penghargaan safety, insight industri heavy equipment dari PT. Mitra Kawan Bersama.' : 'Latest news: project updates, fleet expansion, safety awards, heavy equipment industry insights from PT. Mitra Kawan Bersama.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mitrakawanbersama.co.id/news" />
+        <meta property="og:image" content="https://mitrakawanbersama.co.id/demo-illustration-4.png" />
+        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={language === 'id' ? 'Berita & Update Industri | PT. Mitra Kawan Bersama' : 'Latest News & Industry Updates | PT. Mitra Kawan Bersama'} />
+        <meta name="twitter:description" content={language === 'id' ? 'Berita terbaru: update proyek, pengembangan armada, insight industri heavy equipment.' : 'Latest news: project updates, fleet expansion, heavy equipment industry insights.'} />
+        <meta name="twitter:image" content="https://mitrakawanbersama.co.id/demo-illustration-4.png" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <link rel="canonical" href="https://mitrakawanbersama.co.id/news" />
       </Head>
-      
+      </Head>
+
       <NewsWrapper>
         <Container>
           <HeaderSection>

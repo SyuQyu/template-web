@@ -3,8 +3,39 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 type Language = 'id' | 'en';
 
 interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  language: Language;    'contact.form.duration': 'Durasi Rental',
+    'contact.form.message': 'Pesan/Detail Kebutuhan',
+    'contact.form.submit': 'Kirim Inquiry',
+    'contact.form.reset': 'Reset Form',
+    
+    // SEO Meta Tags
+    'seo.home.title': 'PT. Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya',
+    'seo.home.description': 'PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman. Melayani crane rental, heavy lift operations untuk oil & gas, power plant, dan industrial projects.',
+    'seo.home.keywords': 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia',
+    
+    'seo.fleet.title': 'Armada Heavy Equipment - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama',
+    'seo.fleet.description': 'Armada lengkap heavy equipment PT. Mitra Kawan Bersama dengan 200+ unit peralatan premium termasuk crane Liebherr hingga 2300 ton, excavator, bulldozer, dan lowbed truck untuk proyek konstruksi besar.',
+    'seo.fleet.keywords': 'armada heavy equipment, crane Liebherr, excavator, bulldozer, lowbed truck, heavy equipment Jakarta, construction equipment rental',
+    
+    'seo.services.title': 'Layanan Heavy Equipment Rental & Construction Support | PT. Mitra Kawan Bersama',
+    'seo.services.description': 'Layanan komprehensif PT. Mitra Kawan Bersama: heavy equipment rental, crane operations, heavy lift services, rig move, project management untuk oil & gas, power plant, dan konstruksi industrial.',
+    'seo.services.keywords': 'heavy equipment rental service, crane operations, heavy lift services, rig move, project management, oil gas services, power plant construction',
+    
+    'seo.projects.title': 'Proyek & Track Record - LNG, Power Plant, Oil Refinery | PT. Mitra Kawan Bersama',
+    'seo.projects.description': 'Track record proyek sukses PT. Mitra Kawan Bersama meliputi LNG Plant Tangguh, PLTU Jawa-7, Oil Refinery Cilacap dengan total nilai proyek USD 500+ juta. Dipercaya BP, PLN, Pertamina.',
+    'seo.projects.keywords': 'proyek LNG, power plant construction, oil refinery, track record MKB, major projects Indonesia, BP Indonesia, PLN, Pertamina',
+    
+    'seo.about.title': 'Tentang PT. Mitra Kawan Bersama - Heavy Equipment Rental Expert Indonesia',
+    'seo.about.description': 'PT. Mitra Kawan Bersama didirikan 2008 sebagai specialist heavy equipment rental. 15+ tahun pengalaman, 200+ unit equipment, 99.8% safety record, melayani 50+ major clients di Indonesia.',
+    'seo.about.keywords': 'tentang MKB, company profile, heavy equipment specialist, Jakarta equipment rental, oil gas contractor, industrial equipment',
+    
+    'seo.news.title': 'Berita & Update Terbaru - Heavy Equipment Industry | PT. Mitra Kawan Bersama',
+    'seo.news.description': 'Berita terbaru dan update industry heavy equipment dari PT. Mitra Kawan Bersama. Informasi proyek terbaru, teknologi equipment, dan perkembangan construction industry di Indonesia.',
+    'seo.news.keywords': 'berita heavy equipment, update industri konstruksi, news MKB, construction industry Indonesia, equipment technology news',
+    
+    'seo.contact.title': 'Kontak PT. Mitra Kawan Bersama - Heavy Equipment Rental Jakarta',
+    'seo.contact.description': 'Hubungi PT. Mitra Kawan Bersama untuk konsultasi heavy equipment rental. Kantor Jakarta di The East Building Kuningan. Telepon +62 21 5799 0701, Email info@mkb.co.id. Konsultasi gratis 24/7.',
+    'seo.contact.keywords': 'kontak MKB, heavy equipment rental Jakarta, konsultasi equipment rental, The East Building Kuningan, emergency support 24/7',etLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
 
@@ -351,6 +382,35 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Message/Detail Requirements',
     'contact.form.submit': 'Send Inquiry',
     'contact.form.reset': 'Reset Form',
+    
+    // SEO Meta Tags
+    'seo.home.title': 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support',
+    'seo.home.description': 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.',
+    'seo.home.keywords': 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia',
+    
+    'seo.fleet.title': 'Heavy Equipment Fleet - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama',
+    'seo.fleet.description': 'Complete heavy equipment fleet of PT. Mitra Kawan Bersama with 200+ premium equipment units including Liebherr cranes up to 2300 tons, excavators, bulldozers, and lowbed trucks for major construction projects.',
+    'seo.fleet.keywords': 'heavy equipment fleet, Liebherr crane, excavator, bulldozer, lowbed truck, heavy equipment Jakarta, construction equipment rental',
+    
+    'seo.services.title': 'Heavy Equipment Rental & Construction Support Services | PT. Mitra Kawan Bersama',
+    'seo.services.description': 'Comprehensive services by PT. Mitra Kawan Bersama: heavy equipment rental, crane operations, heavy lift services, rig move, project management for oil & gas, power plant, and industrial construction.',
+    'seo.services.keywords': 'heavy equipment rental service, crane operations, heavy lift services, rig move, project management, oil gas services, power plant construction',
+    
+    'seo.projects.title': 'Projects & Track Record - LNG, Power Plant, Oil Refinery | PT. Mitra Kawan Bersama',
+    'seo.projects.description': 'Successful project track record of PT. Mitra Kawan Bersama including LNG Plant Tangguh, PLTU Jawa-7, Oil Refinery Cilacap with total project value USD 500+ million. Trusted by BP, PLN, Pertamina.',
+    'seo.projects.keywords': 'LNG projects, power plant construction, oil refinery, MKB track record, major projects Indonesia, BP Indonesia, PLN, Pertamina',
+    
+    'seo.about.title': 'About PT. Mitra Kawan Bersama - Heavy Equipment Rental Expert Indonesia',
+    'seo.about.description': 'PT. Mitra Kawan Bersama established in 2008 as heavy equipment rental specialist. 15+ years experience, 200+ equipment units, 99.8% safety record, serving 50+ major clients in Indonesia.',
+    'seo.about.keywords': 'about MKB, company profile, heavy equipment specialist, Jakarta equipment rental, oil gas contractor, industrial equipment',
+    
+    'seo.news.title': 'Latest News & Updates - Heavy Equipment Industry | PT. Mitra Kawan Bersama',
+    'seo.news.description': 'Latest news and heavy equipment industry updates from PT. Mitra Kawan Bersama. Information on latest projects, equipment technology, and construction industry developments in Indonesia.',
+    'seo.news.keywords': 'heavy equipment news, construction industry updates, MKB news, construction industry Indonesia, equipment technology news',
+    
+    'seo.contact.title': 'Contact PT. Mitra Kawan Bersama - Heavy Equipment Rental Jakarta',
+    'seo.contact.description': 'Contact PT. Mitra Kawan Bersama for heavy equipment rental consultation. Jakarta office at The East Building Kuningan. Phone +62 21 5799 0701, Email info@mkb.co.id. Free consultation 24/7.',
+    'seo.contact.keywords': 'contact MKB, heavy equipment rental Jakarta, equipment rental consultation, The East Building Kuningan, emergency support 24/7',
     
     // Partnership Page
     'partnership.page.title': 'Partnership',
