@@ -366,7 +366,7 @@ const FeaturedGrid = styled.div`
 `;
 
 const FeaturedCard = styled.article`
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -472,7 +472,7 @@ const NewsGrid = styled.div`
 `;
 
 const NewsCard = styled.article`
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -575,7 +575,7 @@ const EmailInput = styled.input`
 const SubscribeButton = styled.button`
   padding: 1.5rem 3rem;
   background: white;
-  color: var(--primary);
+  color: rgb(var(--primary));
   border: none;
   border-radius: 0.8rem;
   font-size: 1.6rem;

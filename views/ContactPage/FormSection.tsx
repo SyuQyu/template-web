@@ -3,16 +3,20 @@ import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import Input from 'components/Input';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 import MailSentState from '../../components/MailSentState';
 
 interface EmailPayload {
   name: string;
+  company: string;
   email: string;
-  description: string;
+  phone: string;
+  message: string;
 }
 
 export default function FormSection() {
+  const { t } = useLanguage();
   const [hasSuccessfullySentMail, setHasSuccessfullySentMail] = useState(false);
   const [hasErrored, setHasErrored] = useState(false);
   const { register, handleSubmit, formState } = useForm();
@@ -25,7 +29,10 @@ export default function FormSection() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ subject: 'Email from contact form', ...payload }),
+        body: JSON.stringify({ 
+          subject: `Equipment Rental Inquiry from ${payload.name} - ${payload.company}`, 
+          ...payload 
+        }),
       });
 
       if (res.status !== 204) {
@@ -49,30 +56,71 @@ export default function FormSection() {
 
   return (
     <Wrapper>
+      <FormTitle>{t('contact.form.title')}</FormTitle>
+      <FormSubtitle>{t('contact.form.subtitle')}</FormSubtitle>
+      
       <Form onSubmit={handleSubmit(onSubmit)}>
         {hasErrored && <ErrorMessage>Couldn&apos;t send email. Please try again.</ErrorMessage>}
+        
+        {/* Personal Information */}
         <InputGroup>
           <InputStack>
-            {errors.name && <ErrorMessage>Name is required</ErrorMessage>}
-            <Input placeholder="Your Name" id="name" disabled={isDisabled} {...register('name', { required: true })} />
+            {errors.name && <ErrorMessage>{t('contact.form.name')} is required</ErrorMessage>}
+            <Input 
+              placeholder={t('contact.form.name')} 
+              id="name" 
+              disabled={isDisabled} 
+              {...register('name', { required: true })} 
+            />
           </InputStack>
           <InputStack>
-            {errors.email && <ErrorMessage>Email is required</ErrorMessage>}
-            <Input placeholder="Your Email" id="email" disabled={isDisabled} {...register('email', { required: true })} />
+            {errors.company && <ErrorMessage>{t('contact.form.company')} is required</ErrorMessage>}
+            <Input 
+              placeholder={t('contact.form.company')} 
+              id="company" 
+              disabled={isDisabled} 
+              {...register('company', { required: true })} 
+            />
           </InputStack>
         </InputGroup>
+        
+        <InputGroup>
+          <InputStack>
+            {errors.email && <ErrorMessage>{t('contact.form.email')} is required</ErrorMessage>}
+            <Input 
+              placeholder={t('contact.form.email')} 
+              id="email" 
+              type="email"
+              disabled={isDisabled} 
+              {...register('email', { required: true })} 
+            />
+          </InputStack>
+          <InputStack>
+            {errors.phone && <ErrorMessage>{t('contact.form.phone')} is required</ErrorMessage>}
+            <Input 
+              placeholder={t('contact.form.phone')} 
+              id="phone" 
+              type="tel"
+              disabled={isDisabled} 
+              {...register('phone', { required: true })} 
+            />
+          </InputStack>
+        </InputGroup>
+
         <InputStack>
-          {errors.description && <ErrorMessage>Description is required</ErrorMessage>}
+          {errors.message && <ErrorMessage>{t('contact.form.message')} is required</ErrorMessage>}
           <Textarea
             as="textarea"
-            placeholder="Enter Your Message..."
-            id="description"
+            placeholder={t('contact.form.message')}
+            id="message"
             disabled={isDisabled}
-            {...register('description', { required: true })}
+            rows={5}
+            {...register('message', { required: true })}
           />
         </InputStack>
+
         <Button as="button" type="submit" disabled={isSubmitDisabled}>
-          Send Message
+          {isSubmitting ? 'Sending...' : t('contact.form.submit')}
         </Button>
       </Form>
     </Wrapper>
@@ -81,6 +129,24 @@ export default function FormSection() {
 
 const Wrapper = styled.div`
   flex: 2;
+`;
+
+const FormTitle = styled.h3`
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: rgba(var(--text), 1);
+  font-weight: bold;
+  
+  ${media('<=tablet')} {
+    font-size: 2rem;
+  }
+`;
+
+const FormSubtitle = styled.p`
+  font-size: 1.6rem;
+  color: rgba(var(--text), 0.7);
+  margin-bottom: 3rem;
+  line-height: 1.5;
 `;
 
 const Form = styled.form`
@@ -127,4 +193,5 @@ const ErrorMessage = styled.p`
 const Textarea = styled(Input)`
   width: 100%;
   min-height: 20rem;
+  resize: vertical;
 `;

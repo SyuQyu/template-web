@@ -242,7 +242,7 @@ const AdvantagesGrid = styled.div`
 `;
 
 const AdvantageCard = styled.div`
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));
   padding: 3rem 2rem;
   border-radius: 0.8rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -289,7 +289,7 @@ const ServicesGrid = styled.div`
 `;
 
 const ServiceCard = styled.div`
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));
   padding: 3rem 2rem;
   border-radius: 0.8rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

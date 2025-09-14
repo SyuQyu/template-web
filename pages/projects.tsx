@@ -258,7 +258,7 @@ const StatsGrid = styled.div`
 const StatCard = styled.div`
   text-align: center;
   padding: 3rem 2rem;
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));;
   border-radius: 0.8rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
@@ -287,7 +287,7 @@ const ProjectCard = styled.div<{ reverse?: boolean }>`
   align-items: center;
   margin: 6rem 0;
   padding: 4rem;
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));;
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   
@@ -457,7 +457,7 @@ const ClientLogo = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));;
   border-radius: 0.8rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;

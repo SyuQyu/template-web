@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Import Leaflet CSS
+import 'leaflet/dist/leaflet.css';
+
 // default breakpoints
 // {
 //   smallPhone: 320;

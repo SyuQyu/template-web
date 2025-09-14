@@ -1,10 +1,9 @@
 import dynamic from 'next/dynamic';
-import NextImage, { ImageProps } from 'next/image';
+import NextImage from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { useLanguage } from 'contexts/language.context';
 import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
 import { NavItems, SingleNavItem } from 'types';
 import { media } from 'utils/media';
@@ -17,7 +16,6 @@ const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr
 
 type NavbarProps = { items: NavItems };
 type ScrollingDirections = 'up' | 'down' | 'none';
-type NavbarContainerProps = { hidden: boolean; transparent: boolean };
 
 export default function Navbar({ items }: NavbarProps) {
   const router = useRouter();
@@ -61,17 +59,19 @@ export default function Navbar({ items }: NavbarProps) {
     lastScrollY.current = currentScrollY;
   }
 
-  const isNavbarHidden = scrollingDirection === 'down';
-  const isTransparent = scrollingDirection === 'none';
 
   return (
-    <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
+    <NavbarContainer >
       <Content>
         <NextLink href="/" passHref>
-          <LogoWrapper>
-            <NextImage src={"/mkb_logo_png_new.png"} alt={"logo"} width={30} height={30} objectFit="cover" />
-            <p>Mitra Kawan Bersama</p>
-          </LogoWrapper>
+          <div className='flex justify-start items-center cursor-pointer mr-auto gap-2'>
+            <NextImage src={"/mkb_logo_png_new.png"} alt={"logo"} width={40} height={40} objectFit="cover" />
+             <NavItemWrapper>
+              <NextLink href={"#"} passHref>
+                <h1 className='xl:!block !hidden'>Mitra Kawan Bersama</h1>
+              </NextLink>
+            </NavItemWrapper>
+          </div>
         </NextLink>
         <NavItemList>
           {items.map((singleItem) => (
@@ -126,22 +126,14 @@ const HamburgerMenuWrapper = styled.div`
   }
 `;
 
-const LogoWrapper = styled.a`
-  display: flex;
-  margin-right: auto;
-  text-decoration: none;
-  width: 120px;
-  height: 40px;
-
-  color: rgb(var(--logoColor));
-`;
-
 const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   background-color: ${(p) => (p.outlined ? 'rgb(var(--primary))' : 'transparent')};
   border-radius: 0.5rem;
   font-size: 1.3rem;
   text-transform: uppercase;
   line-height: 2;
+  items-align: center;
+  white-space: nowrap;
 
   &:hover {
     background-color: ${(p) => (p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
@@ -157,12 +149,21 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
     font-weight: 700;
   }
 
+  h1 {
+    display: flex;
+    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+  }
+
   &:not(:last-child) {
     margin-right: 2rem;
   }
 `;
 
-const NavbarContainer = styled.div<NavbarContainerProps>`
+const NavbarContainer = styled.div`
   display: flex;
   position: sticky;
   top: 0;
@@ -173,8 +174,6 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
 
   background-color: rgb(var(--navbarBackground));
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
-  visibility: ${(p) => (p.hidden ? 'hidden' : 'visible')};
-  transform: ${(p) => (p.hidden ? `translateY(-8rem) translateZ(0) scale(1)` : 'translateY(0) translateZ(0) scale(1)')};
 
   transition-property: transform, visibility, height, box-shadow, background-color;
   transition-duration: 0.15s;

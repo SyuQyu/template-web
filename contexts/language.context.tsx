@@ -131,6 +131,47 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.get.touch': 'Hubungi Tim Kami',
     'contact.map.address': 'Jl. Industri Raya No. 15, Kawasan Industri Pulo Gadung, Jakarta Timur 13920, Indonesia',
     
+    // Contact Information
+    'contact.info.title': 'Informasi Kontak',
+    'contact.jakarta.title': 'Kantor Pusat Jakarta',
+    'contact.jakarta.address': 'The East Floor 35 Unit 3, Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Bar., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950',
+    'contact.jakarta.phone': '+62 21 4682 1234',
+    'contact.jakarta.fax': '+62 21 4682 1235',
+    'contact.duri.title': 'Duri Yard - Operational Base',
+    'contact.duri.address': 'Jl. Lintas Timur KM 85, Duri, Bengkalis, Riau 28784, Indonesia',
+    'contact.duri.phone': '+62 765 41234',
+    'contact.duri.fax': '+62 765 41235',
+    
+    // Contact Persons
+    'contact.persons.title': 'Tim Kontak',
+    'contact.sales.title': 'Sales Manager',
+    'contact.sales.name': 'Budi Santoso',
+    'contact.sales.phone': '+62 812 3456 7890',
+    'contact.sales.email': 'budi.santoso@mitrakawanbersama.co.id',
+    'contact.operations.title': 'Operations Manager',
+    'contact.operations.name': 'Sari Widiastuti',
+    'contact.operations.phone': '+62 813 4567 8901',
+    'contact.operations.email': 'sari.widiastuti@mitrakawanbersama.co.id',
+    'contact.technical.title': 'Technical Support',
+    'contact.technical.name': 'Agus Pratama',
+    'contact.technical.phone': '+62 814 5678 9012',
+    'contact.technical.email': 'agus.pratama@mitrakawanbersama.co.id',
+    
+    // Contact Form
+    'contact.form.title': 'Form Inquiry Online',
+    'contact.form.subtitle': 'Silakan isi form di bawah ini untuk mendapatkan quotation atau informasi lebih lanjut.',
+    'contact.form.name': 'Nama Lengkap',
+    'contact.form.company': 'Nama Perusahaan',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Nomor Telepon',
+    'contact.form.project.type': 'Jenis Proyek',
+    'contact.form.equipment.needed': 'Equipment yang Dibutuhkan',
+    'contact.form.project.location': 'Lokasi Proyek',
+    'contact.form.duration': 'Durasi Rental',
+    'contact.form.message': 'Pesan/Detail Requirements',
+    'contact.form.submit': 'Kirim Inquiry',
+    'contact.form.reset': 'Reset Form',
+    
     // Partnership Page
     'partnership.page.title': 'Kemitraan',
     'partnership.page.subtitle': 'PT. Mitra Kawan Bersama menjalin kemitraan dengan berbagai principal dan supplier terkemuka, baik domestik maupun internasional, untuk memastikan ketersediaan produk berkualitas dengan harga kompetitif.',
@@ -267,6 +308,49 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.offices': 'Regional Offices',
     'contact.emergency.title': '24/7 Emergency Support',
     'contact.emergency.subtitle': 'For urgent equipment breakdown or emergency rental needs, our 24/7 support team is ready to assist you.',
+    'contact.get.touch': 'Get In Touch',
+    'contact.map.address': 'Jl. Raya Industri No. 123, Kawasan Industri Pulo Gadung, Jakarta Timur 13920, Indonesia',
+    
+    // Contact Information
+    'contact.info.title': 'Contact Information',
+    'contact.jakarta.title': 'Jakarta Head Office',
+    'contact.jakarta.address': 'The East Floor 35 Unit 3, Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Bar., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950',
+    'contact.jakarta.phone': '+62 21 4682 1234',
+    'contact.jakarta.fax': '+62 21 4682 1235',
+    'contact.duri.title': 'Duri Yard - Operational Base',
+    'contact.duri.address': 'Jl. Lintas Timur KM 85, Duri, Bengkalis, Riau 28784, Indonesia',
+    'contact.duri.phone': '+62 765 41234',
+    'contact.duri.fax': '+62 765 41235',
+    
+    // Contact Persons
+    'contact.persons.title': 'Contact Team',
+    'contact.sales.title': 'Sales Manager',
+    'contact.sales.name': 'Budi Santoso',
+    'contact.sales.phone': '+62 812 3456 7890',
+    'contact.sales.email': 'budi.santoso@mitrakawanbersama.co.id',
+    'contact.operations.title': 'Operations Manager',
+    'contact.operations.name': 'Sari Widiastuti',
+    'contact.operations.phone': '+62 813 4567 8901',
+    'contact.operations.email': 'sari.widiastuti@mitrakawanbersama.co.id',
+    'contact.technical.title': 'Technical Support',
+    'contact.technical.name': 'Agus Pratama',
+    'contact.technical.phone': '+62 814 5678 9012',
+    'contact.technical.email': 'agus.pratama@mitrakawanbersama.co.id',
+    
+    // Contact Form
+    'contact.form.title': 'Online Inquiry Form',
+    'contact.form.subtitle': 'Please fill out the form below to get a quotation or more information.',
+    'contact.form.name': 'Full Name',
+    'contact.form.company': 'Company Name',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Phone Number',
+    'contact.form.project.type': 'Project Type',
+    'contact.form.equipment.needed': 'Equipment Needed',
+    'contact.form.project.location': 'Project Location',
+    'contact.form.duration': 'Rental Duration',
+    'contact.form.message': 'Message/Detail Requirements',
+    'contact.form.submit': 'Send Inquiry',
+    'contact.form.reset': 'Reset Form',
     
     // Partnership Page
     'partnership.page.title': 'Partnership',
@@ -279,10 +363,6 @@ const translations: Record<Language, Record<string, string>> = {
     'partnership.list.suppliers': 'Suppliers with proven track record',
     'partnership.list.technology': 'Technology partners for innovative solutions',
     'partnership.list.distributors': 'Authorized distributors for renowned brands',
-    
-    // Contact Page Additional
-    'contact.get.touch': 'Get in Touch with Our Team',
-    'contact.map.address': 'Jl. Industri Raya No. 15, Kawasan Industri Pulo Gadung, Jakarta Timur 13920, Indonesia',
     
     // Footer
     'footer.about': 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 15+ years of experience serving the oil & gas, power plant, and construction industries in Indonesia.',

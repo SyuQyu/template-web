@@ -154,7 +154,7 @@ const Description = styled.p`
   font-size: 1.8rem;
   line-height: 1.6;
   margin-top: 2rem;
-  color: var(--text-secondary);
+  color: rgb(var(--text-secondary));
 `;
 
 const MissionList = styled.ul`
@@ -172,15 +172,10 @@ const MissionList = styled.ul`
       content: '✓';
       position: absolute;
       left: 0;
-      color: var(--primary);
+      color: rgb(var(--primary));
       font-weight: bold;
     }
   }
-`;
-
-const ValuesSection = styled.div`
-  text-align: center;
-  margin: 8rem 0;
 `;
 
 const ManagementSection = styled.div`
@@ -201,7 +196,7 @@ const ManagementGrid = styled.div`
 `;
 
 const ManagementCard = styled.div`
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));
   padding: 3rem 2rem;
   border-radius: 0.8rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -224,20 +219,20 @@ const ManagementPhoto = styled.img`
 const ManagementName = styled.h3`
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: var(--primary);
+  color: rgb(var(--primary));
 `;
 
 const ManagementPosition = styled.h4`
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: var(--text-secondary);
+  color: rgb(var(--text-secondary));
   font-weight: normal;
 `;
 
 const ManagementDescription = styled.p`
   font-size: 1.4rem;
   line-height: 1.5;
-  color: var(--text-secondary);
+  color: rgb(var(--text-secondary));
 `;
 
 const PartnersSection = styled.div`
@@ -263,7 +258,6 @@ const PartnerLogo = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: var(--cardBackground);
   border-radius: 0.8rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -294,12 +288,12 @@ const CoreStrengthsList = styled.ul`
       content: '⚡';
       position: absolute;
       left: 0;
-      color: var(--primary);
+      color: rgb(var(--primary));
       font-size: 1.5rem;
     }
     
     strong {
-      color: var(--primary);
+      color: rgb(var(--primary));
     }
   }
 `;

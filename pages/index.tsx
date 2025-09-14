@@ -194,7 +194,33 @@ const DarkerBackgroundContainer = styled.div`
 `;
 
 const WhiteBackgroundContainer = styled.div`
-  background: rgb(var(--secondBackground));
+  background: url('/bg.webp') center center/cover no-repeat;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+    
+  }
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  
+  .next-dark-theme & {
+    &::before {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+  
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
 
   & > :last-child {
     padding-bottom: 15rem;

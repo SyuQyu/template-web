@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import Container from 'components/Container';
+import GoogleMaps from 'components/GoogleMaps';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import { useLanguage } from 'contexts/language.context';
@@ -43,102 +44,13 @@ export default function ContactPage() {
           <Container>
             <SectionTitle>{t('contact.location')}</SectionTitle>
             <MapWrapper>
-              <MapPlaceholder>
-                                <MapText>
-                  Interactive Map
-                  <MapAddress>
-                    {t('contact.map.address')}
-                  </MapAddress>
-                </MapText>
-              </MapPlaceholder>
+              <GoogleMaps 
+                width="100%"
+                height="450px"
+              />
             </MapWrapper>
           </Container>
         </MapSection>
-
-        <OfficesSection>
-          <Container>
-            <SectionTitle>Regional Offices</SectionTitle>
-            <OfficesGrid>
-              <OfficeCard>
-                <OfficeTitle>Jakarta Head Office</OfficeTitle>
-                <OfficeAddress>
-                  Jl. Industri Raya No. 15, Kawasan Industri Pulo Gadung
-                  <br />
-                  Jakarta Timur 13260, Indonesia
-                </OfficeAddress>
-                <OfficeDetails>
-                  <DetailItem>
-                    <strong>Phone:</strong> +62 21 5555 0123
-                  </DetailItem>
-                  <DetailItem>
-                    <strong>Fax:</strong> +62 21 5555 0124
-                  </DetailItem>
-                  <DetailItem>
-                    <strong>Email:</strong> jakarta@mkb.co.id
-                  </DetailItem>
-                </OfficeDetails>
-              </OfficeCard>
-
-              <OfficeCard>
-                <OfficeTitle>Surabaya Branch</OfficeTitle>
-                <OfficeAddress>
-                  Jl. Raya Industri No. 28, Kawasan Industri SIER
-                  <br />
-                  Surabaya 60918, Jawa Timur
-                </OfficeAddress>
-                <OfficeDetails>
-                  <DetailItem>
-                    <strong>Phone:</strong> +62 31 7777 0156
-                  </DetailItem>
-                  <DetailItem>
-                    <strong>Fax:</strong> +62 31 7777 0157
-                  </DetailItem>
-                  <DetailItem>
-                    <strong>Email:</strong> surabaya@mkb.co.id
-                  </DetailItem>
-                </OfficeDetails>
-              </OfficeCard>
-
-              <OfficeCard>
-                <OfficeTitle>Balikpapan Branch</OfficeTitle>
-                <OfficeAddress>
-                  Jl. Soekarno Hatta KM 8.5, Kawasan Industri Kariangau
-                  <br />
-                  Balikpapan 76127, Kalimantan Timur
-                </OfficeAddress>
-                <OfficeDetails>
-                  <DetailItem>
-                    <strong>Phone:</strong> +62 542 888 0189
-                  </DetailItem>
-                  <DetailItem>
-                    <strong>Fax:</strong> +62 542 888 0190
-                  </DetailItem>
-                  <DetailItem>
-                    <strong>Email:</strong> balikpapan@mkb.co.id
-                  </DetailItem>
-                </OfficeDetails>
-              </OfficeCard>
-            </OfficesGrid>
-          </Container>
-        </OfficesSection>
-
-        <EmergencySection>
-          <Container>
-            <EmergencyCard>
-              <EmergencyContent>
-                <EmergencyTitle>24/7 Emergency Support</EmergencyTitle>
-                <EmergencyText>
-                  For urgent equipment breakdown or emergency rental needs, 
-                  our 24/7 support team is ready to assist you.
-                </EmergencyText>
-                <EmergencyContact>
-                  <EmergencyPhone>+62 812 3456 7890</EmergencyPhone>
-                  <EmergencyEmail>emergency@mkb.co.id</EmergencyEmail>
-                </EmergencyContact>
-              </EmergencyContent>
-            </EmergencyCard>
-          </Container>
-        </EmergencySection>
       </ContactWrapper>
     </>
   );

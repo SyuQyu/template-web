@@ -56,7 +56,7 @@ export default function Footer() {
           ))}
         </ListContainer>
         <BottomBar>
-          <ShareBar>
+          <ShareBar className='flex flex-row justify-start items-center'>
             <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
               <a>
                 <TwitterIcon size={50} round={true} />
@@ -169,6 +169,7 @@ const BottomBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   ${media('<=tablet')} {
     flex-direction: column;

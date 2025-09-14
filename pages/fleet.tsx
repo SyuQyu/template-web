@@ -143,7 +143,12 @@ export default function FleetPage() {
         </BasicSection>
 
         <Container>
-          <FilterSection>
+
+          <EquipmentSection>
+            <OverTitle>Equipment Categories</OverTitle>
+            <SectionTitle>Heavy Equipment by Category</SectionTitle>
+            
+            <FilterSection>
             <FilterContainer>
               <SearchBox>
                 <SearchInput
@@ -172,11 +177,7 @@ export default function FleetPage() {
               </CategoryFilter>
             </FilterContainer>
           </FilterSection>
-
-          <EquipmentSection>
-            <OverTitle>Equipment Categories</OverTitle>
-            <SectionTitle>Heavy Equipment by Category</SectionTitle>
-            
+          
             {filteredCategories.map((category, idx) => (
               <CategoryCard key={category.category}>
                 <CategoryHeader>
@@ -332,7 +333,7 @@ const SearchInput = styled.input`
   border: 2px solid var(--border);
   border-radius: 2rem;
   font-size: 1.6rem;
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));
   color: var(--text);
   
   &:focus {
@@ -360,7 +361,7 @@ const FilterButton = styled.button<{ active?: boolean }>`
   padding: 1rem 2rem;
   border: 2px solid ${props => props.active ? 'var(--primary)' : 'var(--border)'};
   border-radius: 2rem;
-  background: ${props => props.active ? 'var(--primary)' : 'var(--cardBackground)'};
+  background: ${props => props.active ? 'rgb(var(--primary))' : 'rgb(var(--cardBackground));'};
   color: ${props => props.active ? 'white' : 'var(--text)'};
   font-size: 1.4rem;
   font-weight: 500;
@@ -380,7 +381,7 @@ const EquipmentSection = styled.div`
 `;
 
 const CategoryCard = styled.div`
-  background: var(--cardBackground);
+  background: rgb(var(--cardBackground));
   border-radius: 1.5rem;
   padding: 3rem;
   margin-bottom: 4rem;
