@@ -4,49 +4,49 @@ import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function PartnershipPage() {
+  const { t } = useLanguage();
+  
   return (
     <>
       <Head>
-        <title>Partnership - PT. Mitra Kawan Bersama</title>
+        <title>{t('partnership.page.title')} - PT. Mitra Kawan Bersama</title>
         <meta
           name="description"
-          content="Kemitraan strategis PT. Mitra Kawan Bersama dengan principal dan supplier terkemuka untuk memberikan solusi terbaik bagi industri Indonesia."
+          content={t('partnership.page.subtitle')}
         />
       </Head>
       
       <PartnershipWrapper>
         <Container>
           <HeaderSection>
-            <OverTitle>Partnership</OverTitle>
-            <SectionTitle>Kemitraan Strategis</SectionTitle>
+            <OverTitle>{t('partnership.page.title')}</OverTitle>
+            <SectionTitle>{t('partnership.strategic.title')}</SectionTitle>
             <Description>
-              PT. Mitra Kawan Bersama menjalin kemitraan dengan berbagai principal dan supplier 
-              terkemuka baik domestik maupun internasional untuk memastikan ketersediaan produk 
-              berkualitas dengan harga kompetitif.
+              {t('partnership.page.subtitle')}
             </Description>
           </HeaderSection>
         </Container>
 
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
-          title="Global Partnership Network" 
+          title={t('partnership.global.title')} 
           overTitle="International"
         >
           <PartnershipDescription>
-            <h4>Jaringan Kemitraan Global</h4>
+            <h4>{t('partnership.global.title')}</h4>
             <p>
-              Kami bermitra dengan manufacturer dan supplier terkemuka dari berbagai negara untuk 
-              menghadirkan teknologi dan produk terdepan bagi industri Indonesia.
+              {t('partnership.global.subtitle')}
             </p>
             <PartnershipList>
-              <li>Principal dari Eropa, Amerika, dan Asia</li>
-              <li>Manufacturer dengan sertifikasi internasional</li>
-              <li>Supplier dengan track record yang terpercaya</li>
-              <li>Technology partners untuk solusi inovatif</li>
-              <li>Authorized distributor untuk brand ternama</li>
+              <li>{t('partnership.list.principals')}</li>
+              <li>{t('partnership.list.manufacturers')}</li>
+              <li>{t('partnership.list.suppliers')}</li>
+              <li>{t('partnership.list.technology')}</li>
+              <li>{t('partnership.list.distributors')}</li>
             </PartnershipList>
           </PartnershipDescription>
         </BasicSection>

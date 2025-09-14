@@ -4,45 +4,42 @@ import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function ServicesPage() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Head>
-        <title>Services - PT. Mitra Kawan Bersama</title>
+        <title>{t('services.title')} - PT. Mitra Kawan Bersama</title>
         <meta
           name="description"
-          content="Layanan terpadu PT. Mitra Kawan Bersama: Equipment Rental, Rig Move & Relocation, Maintenance & Repair, Manpower Supply, dan CCPM/QAQC Support."
+          content={t('services.subtitle')}
         />
       </Head>
       
       <ServicesWrapper>
         <Container>
           <HeaderSection>
-            <OverTitle>Our Services</OverTitle>
+            <OverTitle>{t('services.title')}</OverTitle>
             <SectionTitle>Comprehensive Heavy Equipment Services</SectionTitle>
             <Description>
-              PT. Mitra Kawan Bersama menyediakan layanan komprehensif untuk mendukung proyek konstruksi 
-              dan infrastruktur dengan standar kualitas dan safety terbaik.
+              {t('services.subtitle')}
             </Description>
           </HeaderSection>
         </Container>
 
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
-          title="Equipment Rental" 
+          title={t('services.rental.title')} 
           overTitle="Core Service"
         >
           <ServiceDescription>
-            <h4>Heavy Equipment Rental Solutions</h4>
+            <h4>{t('services.rental.title')}</h4>
             <ServiceList>
-              <li>Rental mobile cranes, crawler cranes, dan lifting equipment</li>
-              <li>Lowbed trucks dan specialized transportation equipment</li>
-              <li>Bulldozers, excavators, dan earthmoving equipment</li>
-              <li>Flexible rental terms: daily, weekly, monthly, long-term</li>
-              <li>Comprehensive insurance coverage untuk semua equipment</li>
-              <li>Certified operators dan experienced crew included</li>
+              <li>{t('services.rental.desc')}</li>
             </ServiceList>
           </ServiceDescription>
         </BasicSection>

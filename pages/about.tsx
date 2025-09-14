@@ -4,61 +4,57 @@ import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function AboutPage() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Head>
-        <title>About Us - PT. Mitra Kawan Bersama</title>
+        <title>{t('about.title')} - PT. Mitra Kawan Bersama</title>
         <meta
           name="description"
-          content="PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya sejak 2010. Pelajari lebih lanjut tentang visi, misi, dan tim management kami."
+          content={t('about.subtitle')}
         />
       </Head>
       
       <AboutWrapper>
         <Container>
           <HeaderSection>
-            <OverTitle>About PT. Mitra Kawan Bersama</OverTitle>
+            <OverTitle>{t('about.title')}</OverTitle>
             <SectionTitle>Your Trusted Heavy Equipment Partner</SectionTitle>
             <Description>
-              PT. Mitra Kawan Bersama (MKB) adalah perusahaan yang bergerak di bidang penyewaan alat berat 
-              dan layanan pendukung konstruksi. Didirikan pada tahun 2010, kami telah membangun reputasi 
-              sebagai mitra terpercaya dalam menyediakan solusi heavy equipment berkualitas tinggi.
+              {t('about.subtitle')}
             </Description>
           </HeaderSection>
         </Container>
 
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
-          title="Visi Perusahaan" 
+          title={t('about.vision.title')} 
           overTitle="Vision"
           reversed
         >
           <p>
-            Menjadi perusahaan penyedia layanan heavy equipment terdepan di Indonesia yang memberikan 
-            solusi terbaik dan berkelanjutan untuk kemajuan industri konstruksi dan infrastruktur.
+            {t('about.vision.content')}
           </p>
         </BasicSection>
 
         <BasicSection 
           imageUrl="/demo-illustration-2.svg" 
-          title="Misi Perusahaan" 
+          title={t('about.mission.title')} 
           overTitle="Mission"
         >
           <MissionList>
-            <li>Menyediakan heavy equipment berkualitas tinggi dengan standar safety terbaik</li>
-            <li>Memberikan pelayanan rental dan maintenance yang profesional dan responsif</li>
-            <li>Membangun kemitraan jangka panjang yang saling menguntungkan dengan klien</li>
-            <li>Mendukung pembangunan infrastruktur Indonesia melalui layanan yang berkualitas</li>
-            <li>Mengembangkan SDM yang kompeten dan berpengalaman di bidang heavy equipment</li>
+            <li>{t('about.mission.content')}</li>
           </MissionList>
         </BasicSection>
 
         <Container>
           <ManagementSection>
-            <OverTitle>Management Team</OverTitle>
+            <OverTitle>{t('about.management.title')}</OverTitle>
             <SectionTitle>Tim Management Berpengalaman</SectionTitle>
             
             <ManagementGrid>
@@ -95,7 +91,7 @@ export default function AboutPage() {
           </ManagementSection>
 
           <PartnersSection>
-            <OverTitle>Our Partners</OverTitle>
+            <OverTitle>{t('about.partners.title')}</OverTitle>
             <SectionTitle>Partner Logo Wall</SectionTitle>
             
             <PartnersGrid>

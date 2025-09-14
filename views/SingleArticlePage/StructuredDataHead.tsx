@@ -18,7 +18,7 @@ export default function StructuredDataHead(props: StructuredDataHeadProps) {
   const currentSiteUrl = EnvVars.URL + 'blog/' + slug;
   const ogImageUrl = EnvVars.OG_IMAGES_URL + `${slug}.png`;
   const domainName = EnvVars.URL.replace('https://', '');
-  const logoUrl = EnvVars.URL + 'logo.png';
+  const logoUrl = EnvVars.URL + 'mkb_logo_png_new.png';
 
   return (
     <Head>

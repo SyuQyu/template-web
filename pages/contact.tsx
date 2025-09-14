@@ -3,30 +3,31 @@ import styled from 'styled-components';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 import FormSection from 'views/ContactPage/FormSection';
 import InformationSection from 'views/ContactPage/InformationSection';
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+  
   return (
     <>
       <Head>
-        <title>Contact Us - PT. Mitra Kawan Bersama</title>
+        <title>{t('contact.page.title')} - PT. Mitra Kawan Bersama</title>
         <meta
           name="description"
-          content="Contact PT. Mitra Kawan Bersama untuk heavy equipment rental, crane services, dan construction support. Jakarta office: +62 21 5555 0123"
+          content={t('contact.page.subtitle')}
         />
       </Head>
       
       <ContactWrapper>
         <Container>
           <HeaderSection>
-            <OverTitle>Contact Us</OverTitle>
-            <SectionTitle>Get in Touch with Our Team</SectionTitle>
+            <OverTitle>{t('contact.page.title')}</OverTitle>
+            <SectionTitle>{t('contact.get.touch')}</SectionTitle>
             <Description>
-              Ready to discuss your project requirements? Tim expert kami siap 
-              membantu Anda menemukan solusi heavy equipment rental yang tepat. 
-              Contact us today untuk consultation dan quotation.
+              {t('contact.page.subtitle')}
             </Description>
           </HeaderSection>
         </Container>
@@ -40,15 +41,13 @@ export default function ContactPage() {
 
         <MapSection>
           <Container>
-            <SectionTitle>Our Location</SectionTitle>
+            <SectionTitle>{t('contact.location')}</SectionTitle>
             <MapWrapper>
               <MapPlaceholder>
-                <MapText>
+                                <MapText>
                   Interactive Map
                   <MapAddress>
-                    Jl. Industri Raya No. 15, Kawasan Industri Pulo Gadung
-                    <br />
-                    Jakarta Timur 13260, Indonesia
+                    {t('contact.map.address')}
                   </MapAddress>
                 </MapText>
               </MapPlaceholder>

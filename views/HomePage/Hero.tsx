@@ -5,26 +5,29 @@ import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function Hero() {
+  const { t } = useLanguage();
 
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>Your Trusted Industrial Partner Since 2010</CustomOverTitle>
+        <CustomOverTitle>{t('hero.title')}</CustomOverTitle>
         <Heading>PT. Mitra Kawan Bersama</Heading>
         <Description>
-          Menyediakan solusi terpadu untuk kebutuhan industri Anda dengan komitmen pada kualitas, inovasi, dan pelayanan terbaik. 
-          Kami adalah mitra terpercaya dalam distribusi produk-produk industri berkualitas tinggi.
+          {t('hero.subtitle')}
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => console.log("click")}>
-            Hubungi Kami <span>&rarr;</span>
-          </Button>
-          <NextLink href="#services" passHref>
+          <NextLink href="/contact" passHref>
+            <Button>
+              {t('hero.cta.consultation')} <span>&rarr;</span>
+            </Button>
+          </NextLink>
+          <NextLink href="/fleet" passHref>
             <Button transparent>
-              Layanan Kami <span>&rarr;</span>
+              {t('hero.cta.fleet')} <span>&rarr;</span>
             </Button>
           </NextLink>
         </CustomButtonGroup>

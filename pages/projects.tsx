@@ -4,6 +4,7 @@ import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 const PROJECT_CASES = [
@@ -85,25 +86,25 @@ const STATISTICS = [
 ];
 
 export default function ProjectsPage() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Head>
-        <title>Projects / Track Record - PT. Mitra Kawan Bersama</title>
+        <title>{t('projects.page.title')} - PT. Mitra Kawan Bersama</title>
         <meta
           name="description"
-          content="Track record proyek PT. Mitra Kawan Bersama: 150+ completed projects untuk klien major seperti BP, PLN, Pertamina dengan 99.8% safety record."
+          content={t('projects.page.subtitle')}
         />
       </Head>
       
       <ProjectsWrapper>
         <Container>
           <HeaderSection>
-            <OverTitle>Projects / Track Record</OverTitle>
+            <OverTitle>{t('projects.page.title')}</OverTitle>
             <SectionTitle>Proven Excellence in Major Projects</SectionTitle>
             <Description>
-              PT. Mitra Kawan Bersama telah dipercaya dalam 150+ proyek major oleh klien-klien 
-              terkemuka di Indonesia. Track record kami menunjukkan konsistensi dalam delivery 
-              quality, safety, dan on-time completion.
+              {t('projects.page.subtitle')}
             </Description>
           </HeaderSection>
         </Container>

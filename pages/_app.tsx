@@ -11,11 +11,13 @@ import React, { PropsWithChildren } from 'react';
 
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
-import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
-import NewsletterModal from 'components/NewsletterModal';
 import WaveCta from 'components/WaveCta';
+import { LanguageProvider } from 'contexts/language.context';
 import { NavItems } from 'types';
+
+// Dynamic import for Navbar to access language context
+const DynamicNavbar = dynamic(() => import('components/DynamicNavbar'), { ssr: false });
 
 const navItems: NavItems = [
   { title: 'About Us', href: '/about' },
@@ -52,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Providers>
         {/* <Modals /> */}
-        <Navbar items={navItems} />
+        <DynamicNavbar />
           <Component {...pageProps} />
         <WaveCta />
         <Footer />
@@ -63,13 +65,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 function Providers<T>({ children }: PropsWithChildren<T>) {
   return (
+    <LanguageProvider>
       <NavigationDrawer items={navItems}>{children}</NavigationDrawer>
+    </LanguageProvider>
   );
-}
-
-function Modals() {
-
-  return <NewsletterModal onClose={() => console.log("close")} />;
 }
 
 export default MyApp;

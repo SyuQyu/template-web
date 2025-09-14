@@ -1,16 +1,17 @@
 import dynamic from 'next/dynamic';
+import NextImage, { ImageProps } from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
+import { useLanguage } from 'contexts/language.context';
 import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
 import { NavItems, SingleNavItem } from 'types';
 import { media } from 'utils/media';
-import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
-import Logo from './Logo';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -68,7 +69,8 @@ export default function Navbar({ items }: NavbarProps) {
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
-            <Logo />
+            <NextImage src={"/mkb_logo_png_new.png"} alt={"logo"} width={30} height={30} objectFit="cover" />
+            <p>Mitra Kawan Bersama</p>
           </LogoWrapper>
         </NextLink>
         <NavItemList>
@@ -76,6 +78,9 @@ export default function Navbar({ items }: NavbarProps) {
             <NavItem key={singleItem.href} {...singleItem} />
           ))}
         </NavItemList>
+        <LanguageSwitcherContainer>
+          <LanguageSwitcher />
+        </LanguageSwitcherContainer>
         <ColorSwitcherContainer>
           <ColorSwitcher />
         </ColorSwitcherContainer>
@@ -102,11 +107,6 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
   );
 }
 
-const CustomButton = styled(Button)`
-  padding: 0.75rem 1.5rem;
-  line-height: 1.8;
-`;
-
 const NavItemList = styled.div`
   display: flex;
   list-style: none;
@@ -130,6 +130,8 @@ const LogoWrapper = styled.a`
   display: flex;
   margin-right: auto;
   text-decoration: none;
+  width: 120px;
+  height: 40px;
 
   color: rgb(var(--logoColor));
 `;
@@ -187,5 +189,9 @@ const Content = styled(Container)`
 
 const ColorSwitcherContainer = styled.div`
   width: 4rem;
+  margin: 0 1rem;
+`;
+
+const LanguageSwitcherContainer = styled.div`
   margin: 0 1rem;
 `;
