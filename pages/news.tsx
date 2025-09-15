@@ -183,7 +183,7 @@ export default function NewsPage() {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="PT. Mitra Kawan Bersama" />
         <link rel="canonical" href="https://mitrakawanbersama.co.id/news" />
-      </Head>
+
       </Head>
 
       <NewsWrapper>

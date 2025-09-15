@@ -40,7 +40,7 @@ export default function Homepage({ posts }: any) {
         <meta name="author" content="PT. Mitra Kawan Bersama" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://mitrakawanbersama.co.id/" />
-      </Head>
+
         <meta property="og:url" content="https://mkb.co.id" />
         <meta property="og:image" content="https://mkb.co.id/mkb_logo_png_new.png" />
         <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />

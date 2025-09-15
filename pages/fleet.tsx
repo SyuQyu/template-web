@@ -168,7 +168,6 @@ export default function FleetPage() {
             })
           }}
         />
-      </Head>
         <meta name="twitter:description" content="Sewa heavy equipment terlengkap: mobile cranes 750+ ton, bulldozers, excavators dengan operator berpengalaman." />
         <meta name="twitter:image" content="https://mkb.co.id/demo-illustration-1.svg" />
         
