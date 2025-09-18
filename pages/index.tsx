@@ -17,44 +17,44 @@ export default function Homepage({ posts }: any) {
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'PT. Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'}</title>
+        <title>{language === 'id' ? 'PT Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman. Melayani crane rental, heavy lift operations untuk oil & gas, power plant, dan industrial projects.' : 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.'}
+          content={language === 'id' ? 'PT Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman. Melayani crane rental, heavy lift operations untuk oil & gas, power plant, dan industrial projects.' : 'PT Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.'}
         />
         <meta name="keywords" content={language === 'id' ? 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia' : 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia'} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'PT. Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'} />
-        <meta property="og:description" content={language === 'id' ? 'PT. Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
+        <meta property="og:title" content={language === 'id' ? 'PT Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'} />
+        <meta property="og:description" content={language === 'id' ? 'PT Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'PT. Mitra Kawan Bersama - Heavy Equipment Rental Terpercaya' : 'PT. Mitra Kawan Bersama - Trusted Heavy Equipment Rental'} />
+        <meta name="twitter:title" content={language === 'id' ? 'PT Mitra Kawan Bersama - Heavy Equipment Rental Terpercaya' : 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental'} />
         <meta name="twitter:description" content={language === 'id' ? 'Perusahaan heavy equipment rental dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'Heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <meta name="author" content="PT Mitra Kawan Bersama" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://mitrakawanbersama.co.id/" />
 
         <meta property="og:url" content="https://mkb.co.id" />
         <meta property="og:image" content="https://mkb.co.id/mkb_logo_png_new.png" />
-        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:site_name" content="PT Mitra Kawan Bersama" />
         <meta property="og:locale" content="id_ID" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PT. Mitra Kawan Bersama | Heavy Equipment Rental Indonesia" />
+        <meta name="twitter:title" content="PT Mitra Kawan Bersama | Heavy Equipment Rental Indonesia" />
         <meta name="twitter:description" content="Leading heavy equipment rental with 150+ completed projects. Professional crane rental & construction support services." />
         <meta name="twitter:image" content="https://mkb.co.id/mkb_logo_png_new.png" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <meta name="author" content="PT Mitra Kawan Bersama" />
         <meta name="language" content="Indonesian" />
         <meta name="geo.region" content="ID-JK" />
         <meta name="geo.placename" content="Jakarta" />
@@ -71,7 +71,7 @@ export default function Homepage({ posts }: any) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "PT. Mitra Kawan Bersama",
+              "name": "PT Mitra Kawan Bersama",
               "alternateName": "MKB Indonesia",
               "description": "Leading heavy equipment rental company in Indonesia specializing in crane rental, heavy lift operations, and construction support services for oil & gas, power plant, and industrial projects.",
               "url": "https://mkb.co.id",
@@ -120,7 +120,7 @@ export default function Homepage({ posts }: any) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "PT. Mitra Kawan Bersama",
+              "name": "PT Mitra Kawan Bersama",
               "image": "https://mkb.co.id/mkb_logo_png_new.png",
               "telephone": "+62-21-5799-0701",
               "email": "info@mkb.co.id",
@@ -216,7 +216,7 @@ export default function Homepage({ posts }: any) {
                 <ProjectImage src="/demo-illustration-2.svg" alt="PLTU Jawa Project" />
                 <ProjectContent>
                   <ProjectTitle>Power Plant Construction - PLTU Jawa-7</ProjectTitle>
-                  <ProjectClient>PT. PLN (Persero)</ProjectClient>
+                  <ProjectClient>PT PLN (Persero)</ProjectClient>
                   <ProjectDescription>
                     Rig move dan heavy equipment support untuk pembangunan 
                     power plant 1000 MW capacity.
@@ -229,7 +229,7 @@ export default function Homepage({ posts }: any) {
                 <ProjectImage src="/demo-illustration-3.png" alt="Pertamina Refinery" />
                 <ProjectContent>
                   <ProjectTitle>Oil Refinery Expansion - Kilang Cilacap</ProjectTitle>
-                  <ProjectClient>PT. Pertamina (Persero)</ProjectClient>
+                  <ProjectClient>PT Pertamina (Persero)</ProjectClient>
                   <ProjectDescription>
                     Equipment rental dan maintenance support untuk refinery 
                     capacity expansion project.
@@ -315,7 +315,7 @@ const DarkerBackgroundContainer = styled.div`
 `;
 
 const WhiteBackgroundContainer = styled.div`
-  background: url('/bg.webp') center center/cover no-repeat;
+  background: url('/Homepage.jpg') center center/cover no-repeat;
   position: relative;
   
   &::before {
@@ -325,7 +325,7 @@ const WhiteBackgroundContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(203, 205, 224, 0.6);
     z-index: 1;
     
   }
@@ -334,7 +334,7 @@ const WhiteBackgroundContainer = styled.div`
   
   .next-dark-theme & {
     &::before {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.76);
     }
   }
   

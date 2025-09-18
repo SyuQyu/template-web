@@ -25,8 +25,8 @@ interface NewsPost {
 const NEWS_POSTS: NewsPost[] = [
   {
     id: 1,
-    title: 'PT. MKB Raih Penghargaan Best Safety Performance 2023',
-    excerpt: 'PT. Mitra Kawan Bersama meraih penghargaan Best Safety Performance dari Indonesian Construction Safety Association untuk pencapaian zero accident selama 24 bulan berturut-turut.',
+    title: 'PT MKB Raih Penghargaan Best Safety Performance 2023',
+    excerpt: 'PT Mitra Kawan Bersama meraih penghargaan Best Safety Performance dari Indonesian Construction Safety Association untuk pencapaian zero accident selama 24 bulan berturut-turut.',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     date: '2023-12-15',
     author: 'Corporate Communications',
@@ -38,7 +38,7 @@ const NEWS_POSTS: NewsPost[] = [
   {
     id: 2,
     title: 'Ekspansi Fleet: Tambahan 5 Unit Crawler Crane Terbaru',
-    excerpt: 'Untuk mendukung proyek-proyek besar tahun 2024, PT. MKB menambah armada dengan 5 unit crawler crane berkapasitas 750-2300 ton dari Liebherr dan Manitowoc.',
+    excerpt: 'Untuk mendukung proyek-proyek besar tahun 2024, PT MKB menambah armada dengan 5 unit crawler crane berkapasitas 750-2300 ton dari Liebherr dan Manitowoc.',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     date: '2023-12-10',
     author: 'Equipment Division',
@@ -62,7 +62,7 @@ const NEWS_POSTS: NewsPost[] = [
   {
     id: 4,
     title: 'Kolaborasi Strategis dengan International Partners',
-    excerpt: 'PT. MKB menjalin kerjasama strategis dengan Mammoet dan Sarens untuk memperkuat capability dalam handling proyek-proyek mega construction.',
+    excerpt: 'PT MKB menjalin kerjasama strategis dengan Mammoet dan Sarens untuk memperkuat capability dalam handling proyek-proyek mega construction.',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     date: '2023-11-28',
     author: 'Business Development',
@@ -98,7 +98,7 @@ const NEWS_POSTS: NewsPost[] = [
   {
     id: 7,
     title: 'Program Safety Training Certification Level 5',
-    excerpt: 'PT. MKB meluncurkan program sertifikasi safety training level 5 untuk seluruh operator dan maintenance crew guna meningkatkan standard keselamatan kerja.',
+    excerpt: 'PT MKB meluncurkan program sertifikasi safety training level 5 untuk seluruh operator dan maintenance crew guna meningkatkan standard keselamatan kerja.',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     date: '2023-11-10',
     author: 'HSE Department',
@@ -110,7 +110,7 @@ const NEWS_POSTS: NewsPost[] = [
   {
     id: 8,
     title: 'Kontrak Baru: PLTU Jawa-8 Senilai USD 42 Million',
-    excerpt: 'PT. MKB memperoleh kontrak baru untuk proyek PLTU Jawa-8 dengan nilai kontrak USD 42 million untuk periode 30 bulan.',
+    excerpt: 'PT MKB memperoleh kontrak baru untuk proyek PLTU Jawa-8 dengan nilai kontrak USD 42 million untuk periode 30 bulan.',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     date: '2023-11-05',
     author: 'Business Development',
@@ -157,31 +157,31 @@ export default function NewsPage() {
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'Berita & Update Industri Terbaru | Insight Heavy Equipment | PT. Mitra Kawan Bersama' : 'Latest News & Industry Updates | Heavy Equipment Insights | PT. Mitra Kawan Bersama'}</title>
+        <title>{language === 'id' ? 'Berita & Update Industri Terbaru | Insight Heavy Equipment | PT Mitra Kawan Bersama' : 'Latest News & Industry Updates | Heavy Equipment Insights | PT Mitra Kawan Bersama'}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'Berita terbaru PT. Mitra Kawan Bersama: update proyek, pengembangan armada, penghargaan safety, insight industri heavy equipment. Tetap update dengan perkembangan terkini perusahaan dan industri konstruksi Indonesia.' : 'Latest news from PT. Mitra Kawan Bersama: project updates, fleet expansion, safety awards, heavy equipment industry insights. Stay updated with company developments and Indonesian construction industry trends.'}
+          content={language === 'id' ? 'Berita terbaru PT Mitra Kawan Bersama: update proyek, pengembangan armada, penghargaan safety, insight industri heavy equipment. Tetap update dengan perkembangan terkini perusahaan dan industri konstruksi Indonesia.' : 'Latest news from PT Mitra Kawan Bersama: project updates, fleet expansion, safety awards, heavy equipment industry insights. Stay updated with company developments and Indonesian construction industry trends.'}
         />
         <meta name="keywords" content={language === 'id' ? 'berita mkb, news heavy equipment, update proyek konstruksi, pengembangan armada crane, safety award, insight industri, berita konstruksi indonesia, heavy equipment news' : 'mkb news, heavy equipment news, construction project updates, crane fleet expansion, safety awards, industry insights, indonesia construction news, heavy equipment industry'} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'Berita & Update Industri Terbaru | Heavy Equipment Insights | PT. MKB' : 'Latest News & Industry Updates | Heavy Equipment Insights | PT. MKB'} />
-        <meta property="og:description" content={language === 'id' ? 'Berita terbaru: update proyek, pengembangan armada, penghargaan safety, insight industri heavy equipment dari PT. Mitra Kawan Bersama.' : 'Latest news: project updates, fleet expansion, safety awards, heavy equipment industry insights from PT. Mitra Kawan Bersama.'} />
+        <meta property="og:title" content={language === 'id' ? 'Berita & Update Industri Terbaru | Heavy Equipment Insights | PT MKB' : 'Latest News & Industry Updates | Heavy Equipment Insights | PT MKB'} />
+        <meta property="og:description" content={language === 'id' ? 'Berita terbaru: update proyek, pengembangan armada, penghargaan safety, insight industri heavy equipment dari PT Mitra Kawan Bersama.' : 'Latest news: project updates, fleet expansion, safety awards, heavy equipment industry insights from PT Mitra Kawan Bersama.'} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mitrakawanbersama.co.id/news" />
         <meta property="og:image" content="https://mitrakawanbersama.co.id/demo-illustration-4.png" />
-        <meta property="og:site_name" content="PT. Mitra Kawan Bersama" />
+        <meta property="og:site_name" content="PT Mitra Kawan Bersama" />
         <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'Berita & Update Industri | PT. Mitra Kawan Bersama' : 'Latest News & Industry Updates | PT. Mitra Kawan Bersama'} />
+        <meta name="twitter:title" content={language === 'id' ? 'Berita & Update Industri | PT Mitra Kawan Bersama' : 'Latest News & Industry Updates | PT Mitra Kawan Bersama'} />
         <meta name="twitter:description" content={language === 'id' ? 'Berita terbaru: update proyek, pengembangan armada, insight industri heavy equipment.' : 'Latest news: project updates, fleet expansion, heavy equipment industry insights.'} />
         <meta name="twitter:image" content="https://mitrakawanbersama.co.id/demo-illustration-4.png" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="PT. Mitra Kawan Bersama" />
+        <meta name="author" content="PT Mitra Kawan Bersama" />
         <link rel="canonical" href="https://mitrakawanbersama.co.id/news" />
 
       </Head>
@@ -193,7 +193,7 @@ export default function NewsPage() {
             <SectionTitle>Latest News & Industry Insights</SectionTitle>
             <Description>
               Stay informed dengan berita terbaru, update proyek, dan insights industri 
-              dari PT. Mitra Kawan Bersama. Dapatkan informasi terkini tentang 
+              dari PT Mitra Kawan Bersama. Dapatkan informasi terkini tentang 
               perkembangan company dan industry heavy equipment rental.
             </Description>
           </HeaderSection>

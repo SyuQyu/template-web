@@ -15,7 +15,7 @@ export default function Hero() {
     <HeroWrapper>
       <Contents>
         <CustomOverTitle>{t('hero.title')}</CustomOverTitle>
-        <Heading>PT. Mitra Kawan Bersama</Heading>
+        <Heading>PT Mitra Kawan Bersama</Heading>
         <Description>
           {t('hero.subtitle')}
         </Description>

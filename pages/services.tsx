@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { SetStateAction, useEffect, useState } from 'react';
 import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
@@ -9,6 +10,55 @@ import { media } from 'utils/media';
 
 export default function ServicesPage() {
   const { t, language } = useLanguage();
+
+  // Photo slider state
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const photos = [
+    { id: 1, src: "/operational/1.jpg", title: "Mobile Crane Operation", category: "Equipment" },
+    { id: 2, src: "/operational/2.jpg", title: "Safety Briefing Session", category: "Team" },
+    { id: 3, src: "/operational/3.jpg", title: "Heavy Lift Operation", category: "Process" },
+    { id: 4, src: "/operational/4.jpg", title: "Rig Moving Project", category: "Process" },
+    { id: 5, src: "/operational/5.jpg", title: "Equipment Maintenance", category: "Equipment" },
+    { id: 6, src: "/operational/6.jpg", title: "Team Coordination", category: "Team" },
+    { id: 7, src: "/operational/7.jpg", title: "Crane Fleet", category: "Equipment" },
+    { id: 8, src: "/operational/8.jpg", title: "On-site Supervision", category: "Team" }, 
+    { id: 9, src: "/operational/9.jpg", title: "Logistics Planning", category: "Process" },
+    { id: 10, src: "/operational/10.jpg", title: "Heavy Equipment Transport", category: "Process" },
+    { id: 11, src: "/operational/11.jpg", title: "Rig Assembly", category: "Process" },
+    { id: 12, src: "/operational/12.jpg", title: "Crane Inspection", category: "Equipment" },
+    { id: 13, src: "/operational/13.jpg", title: "Team Training", category: "Team" },
+    { id: 14, src: "/operational/14.jpg", title: "Project Kick-off Meeting", category: "Team" },
+    { id: 15, src: "/operational/15.jpg", title: "Heavy Lift with Mobile Crane", category: "Process" },
+    { id: 16, src: "/operational/16.jpg", title: "Equipment Staging Area", category: "Equipment" },
+    { id: 17, src: "/operational/17.jpg", title: "Rig Transport Preparation", category: "Process" },
+    { id: 18, src: "/operational/18.jpg", title: "Team Safety Drill", category: "Team" },
+    { id: 19, src: "/operational/19.jpg", title: "Crane Operator at Work", category: "Equipment" },
+    { id: 20, src: "/operational/20.jpg", title: "Project Completion Celebration", category: "Team" },
+    { id: 21, src: "/operational/21.jpg", title: "Heavy Lift Planning", category: "Process" },
+    { id: 22, src: "/operational/22.jpg", title: "Equipment Loading", category: "Process" },
+    { id: 23, src: "/operational/23.jpg", title: "Team Meeting", category: "Team" },
+  ];
+
+  
+
+
+  // If you want to filter photos by category or other logic, do it here.
+  // For now, show all photos.
+  const filteredPhotos = photos;
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % filteredPhotos.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + filteredPhotos.length) % filteredPhotos.length);
+  };
+
+  const goToSlide = (index: SetStateAction<number>) => {
+    setCurrentSlide(index);
+  };
+
 
   return (
     <>
@@ -77,10 +127,60 @@ export default function ServicesPage() {
       </Head>
       
       <ServicesWrapper>
+        <PhotoSliderSection>
+          <Container>
+            <SliderHeader>
+              <OverTitle>Operational Gallery</OverTitle>
+              <SectionTitle>Our Work in Action</SectionTitle>
+              <SliderDescription>
+                Dokumentasi lengkap operasional dan fasilitas PT. Mitra Kawan Bersama
+              </SliderDescription>
+            </SliderHeader>
+
+            <SliderContainer>
+              <SliderWrapper>
+                <SliderTrack currentSlide={currentSlide}>
+                  {filteredPhotos.map((photo, index) => (
+                    <SliderSlide key={photo.id}>
+                      <SlideImage src={photo.src} alt={photo.title} />
+                      <SlideOverlay>
+                        <SlideTitle>{photo.title}</SlideTitle>
+                        <SlideCategory>{photo.category}</SlideCategory>
+                      </SlideOverlay>
+                    </SliderSlide>
+                  ))}
+                </SliderTrack>
+                
+                <NavButton left onClick={prevSlide}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                  </svg>
+                </NavButton>
+                <NavButton right onClick={nextSlide}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                  </svg>
+                </NavButton>
+              </SliderWrapper>
+
+              {/* Dots Indicator */}
+            <DotsContainer>
+                {filteredPhotos.slice(0, Math.min(filteredPhotos.length, 10)).map((_, index) => (
+                  <Dot
+                    key={index}
+                    $active={currentSlide === index}
+                    onClick={() => goToSlide(index)}
+                  />
+                ))}
+              </DotsContainer>
+            </SliderContainer>
+          </Container>
+        </PhotoSliderSection>
+
         <Container>
           <HeaderSection>
             <OverTitle>{t('services.title')}</OverTitle>
-            <SectionTitle>Comprehensive Heavy Equipment Services</SectionTitle>
+            <SectionTitle>Heavy Duty Equipment Services</SectionTitle>
             <Description>
               {t('services.subtitle')}
             </Description>
@@ -88,7 +188,7 @@ export default function ServicesPage() {
         </Container>
 
         <BasicSection 
-          imageUrl="/demo-illustration-1.svg" 
+          imageUrl="/Trucks.png" 
           title={t('services.rental.title')} 
           overTitle="Core Service"
         >
@@ -102,7 +202,7 @@ export default function ServicesPage() {
 
         <BasicSection 
           imageUrl="/demo-illustration-2.svg" 
-          title="Rig Move & Relocation Support" 
+          title="Rig Moving & Relocation Support" 
           overTitle="Specialized Service"
           reversed
         >
@@ -229,6 +329,145 @@ export default function ServicesPage() {
   );
 }
 
+// Photo Slider Styles
+const PhotoSliderSection = styled.div`
+  color:(--primary);
+  padding: 2rem 0;
+  margin-bottom: 5rem;
+`;
+
+const SliderHeader = styled.div`
+  text-align: center;
+  max-width: 80rem;
+  margin: 0 auto 4rem;
+`;
+
+const SliderDescription = styled.p`
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  color: var(--text-secondary);
+`;
+
+const SliderContainer = styled.div`
+  position: relative;
+  max-width: 200rem;
+  margin: 0 auto;
+`;
+
+const SliderWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+`;
+
+const SliderTrack = styled.div<{ currentSlide: number }>`
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-${props => props.currentSlide * 100}%);
+`;
+
+const SliderSlide = styled.div`
+  min-width: 100%;
+  position: relative;
+`;
+
+const SlideImage = styled.img`
+  width: 100%;
+  height: 55rem;
+  object-fit: cover;
+  display: block;
+
+  ${media('<=tablet')} {
+    height: 35rem;
+  }
+`;
+
+const SlideOverlay = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 4rem 3rem 2rem;
+  color: white;
+`;
+
+const SlideTitle = styled.h3`
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+
+  ${media('<=tablet')} {
+    font-size: 2rem;
+  }
+`;
+
+const SlideCategory = styled.p`
+  font-size: 1.4rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+`;
+
+interface NavButtonProps {
+  left?: boolean;
+  right?: boolean;
+}
+
+const NavButton = styled.button<NavButtonProps>`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  ${props => props.left ? 'left: 2rem;' : props.right ? 'right: 2rem;' : ''}
+  background: rgb(var(--border));
+  border: none;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--primary);
+
+  &:hover {
+    background: rgb(var(--cardBackground));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  ${media('<=tablet')} {
+    width: 4rem;
+    height: 4rem;
+    ${props => props.left ? 'left: 1rem;' : props.right ? 'right: 1rem;' : ''}
+  }
+`;
+
+const DotsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 4rem;
+`;
+
+const Dot = styled.button<{ $active: boolean }>`
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: none;
+  background-color: ${props => props.$active ? 'rgb(var(--primary))' : '#ddd'};
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgb(var(--primary));
+  }
+`;
+
+// Existing styles...
 const ServicesWrapper = styled.div`
   padding: 5rem 0;
   

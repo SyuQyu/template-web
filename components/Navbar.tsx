@@ -28,6 +28,7 @@ export default function Navbar({ items }: NavbarProps) {
 
   useScrollPosition(scrollPositionCallback, [router.asPath], undefined, undefined, 50);
 
+  
   function scrollPositionCallback({ currPos }: ScrollPositionEffectProps) {
     const routerPath = router.asPath;
     const hasRouteChanged = routerPath !== lastRoute.current;
@@ -93,6 +94,8 @@ export default function Navbar({ items }: NavbarProps) {
 }
 
 function NavItem({ href, title, outlined }: SingleNavItem) {
+  const router = useRouter();
+  const isActive = router.asPath === href;
 
   if (outlined) {
     
@@ -101,7 +104,7 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
   return (
     <NavItemWrapper outlined={outlined}>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+         <a className={isActive ? 'active' : ''}>{title}</a>
       </NextLink>
     </NavItemWrapper>
   );
@@ -149,6 +152,12 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
     font-weight: 700;
   }
 
+  a:hover,
+  a.active {
+    color: rgb(var(--textSecondary));
+  }
+
+
   h1 {
     display: flex;
     color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
@@ -159,7 +168,7 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   }
 
   &:not(:last-child) {
-    margin-right: 2rem;
+    margin-right: 6rem;
   }
 `;
 

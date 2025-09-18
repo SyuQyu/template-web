@@ -22,7 +22,7 @@ const DynamicNavbar = dynamic(() => import('components/DynamicNavbar'), { ssr: f
 
 const navItems: NavItems = [
   { title: 'About Us', href: '/about' },
-  { title: 'Fleet / Equipment', href: '/fleet' },
+  // { title: 'Fleet / Equipment', href: '/fleet' },
   { title: 'Services', href: '/services' },
   { title: 'Projects', href: '/projects' },
   { title: 'News', href: '/news' },
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>PT. Mitra Kawan Bersama - Your Trusted Industrial Partner</title>
+        <title>PT Mitra Kawan Bersama - Your Trusted Industrial Partner</title>
         <meta name="description" content="PT. Mitra Kawan Bersama adalah perusahaan distribusi produk industri terpercaya sejak 2010. Menyediakan solusi terpadu untuk kebutuhan industri Anda dengan kualitas dan pelayanan terbaik." />
         <meta name="keywords" content="distribusi industri, produk industri, industrial equipment, chemical products, safety equipment, Indonesia" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -115,7 +115,7 @@ export default function AboutPage() {
         </BasicSection>
 
         <Container>
-          <ManagementSection>
+          {/* <ManagementSection>
             <OverTitle>{t('about.management.title')}</OverTitle>
             <SectionTitle>Tim Management Berpengalaman</SectionTitle>
             
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 </ManagementDescription>
               </ManagementCard>
             </ManagementGrid>
-          </ManagementSection>
+          </ManagementSection> */}
 
           <PartnersSection>
             <OverTitle>{t('about.partners.title')}</OverTitle>

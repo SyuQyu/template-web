@@ -7,39 +7,25 @@ import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  'logoipsum-logo-1.svg',
-  'logoipsum-logo-2.svg',
-  'logoipsum-logo-3.svg',
-  'logoipsum-logo-4.svg',
-  'logoipsum-logo-5.svg',
-  'logoipsum-logo-6.svg',
-  'logoipsum-logo-7.svg',
+  'gwdc.png',
+  'Pertamina.png',
 ];
 
 export default function Partners() {
   return (
     <PartnersWrapper>
-      <Title>official partners with</Title>
-      <Swiper
-        modules={[Autoplay]}
-        slidesPerView={6}
-        spaceBetween={30}
-        loop={true}
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
-        speed={3000}
-        breakpoints={{
-          320: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1025: { slidesPerView: 6 },
-        }}
-        className="swiper-wrapper"
-      >
+      <Title>MKB Group</Title>
+      <LogosWrapper>
         {PARTNER_LOGOS.map((logo) => (
-          <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={128} height={128} />
-          </SwiperSlide>
+          <LogoImage
+            key={logo}
+            src={'/partners/' + logo}
+            alt={normalizePartnerLogoName(logo)}
+            width={200}
+            height={200}
+          />
         ))}
-      </Swiper>
+      </LogosWrapper>
     </PartnersWrapper>
   );
 }
@@ -49,13 +35,14 @@ function normalizePartnerLogoName(logo: string) {
 }
 
 const Title = styled.h3`
-  font-size: 1.3rem;
+  font-size: 3rem;
   letter-spacing: 0.02em;
   line-height: 0;
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-align: center;
   opacity: 0.8;
+  font-weight: 600;
 
   ${media('<=desktop')} {
     line-height: 1.5;
@@ -63,19 +50,27 @@ const Title = styled.h3`
 `;
 
 const PartnersWrapper = styled(Container)`
-  .swiper-wrapper {
-    will-change: transform;
-    transition-timing-function: linear;
-    margin-top: 0.5rem;
-    user-select: none;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-  .swiper-slide {
-    opacity: 0.8;
-    transition: opacity 0.2s;
+const LogosWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+`;
 
-    &:hover {
-      opacity: 1;
-    }
+const LogoImage = styled(NextImage)`
+  opacity: 1;
+  transition: opacity 0.2s;
+  max-width: 120px;
+  max-height: 80px;
+  object-fit: contain;
+
+  &:hover {
+    opacity: 1;
   }
 `;
