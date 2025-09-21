@@ -9,7 +9,7 @@ const Button = styled.a<ButtonProps>`
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  background: ${(p) => (p.transparent ? 'transparent' : 'rgb(var(--primary))')};
+  background: ${(p) => (p.transparent ? 'transparent' : '#174313')};
   padding: 1.75rem 2.25rem;
   font-size: 1.2rem;
   color: ${(p) => (p.transparent ? 'rgb(var(--text))' : 'rgb(var(--textSecondary))')};
@@ -17,7 +17,6 @@ const Button = styled.a<ButtonProps>`
   font-family: var(--font);
   font-weight: bold;
   border-radius: 0.4rem;
-  border: ${(p) => (p.transparent ? 'none' : '2px solid rgb(var(--primary))')};
   transition: transform 0.3s;
   backface-visibility: hidden;
   will-change: transform;

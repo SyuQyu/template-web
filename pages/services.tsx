@@ -13,6 +13,7 @@ export default function ServicesPage() {
 
   // Photo slider state
   const [currentSlide, setCurrentSlide] = useState(0);
+  
 
   const photos = [
     { id: 1, src: "/operational/1.jpg", title: "Mobile Crane Operation", category: "Equipment" },
@@ -163,16 +164,21 @@ export default function ServicesPage() {
                 </NavButton>
               </SliderWrapper>
 
-              {/* Dots Indicator */}
-            <DotsContainer>
-                {filteredPhotos.slice(0, Math.min(filteredPhotos.length, 10)).map((_, index) => (
-                  <Dot
-                    key={index}
-                    $active={currentSlide === index}
-                    onClick={() => goToSlide(index)}
-                  />
+              <ImagePreviewContainer>
+                {filteredPhotos.map((photo, index) => (
+                  <PreviewImageWrapper key={index}>
+                    <PreviewImage
+                      src={photo.src}
+                      alt={photo.title}
+                      className={currentSlide === index ? 'active' : ''}
+                      onClick={() => goToSlide(index)}
+                    />
+                    <PreviewOverlay className={currentSlide === index ? 'active-overlay' : ''}>
+                      <PreviewCategory>{photo.category}</PreviewCategory>
+                    </PreviewOverlay>
+                  </PreviewImageWrapper>
                 ))}
-              </DotsContainer>
+              </ImagePreviewContainer>
             </SliderContainer>
           </Container>
         </PhotoSliderSection>
@@ -201,7 +207,7 @@ export default function ServicesPage() {
         </BasicSection>
 
         <BasicSection 
-          imageUrl="/demo-illustration-2.svg" 
+          imageUrl="/rigmoving.JPG" 
           title="Rig Moving & Relocation Support" 
           overTitle="Specialized Service"
           reversed
@@ -220,7 +226,7 @@ export default function ServicesPage() {
         </BasicSection>
 
         <BasicSection 
-          imageUrl="/demo-illustration-3.png" 
+          imageUrl="/maintenance.webp" 
           title="Maintenance & Repair Services" 
           overTitle="Support Service"
         >
@@ -626,5 +632,109 @@ const ServiceDetails = styled.ul`
       color: var(--primary);
       font-weight: bold;
     }
+  }
+`;
+
+const ImagePreviewContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  overflow-x: auto;
+  padding: 1rem 2rem;
+  scroll-behavior: smooth;
+  
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgb(var(--primary));
+    border-radius: 3px;
+    
+    &:hover {
+      background: rgba(var(--primary-rgb), 0.8);
+    }
+  }
+  
+  ${media('<=tablet')} {
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    justify-content: flex-start;
+  }
+`;
+
+const PreviewImageWrapper = styled.div`
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+`;
+
+const PreviewImage = styled.img`
+  width: 9rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  &.active {
+    border-color: rgb(var(--primary));
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
+  }
+  
+  ${media('<=tablet')} {
+    width: 7rem;
+    height: 4.5rem;
+  }
+`;
+
+const PreviewOverlay = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 1rem 0.5rem 0.5rem;
+  border-radius: 0 0 0.8rem 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  ${PreviewImageWrapper}:hover & {
+    opacity: 1;
+  }
+  
+  &.active-overlay {
+    opacity: 1;
+  }
+`;
+
+const PreviewCategory = styled.p`
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  
+  ${media('<=tablet')} {
+    font-size: 0.9rem;
   }
 `;

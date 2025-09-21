@@ -235,11 +235,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About Page
     'about.title': 'About PT Mitra Kawan Bersama',
-    'about.subtitle': 'Your trusted partner for heavy equipment rental and construction support solutions in Indonesia since 2010',
+    'about.subtitle': 'Established in 2021, Mitra Kawan Bersama Group is a company specializing in heavy-duty equipment, light vehicle and mini bus provider for drilling rig, workovers rig, rig services, recognized for its innovation in the oil field services. Built on a strong foundation of excellence and a deep commitment to customer satisfaction, these core values have played a key role in driving our growth and success. In addition to equipment services, we also provide mobilizations de-mobilizations and professional manpower solutions, offering highly skilled and experienced personnel to support various operational needs in the oil and gas industry.',
     'about.vision.title': 'Vision',
-    'about.vision.content': 'To become the leading heavy equipment rental company in Southeast Asia that provides optimal added value to stakeholders.',
+    'about.vision.content': 'Our vision is to set a new benchmark in the industry by continuously pushing boundaries—driven by innovation and a deep commitment to sustainability. We strive to lead with purpose, creating impactful solutions that shape the future of the oil and gas sector.',
     'about.mission.title': 'Mission',
-    'about.mission.content': 'Providing high-quality heavy equipment rental services with international safety standards to support Indonesia\'s infrastructure development.',
+    'about.mission.content': 'Our mission is to empower our clients through transformative, high-impact solutions while cultivating a culture of ongoing improvement and excellence. These principles guide every aspect of our daily operations, inspiring us to not only surpass client expectations but also make meaningful contributions to the communities we serve.',
     'about.management.title': 'Management Team',
     'about.partners.title': 'Strategic Partners',
     

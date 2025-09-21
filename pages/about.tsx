@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import BasicSection from 'components/BasicSection';
+import BasicSection2 from 'components/BasicSection2';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
@@ -86,33 +86,31 @@ export default function AboutPage() {
         <Container>
           <HeaderSection>
             <OverTitle>{t('about.title')}</OverTitle>
-            <SectionTitle>Your Trusted Heavy Equipment Partner</SectionTitle>
+            <SectionTitle>Your Trusted Heavy Duty Equipment Partner</SectionTitle>
             <Description>
-              {t('about.subtitle')}
+           {t('about.subtitle')}
             </Description>
           </HeaderSection>
         </Container>
 
-        <BasicSection 
-          imageUrl="/demo-illustration-1.svg" 
+        <BasicSection2 
           title={t('about.vision.title')} 
           overTitle="Vision"
           reversed
         >
-          <p>
-            {t('about.vision.content')}
-          </p>
-        </BasicSection>
+          <VissionList>
+            <li>{t('about.vision.content')}</li>
+          </VissionList>
+        </BasicSection2>
 
-        <BasicSection 
-          imageUrl="/demo-illustration-2.svg" 
+        <BasicSection2 
           title={t('about.mission.title')} 
           overTitle="Mission"
         >
           <MissionList>
             <li>{t('about.mission.content')}</li>
           </MissionList>
-        </BasicSection>
+        </BasicSection2>
 
         <Container>
           {/* <ManagementSection>
@@ -179,8 +177,7 @@ export default function AboutPage() {
           </PartnersSection>
         </Container>
 
-        <BasicSection 
-          imageUrl="/demo-illustration-3.png" 
+        <BasicSection2 
           title="Core Strengths" 
           overTitle="Our Strength"
           reversed
@@ -192,7 +189,7 @@ export default function AboutPage() {
             <li><strong>Quality Assurance:</strong> Sistem QAQC terintegrasi untuk memastikan standar kualitas terbaik</li>
             <li><strong>24/7 Support:</strong> Layanan maintenance dan emergency response siap 24 jam</li>
           </CoreStrengthsList>
-        </BasicSection>
+        </BasicSection2>
       </AboutWrapper>
     </>
   );
@@ -219,83 +216,36 @@ const Description = styled.p`
   color: rgb(var(--text-secondary));
 `;
 
-const MissionList = styled.ul`
+const VissionList = styled.p`
   list-style: none;
   padding: 0;
   
   li {
     position: relative;
-    padding-left: 2rem;
-    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    margin-bottom: 0.7rem;
     font-size: 1.6rem;
-    line-height: 1.5;
-    
-    &:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: rgb(var(--primary));
-      font-weight: bold;
-    }
+    line-height: 1.6;
+    max-width: 90rem;
+    text-align: center;
   }
 `;
 
-const ManagementSection = styled.div`
-  text-align: center;
-  margin: 8rem 0;
-`;
+const MissionList = styled.p`
+  list-style: none;
+  padding: 0;
 
-const ManagementGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  margin-top: 4rem;
-  
-  ${media('<=tablet')} {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 90rem;
+    text-align: center;
   }
 `;
 
-const ManagementCard = styled.div`
-  background: rgb(var(--cardBackground));
-  padding: 3rem 2rem;
-  border-radius: 0.8rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-  
-  &:hover {
-    transform: translateY(-4px);
-  }
-`;
-
-const ManagementPhoto = styled.img`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
-`;
-
-const ManagementName = styled.h3`
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: rgb(var(--primary));
-`;
-
-const ManagementPosition = styled.h4`
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: rgb(var(--text-secondary));
-  font-weight: normal;
-`;
-
-const ManagementDescription = styled.p`
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: rgb(var(--text-secondary));
-`;
 
 const PartnersSection = styled.div`
   text-align: center;

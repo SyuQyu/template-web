@@ -1,14 +1,13 @@
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  'gwdc.png',
-  'Pertamina.png',
+  'big.png',
+  'SJRR.png', 
+  'PEA.png',
 ];
 
 export default function Partners() {
@@ -17,13 +16,14 @@ export default function Partners() {
       <Title>MKB Group</Title>
       <LogosWrapper>
         {PARTNER_LOGOS.map((logo) => (
+        <LogoContainer wide={logo.includes('SJR')}>
           <LogoImage
-            key={logo}
-            src={'/partners/' + logo}
+            src={'/MKB Group/' + logo}
             alt={normalizePartnerLogoName(logo)}
             width={200}
-            height={200}
+            height={150}
           />
+        </LogoContainer>
         ))}
       </LogosWrapper>
     </PartnersWrapper>
@@ -43,7 +43,7 @@ const Title = styled.h3`
   text-align: center;
   opacity: 0.8;
   font-weight: 600;
-
+ 
   ${media('<=desktop')} {
     line-height: 1.5;
   }
@@ -63,14 +63,25 @@ const LogosWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
+// Container untuk setiap logo dengan ukuran tetap
+const LogoContainer = styled.div<{ wide?: boolean }>`
+  width: ${(props) => (props.wide ? '140px' : '120px')};
+  height: 12.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
 const LogoImage = styled(NextImage)`
   opacity: 1;
   transition: opacity 0.2s;
-  max-width: 120px;
-  max-height: 80px;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: contain;
+  position: relative !important;
 
   &:hover {
-    opacity: 1;
+    opacity: 0.8;
   }
 `;

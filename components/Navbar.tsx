@@ -114,6 +114,7 @@ const NavItemList = styled.div`
   display: flex;
   list-style: none;
 
+
   ${media('<=desktop')} {
     display: none;
   }
@@ -130,7 +131,7 @@ const HamburgerMenuWrapper = styled.div`
 `;
 
 const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
-  background-color: ${(p) => (p.outlined ? 'rgb(var(--primary))' : 'transparent')};
+  background-color: ${(p) => (p.outlined ? '#174313' : 'transparent')};
   border-radius: 0.5rem;
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -139,17 +140,27 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   white-space: nowrap;
 
   &:hover {
-    background-color: ${(p) => (p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
+    background-color: ${(p) => (p.outlined ? '#08325c' : 'transparent')};
     transition: background-color 0.2s;
   }
 
   a {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    color: ${(p) =>
+      p.outlined
+        ? 'rgb(var(--textSecondary))'
+        : 'rgba(var(--text), 0.75)'};
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     font-weight: 700;
+    transition: color 0.2s;
+  }
+
+  /* Light mode override: only on hover or active */
+  .next-light-theme & a:hover,
+  .next-light-theme & a.active {
+    color: black;
   }
 
   a:hover,
@@ -157,14 +168,22 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
     color: rgb(var(--textSecondary));
   }
 
-
   h1 {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    color: ${(p) =>
+      p.outlined
+        ? 'rgb(var(--textSecondary))'
+        : 'rgba(var(--text), 0.75)'};
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     font-weight: 700;
+    transition: color 0.2s;
+  }
+
+  .next-light-theme & h1:hover,
+  .next-light-theme & h1.active {
+    color: black;
   }
 
   &:not(:last-child) {
@@ -181,7 +200,7 @@ const NavbarContainer = styled.div`
   height: 8rem;
   z-index: var(--z-navbar);
 
-  background-color: rgb(var(--navbarBackground));
+  background-color: rgb(var(--secpondaryBackground));
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
 
   transition-property: transform, visibility, height, box-shadow, background-color;

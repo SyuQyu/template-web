@@ -258,28 +258,7 @@ export default function ProjectsPage() {
             
             <ClientsGrid>
               <ClientLogo>
-                <img src="/partners/logoipsum-logo-1.svg" alt="BP Indonesia" />
-                <ClientName>BP Indonesia</ClientName>
-              </ClientLogo>
-              <ClientLogo>
-                <img src="/partners/logoipsum-logo-2.svg" alt="PT. PLN" />
-                <ClientName>PT. PLN (Persero)</ClientName>
-              </ClientLogo>
-              <ClientLogo>
-                <img src="/partners/logoipsum-logo-3.svg" alt="Pertamina" />
-                <ClientName>PT. Pertamina</ClientName>
-              </ClientLogo>
-              <ClientLogo>
-                <img src="/partners/logoipsum-logo-4.svg" alt="Chevron" />
-                <ClientName>Chevron Indonesia</ClientName>
-              </ClientLogo>
-              <ClientLogo>
-                <img src="/partners/logoipsum-logo-5.svg" alt="ExxonMobil" />
-                <ClientName>ExxonMobil Indonesia</ClientName>
-              </ClientLogo>
-              <ClientLogo>
-                <img src="/partners/logoipsum-logo-6.svg" alt="Total" />
-                <ClientName>Total Energies</ClientName>
+                <img src="/partners/gdap.png" alt="BP Indonesia" />
               </ClientLogo>
             </ClientsGrid>
           </ClientsSection>
@@ -529,8 +508,8 @@ const ClientLogo = styled.div`
   }
   
   img {
-    width: 120px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     margin-bottom: 1rem;
   }

@@ -376,6 +376,7 @@ const StrengthCard = styled.div`
   text-align: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  }
   
   &:hover {
     transform: translateY(-4px);
@@ -421,7 +422,7 @@ const ProjectCard = styled.div`
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-4px);
   }
@@ -481,6 +482,7 @@ const ContactCard = styled.div`
   text-align: center;
   color: white;
   
+
   ${media('<=tablet')} {
     padding: 4rem 2rem;
   }
@@ -495,6 +497,11 @@ const ContactTitle = styled.h2`
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   
+  
+  .next-light-theme & {
+    color: black;
+  }
+  
   ${media('<=tablet')} {
     font-size: 2.8rem;
   }
@@ -505,6 +512,11 @@ const ContactSubtitle = styled.p`
   line-height: 1.6;
   margin-bottom: 4rem;
   opacity: 0.9;
+
+  .next-light-theme & {
+    color: black;
+  }
+
 `;
 
 const ContactOptions = styled.div`
@@ -512,6 +524,10 @@ const ContactOptions = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  
+  .next-light-theme & {
+    color: black;
+  }
   
   ${media('<=tablet')} {
     grid-template-columns: 1fr;
@@ -528,10 +544,15 @@ const ContactOption = styled.a`
   text-decoration: none;
   color: white;
   transition: background 0.3s ease;
-  
+
+  .next-light-theme & {
+    color: black;
+  }
+
   &:hover {
     background: rgba(255, 255, 255, 0.2);
   }
+
 `;
 
 const ContactIcon = styled.div`
@@ -556,4 +577,3 @@ const ContactValue = styled.div`
 const ContactCTA = styled.div`
   margin-top: 3rem;
 `;
-
