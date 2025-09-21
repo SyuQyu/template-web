@@ -150,7 +150,7 @@ export default function AboutPage() {
             </ManagementGrid>
           </ManagementSection> */}
 
-          <PartnersSection>
+          {/* <PartnersSection>
             <OverTitle>{t('about.partners.title')}</OverTitle>
             <SectionTitle>Partner Logo Wall</SectionTitle>
             
@@ -174,7 +174,7 @@ export default function AboutPage() {
                 <img src="/partners/logoipsum-logo-6.svg" alt="Partner 6" />
               </PartnerLogo>
             </PartnersGrid>
-          </PartnersSection>
+          </PartnersSection> */}
         </Container>
 
         <BasicSection2 

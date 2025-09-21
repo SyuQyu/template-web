@@ -15,20 +15,10 @@ import { GlobalStyle } from 'components/GlobalStyles';
 import NavigationDrawer from 'components/NavigationDrawer';
 import WaveCta from 'components/WaveCta';
 import { LanguageProvider } from 'contexts/language.context';
+import { useLanguage } from 'contexts/language.context';
 import { NavItems } from 'types';
-
 // Dynamic import for Navbar to access language context
 const DynamicNavbar = dynamic(() => import('components/DynamicNavbar'), { ssr: false });
-
-const navItems: NavItems = [
-  { title: 'About Us', href: '/about' },
-  // { title: 'Fleet / Equipment', href: '/fleet' },
-  { title: 'Services', href: '/services' },
-  { title: 'Projects', href: '/projects' },
-  { title: 'News', href: '/news' },
-  { title: 'Contact Us', href: '/contact', outlined: true },
-];
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -67,8 +57,24 @@ function MyApp({ Component, pageProps }: AppProps) {
 function Providers<T>({ children }: PropsWithChildren<T>) {
   return (
     <LanguageProvider>
-      <NavigationDrawer items={navItems}>{children}</NavigationDrawer>
+      <NavigationDrawerWrapper>{children}</NavigationDrawerWrapper>
     </LanguageProvider>
+  );
+}
+
+function NavigationDrawerWrapper<T>({ children }: PropsWithChildren<T>) {
+  const { t } = useLanguage();
+  const navItems: NavItems = [
+    { title: t('nav.about'), href: '/about' },
+    // { title: t('nav.fleet'), href: '/fleet' },
+    { title: t('nav.services'), href: '/services' },
+    { title: t('nav.projects'), href: '/our-client-achievements' },
+    { title: t('nav.news'), href: '/news' },
+    { title: t('nav.contact'), href: '/contact', outlined: true },
+  ];
+
+  return (
+    <NavigationDrawer items={navItems}>{children}</NavigationDrawer>
   );
 }
 

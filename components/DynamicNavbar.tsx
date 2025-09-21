@@ -10,7 +10,7 @@ export default function DynamicNavbar() {
     { title: t('nav.about'), href: '/about' },
     // { title: t('nav.fleet'), href: '/fleet' },
     { title: t('nav.services'), href: '/services' },
-    { title: t('nav.projects'), href: '/projects' },
+    { title: t('nav.projects'), href: '/our-client-achievements' },
     { title: t('nav.news'), href: '/news' },
     { title: t('nav.contact'), href: '/contact', outlined: true },
   ];

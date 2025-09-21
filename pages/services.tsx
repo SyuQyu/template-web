@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import styled from 'styled-components';
 import { SetStateAction, useEffect, useState } from 'react';
+import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
@@ -128,7 +128,7 @@ export default function ServicesPage() {
       </Head>
       
       <ServicesWrapper>
-        <PhotoSliderSection>
+        {/* <PhotoSliderSection>
           <Container>
             <SliderHeader>
               <OverTitle>Operational Gallery</OverTitle>
@@ -181,7 +181,7 @@ export default function ServicesPage() {
               </ImagePreviewContainer>
             </SliderContainer>
           </Container>
-        </PhotoSliderSection>
+        </PhotoSliderSection> */}
 
         <Container>
           <HeaderSection>
