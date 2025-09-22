@@ -210,111 +210,101 @@ export default function ServicesPage() {
 
         <BasicSection 
           imageUrl="/rigmoving.JPG" 
-          title="Rig Moving & Relocation Support" 
+          title="Field Operations Support & ManPower Supply" 
           reversed={true}
         >
           <ServiceDescription>
-            <h4>Professional Rig Moving Services</h4>
+            <h4>We offer skilled manpower and operational support to help you run field activities efficiently</h4>
             <ServiceList>
-              <li>Rig dismantle, transportation, dan re-assembly services</li>
-              <li>Route survey dan engineering analysis untuk safe transport</li>
-              <li>Heavy lift operations dengan specialized cranes</li>
-              <li>Multi-modal transportation: land, sea, dan barge transport</li>
-              <li>Project management dan coordination dengan authorities</li>
-              <li>Emergency rig move services 24/7 availability</li>
+            <ul>
+              <li>
+                <strong>Key Roles Provided: </strong> 
+                Truck Pushers, Crane Technicians, Site Coordinators (PIC)
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <strong>Operator and Drivers: </strong> 
+                All staff are MIGAS-certified professionals with proven experience in the field
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <strong>Value Additional: </strong> 
+                Rotational Workforce Management, License and Certification Monitoring, Full
+                coordination, including effective communication and engagement with local
+                communities and NGOs (LSMs) to ensure smooth site operations and social
+                harmony.
+              </li>
+            </ul>
+
             </ServiceList>
           </ServiceDescription>
         </BasicSection>
 
         <BasicSection 
           imageUrl="/maintenance.webp" 
-          title="Maintenance & Repair Services" 
+          title="Project Coordination & Site Reporting" 
         >
           <ServiceDescription>
             <h4>Comprehensive Maintenance Solutions</h4>
             <ServiceList>
-              <li>Preventive maintenance programs untuk equipment longevity</li>
-              <li>Emergency repair services dengan response time &lt; 4 hours</li>
-              <li>On-site field service team dengan mobile workshop</li>
-              <li>Genuine spare parts supply dan inventory management</li>
-              <li>Equipment overhaul dan refurbishment services</li>
-              <li>Condition monitoring dan predictive maintenance</li>
+              <li>Daily Work Scheduling and Progress Reporting</li>
+              <li>Downtime Tracking and Cost-Efficiency Analysis</li>
+              <li>Real-time Alerts and Compliance Monitoring Through The CCPM System</li>
             </ServiceList>
           </ServiceDescription>
         </BasicSection>
 
         <Container>
           <AdditionalServicesSection>
-            <SectionTitle>Manpower & Quality Assurance</SectionTitle>
-            
+            <SectionTitle>Light Vehicle Rental Operation Support</SectionTitle>
             <ServicesGrid>
               <ServiceCard>
-                <ServiceIcon>👨‍🔧</ServiceIcon>
-                <ServiceTitle>Manpower Supply</ServiceTitle>
                 <ServiceDetails>
-                  <li>Certified crane operators dengan pengalaman 10+ tahun</li>
-                  <li>Skilled technicians dan mechanics untuk maintenance</li>
-                  <li>Professional drivers untuk heavy equipment transportation</li>
-                  <li>Safety officers dan project supervisors</li>
-                  <li>Training dan certification programs untuk crew</li>
-                </ServiceDetails>
-              </ServiceCard>
-              
-              <ServiceCard>
-                <ServiceIcon>📋</ServiceIcon>
-                <ServiceTitle>CCPM / QAQC System Management</ServiceTitle>
-                <ServiceDetails>
-                  <li>Construction Project Management (CCPM) support</li>
-                  <li>Quality Assurance & Quality Control (QAQC) implementation</li>
-                  <li>HSE (Health, Safety, Environment) management system</li>
-                  <li>Project documentation dan progress reporting</li>
-                  <li>Compliance monitoring dan regulatory support</li>
+                  <p>We offer a comprehensive selection of high-quality light vehicles to support a
+                  wide range of project requirements. Our fleet includes Double Cabins, Mini
+                  Buses, and Elf Buses, all maintained to the highest standards to ensure
+                  reliability, comfort, and safety on the job. These vehicles are ideal for
+                  transporting personnel and light cargo across project sites efficiently.</p>
                 </ServiceDetails>
               </ServiceCard>
             </ServicesGrid>
           </AdditionalServicesSection>
 
           <AdvantagesSection>
-            <SectionTitle>Keunggulan Layanan Kami</SectionTitle>
-            
+            <SectionTitle>Mobilization and De-Mobilization Rig Moving</SectionTitle>
+            <h4>We provide efficient mobilization and de-mobilization services to ensure the
+            timely and safe transfer of equipment, vehicles, and personnel to and from
+            project sites. Our team is experienced in planning and executing logistics for
+            remote, urban, and high-demand environments, minimizing downtime and
+            optimizing project start-up and close-out phases.
+            </h4>
+            <h4>This service includes:</h4>
             <AdvantagesGrid>
-              <AdvantageCard>
-                <AdvantageIcon>🛡️</AdvantageIcon>
-                <AdvantageTitle>Safety First</AdvantageTitle>
-                <AdvantageDescription>
-                  Zero accident policy dengan comprehensive safety management system dan certified crew
-                </AdvantageDescription>
-              </AdvantageCard>
-              
               <AdvantageCard>
                 <AdvantageIcon>⚡</AdvantageIcon>
                 <AdvantageTitle>Rapid Response</AdvantageTitle>
                 <AdvantageDescription>
-                  Emergency response team siap 24/7 dengan mobilization time kurang dari 4 jam
+                  Route and permit planning
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
                 <AdvantageIcon>🔧</AdvantageIcon>
-                <AdvantageTitle>Expert Team</AdvantageTitle>
+                <AdvantageTitle>Heavy Equipment Handling</AdvantageTitle>
                 <AdvantageDescription>
-                  Tim operator dan teknisi bersertifikat dengan pengalaman puluhan tahun
+                  Transportation of heavy and light equipment
                 </AdvantageDescription>
               </AdvantageCard>
               
               <AdvantageCard>
                 <AdvantageIcon>🌐</AdvantageIcon>
-                <AdvantageTitle>Nationwide Coverage</AdvantageTitle>
+                <AdvantageTitle>Operational Support</AdvantageTitle>
                 <AdvantageDescription>
-                  Coverage area seluruh Indonesia dengan logistics network yang kuat
-                </AdvantageDescription>
-              </AdvantageCard>
-              
-              <AdvantageCard>
-                <AdvantageIcon>📊</AdvantageIcon>
-                <AdvantageTitle>Quality Assurance</AdvantageTitle>
-                <AdvantageDescription>
-                  ISO certified quality management system dengan continuous improvement
+                  Site setup and dismantling coordination
                 </AdvantageDescription>
               </AdvantageCard>
               
@@ -322,7 +312,7 @@ export default function ServicesPage() {
                 <AdvantageIcon>💼</AdvantageIcon>
                 <AdvantageTitle>Project Management</AdvantageTitle>
                 <AdvantageDescription>
-                  End-to-end project management dengan dedicated project coordinator
+                  Safety compliance and documentation suppor
                 </AdvantageDescription>
               </AdvantageCard>
             </AdvantagesGrid>
@@ -559,11 +549,20 @@ const ServiceList = styled.ul`
 const AdvantagesSection = styled.div`
   text-align: center;
   margin: 8rem 0;
+
+  h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const AdvantagesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   margin-top: 4rem;
   
@@ -598,7 +597,7 @@ const AdvantageTitle = styled.h3`
 `;
 
 const AdvantageDescription = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: var(--text-secondary);
 `;
@@ -644,25 +643,16 @@ const ServiceTitle = styled.h3`
   color: var(--primary);
 `;
 
-const ServiceDetails = styled.ul`
+const ServiceDetails = styled.div`
   list-style: none;
   padding: 0;
   text-align: left;
   
-  li {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    line-height: 1.5;
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
     
-    &:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: bold;
-    }
   }
 `;
 
