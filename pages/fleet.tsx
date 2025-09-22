@@ -251,7 +251,6 @@ export default function FleetPage() {
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
           title="Fleet Overview" 
-          overTitle="Our Fleet"
         >
           <FleetStats>
             <StatItem>
@@ -364,7 +363,6 @@ export default function FleetPage() {
           </EquipmentSection>
 
           <CTASection>
-            <OverTitle>Need Our Equipment?</OverTitle>
             <SectionTitle>Ready to Support Your Project</SectionTitle>
             <CTADescription>
               Semua equipment kami tersedia untuk rental dengan operator berpengalaman dan dukungan 

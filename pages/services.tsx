@@ -61,6 +61,8 @@ export default function ServicesPage() {
   };
 
 
+  const rentalItems = t('services.rental.desc').split(',').map(item => item.trim());
+
   return (
     <>
       <Head>
@@ -185,7 +187,6 @@ export default function ServicesPage() {
 
         <Container>
           <HeaderSection>
-            <OverTitle>{t('services.title')}</OverTitle>
             <SectionTitle>Heavy Duty Equipment Services</SectionTitle>
             <Description>
               {t('services.subtitle')}
@@ -196,21 +197,21 @@ export default function ServicesPage() {
         <BasicSection 
           imageUrl="/Trucks.png" 
           title={t('services.rental.title')} 
-          overTitle="Core Service"
         >
           <ServiceDescription>
-            <h4>{t('services.rental.title')}</h4>
-            <ServiceList>
-              <li>{t('services.rental.desc')}</li>
-            </ServiceList>
+            <h4>{t('services.rental.title2')}</h4>
+            <ServiceList2>
+              {rentalItems.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ServiceList2>
           </ServiceDescription>
         </BasicSection>
 
         <BasicSection 
           imageUrl="/rigmoving.JPG" 
           title="Rig Moving & Relocation Support" 
-          overTitle="Specialized Service"
-          reversed
+          reversed={true}
         >
           <ServiceDescription>
             <h4>Professional Rig Moving Services</h4>
@@ -228,7 +229,6 @@ export default function ServicesPage() {
         <BasicSection 
           imageUrl="/maintenance.webp" 
           title="Maintenance & Repair Services" 
-          overTitle="Support Service"
         >
           <ServiceDescription>
             <h4>Comprehensive Maintenance Solutions</h4>
@@ -245,7 +245,6 @@ export default function ServicesPage() {
 
         <Container>
           <AdditionalServicesSection>
-            <OverTitle>Additional Services</OverTitle>
             <SectionTitle>Manpower & Quality Assurance</SectionTitle>
             
             <ServicesGrid>
@@ -276,7 +275,6 @@ export default function ServicesPage() {
           </AdditionalServicesSection>
 
           <AdvantagesSection>
-            <OverTitle>Why Choose Our Services</OverTitle>
             <SectionTitle>Keunggulan Layanan Kami</SectionTitle>
             
             <AdvantagesGrid>
@@ -497,15 +495,47 @@ const Description = styled.p`
 
 const ServiceDescription = styled.div`
   h4 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
     color: var(--primary);
   }
 `;
+const ServiceList2 = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #e2e8f0;
+   
+    &:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+`;
+
 
 const ServiceList = styled.ul`
   list-style: none;
   padding: 0;
+  margin-top: 1rem;
   
   li {
     position: relative;
@@ -524,6 +554,7 @@ const ServiceList = styled.ul`
     }
   }
 `;
+
 
 const AdvantagesSection = styled.div`
   text-align: center;

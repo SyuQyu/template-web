@@ -32,7 +32,6 @@ export default function ProductsPage() {
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
           title="Industrial Equipment" 
-          overTitle="Category 1"
         >
           <ProductDescription>
             <h4>Peralatan Industri & Mesin</h4>
@@ -53,7 +52,6 @@ export default function ProductsPage() {
         <BasicSection 
           imageUrl="/demo-illustration-2.svg" 
           title="Chemical Products" 
-          overTitle="Category 2"
           reversed
         >
           <ProductDescription>
@@ -75,7 +73,6 @@ export default function ProductsPage() {
         <BasicSection 
           imageUrl="/demo-illustration-3.png" 
           title="Safety Equipment" 
-          overTitle="Category 3"
         >
           <ProductDescription>
             <h4>Peralatan Keselamatan Kerja</h4>

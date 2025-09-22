@@ -9,18 +9,16 @@ import RichText from './RichText';
 export interface BasicSectionProps {
   imageUrl: string;
   title: string;
-  overTitle: string;
   reversed?: boolean;
 }
 
-export default function BasicSection({ imageUrl, title, overTitle, reversed, children }: PropsWithChildren<BasicSectionProps>) {
+export default function BasicSection({ imageUrl, title, reversed, children }: PropsWithChildren<BasicSectionProps>) {
   return (
     <BasicSectionWrapper reversed={reversed}>
       <ImageContainer>
         <NextImage src={imageUrl} alt={title} layout="fill" objectFit="cover" />
       </ImageContainer>
       <ContentContainer>
-        <CustomOverTitle>{overTitle}</CustomOverTitle>
         <Title>{title}</Title>
         <RichText>{children}</RichText>
       </ContentContainer>
@@ -32,7 +30,7 @@ const Title = styled.h1`
   font-size: 5.2rem;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.03em;
 
   ${media('<=tablet')} {
@@ -53,6 +51,7 @@ const ImageContainer = styled.div`
     display: block;
     content: '';
     width: 100%;
+    height: 375px;
     padding-top: calc((9 / 16) * 100%);
   }
 

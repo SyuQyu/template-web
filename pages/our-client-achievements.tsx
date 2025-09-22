@@ -246,7 +246,6 @@ export default function ClientsAchievementsPage() {
 				<BasicSection
 					imageUrl="/demo-illustration-1.svg"
 					title="Company Achievements"
-					overTitle="Our Excellence"
 				>
 					<StatsGrid>
 						{ACHIEVEMENTS.map((achievement, idx) => (

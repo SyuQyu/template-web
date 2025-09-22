@@ -34,7 +34,6 @@ export default function PartnershipPage() {
         <BasicSection 
           imageUrl="/demo-illustration-1.svg" 
           title={t('partnership.global.title')} 
-          overTitle="International"
         >
           <PartnershipDescription>
             <h4>{t('partnership.global.title')}</h4>
@@ -54,7 +53,6 @@ export default function PartnershipPage() {
         <BasicSection 
           imageUrl="/demo-illustration-2.svg" 
           title="Local Strategic Partners" 
-          overTitle="Domestic"
           reversed
         >
           <PartnershipDescription>
