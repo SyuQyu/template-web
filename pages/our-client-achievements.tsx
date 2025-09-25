@@ -232,8 +232,8 @@ export default function ClientsAchievementsPage() {
 						<SectionTitle>Trusted Partnership Excellence</SectionTitle>
 						<Description>
 							{language === 'id'
-								? 'Membanggakan kerjasama dengan 50+ klien terkemuka di Indonesia. Pengalaman 15+ tahun melayani sektor Oil & Gas, Power Generation, dan Mining dengan standar safety 99.8% dan total project value USD 500M+'
-								: 'Proud to partner with 50+ leading clients across Indonesia. 15+ years of experience serving Oil & Gas, Power Generation, and Mining sectors with 99.8% safety standards and USD 500M+ total project value.'}
+								? 'Membanggakan kerjasama dengan klien terkemuka di Indonesia. Berpengalaman melayani sektor Oil & Gas, Power Generation, dan Mining dengan standar safety dan total project value USD 500M+'
+								: 'Proud to partner with leading clients across Indonesia. Experience serving Oil & Gas, Power Generation, and Mining sectors with safety standards and USD 500M+ total project value.'}
 						</Description>
 					</HeaderSection>
 				</Container>

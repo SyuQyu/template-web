@@ -22,12 +22,12 @@ export default function Hero() {
         <CustomButtonGroup>
           <NextLink href="/contact" passHref>
             <Button>
-              {t('hero.cta.consultation')} <span>&rarr;</span>
+              {t('hero.cta.consultation')}
             </Button>
           </NextLink>
           <NextLink href="/fleet" passHref>
             <Button transparent>
-              {t('hero.cta.fleet')} <span>&rarr;</span>
+              {t('hero.cta.fleet')}
             </Button>
           </NextLink>
         </CustomButtonGroup>
@@ -41,15 +41,14 @@ export default function Hero() {
 
 const HeroWrapper = styled(Container)`
   display: flex;
-  padding-top: 5rem;
+  flex-direction: column; 
+  justify-content: center; 
   align-items: center;
-
-  ${media('<=desktop')} {
-    padding-top: 1rem;
-    flex-direction: column;
-    align-items: center;
-  }
+  text-align: center;
+  min-height: 100vh; 
+  padding-top: 0; 
 `;
+
 
 const Contents = styled.div`
   flex: 1;
@@ -62,6 +61,7 @@ const Contents = styled.div`
 
 const CustomButtonGroup = styled(ButtonGroup)`
   margin-top: 4rem;
+  justify-content: center; 
 `;
 
 const ImageContainer = styled.div`
@@ -87,6 +87,14 @@ const Description = styled.p`
   font-size: 1.8rem;
   opacity: 0.8;
   line-height: 1.6;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
+
+  .next-light-theme & {
+    color: #000;
+    text-shadow:  2px 2px 6px rgba(0, 0, 0, 0.6),  
+    0 0 12px rgba(0, 0, 0, 0.4);
+  }
 
   ${media('<=desktop')} {
     font-size: 1.5rem;
@@ -103,6 +111,15 @@ const Heading = styled.h1`
   line-height: 1.1;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
+  
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
+
+  .next-light-theme & {
+    color: #000;
+    text-shadow:  2px 2px 6px rgba(0, 0, 0, 0.6), 
+    0 0 12px rgba(0, 0, 0, 0.4);
+  }
 
   ${media('<=tablet')} {
     font-size: 4.6rem;

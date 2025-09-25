@@ -24,7 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.title': 'Heavy Equipment Rental & Construction Support',
-    'hero.subtitle': 'Partner terpercaya untuk proyek konstruksi besar dengan 200+ unit heavy equipment dan 15+ tahun pengalaman',
+    'hero.subtitle': 'Partner terpercaya untuk proyek konstruksi besar dengan 200+ unit heavy equipment dan pengalaman',
     'hero.cta.consultation': 'Konsultasi Gratis',
     'hero.cta.fleet': 'Lihat Armada',
     
@@ -94,7 +94,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Projects Page
     'projects.page.title': 'Proyek / Track Record',
-    'projects.page.subtitle': 'Track record proyek PT Mitra Kawan Bersama: 150+ completed projects untuk klien major dengan 99.8% safety record',
+    'projects.page.subtitle': 'Track record proyek PT Mitra Kawan Bersama:  completed projects untuk klien major dengan safety record',
     'projects.stats.completed': 'Proyek Selesai',
     'projects.stats.clients': 'Klien Major',
     'projects.stats.experience': 'Tahun Pengalaman',
@@ -190,7 +190,7 @@ const translations: Record<Language, Record<string, string>> = {
     'partnership.list.distributors': 'Authorized distributor untuk brand ternama',
     
     // Footer
-    'footer.about': 'PT Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 15+ tahun pengalaman melayani industri oil & gas, power plant, dan konstruksi di Indonesia.',
+    'footer.about': 'PT Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan pengalaman melayani industri oil & gas, power plant, dan konstruksi di Indonesia.',
     'footer.quicklinks': 'Tautan Cepat',
     'footer.services': 'Layanan',
     'footer.contact': 'Kontak',
@@ -209,7 +209,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.title': 'Heavy Equipment Rental & Construction Support',
-    'hero.subtitle': 'Your trusted partner for major construction projects with 200+ heavy equipment units and 15+ years of experience',
+    'hero.subtitle': 'Your trusted partner for major construction projects with 200+ heavy equipment units and of experience',
     'hero.cta.consultation': 'Free Consultation',
     'hero.cta.fleet': 'View Fleet',
     
@@ -220,10 +220,10 @@ const translations: Record<Language, Record<string, string>> = {
     'strengths.experience.desc': 'Experience in heavy equipment rental and construction support.',
     'strengths.fleet.title': 'Premium Equipment Fleet',
     'strengths.fleet.desc': '200+ heavy equipment units from leading brands: Liebherr, Manitowoc, Demag, Grove with capacity up to 2300 tons.',
-    'strengths.safety.title': '99.8% Safety Record',
+    'strengths.safety.title': 'Safety Record',
     'strengths.safety.desc': 'Outstanding safety track record with zero accidents for 24 consecutive months.',
     'strengths.trusted.title': 'Trusted by Industry Leaders',
-    'strengths.trusted.desc': 'Trusted by 50+ major clients including BP, PLN, Pertamina, Chevron, ExxonMobil for strategic projects.',
+    'strengths.trusted.desc': 'Trusted by major clients including BP, PLN, Pertamina, Chevron, ExxonMobil for strategic projects.',
     
     // Key Projects
     'projects.title': 'Featured Project Achievements',
@@ -281,7 +281,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Projects Page
     'projects.page.title': 'Projects / Track Record',
-    'projects.page.subtitle': 'PT Mitra Kawan Bersama track record: 150+ completed projects for major clients with 99.8% safety record',
+    'projects.page.subtitle': 'PT Mitra Kawan Bersama track record:  completed projects for major clients with safety record',
     'projects.stats.completed': 'Completed Projects',
     'projects.stats.clients': 'Major Clients',
     'projects.stats.experience': 'Years Experience',
@@ -366,7 +366,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // SEO Meta Tags
     'seo.home.title': 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support',
-    'seo.home.description': 'PT Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.',
+    'seo.home.description': 'PT Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and  experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.',
     'seo.home.keywords': 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia',
     
     'seo.fleet.title': 'Heavy Equipment Fleet - Crane, Excavator, Bulldozer | PT Mitra Kawan Bersama',
@@ -382,7 +382,7 @@ const translations: Record<Language, Record<string, string>> = {
     'seo.projects.keywords': 'LNG projects, power plant construction, oil refinery, MKB track record, major projects Indonesia, BP Indonesia, PLN, Pertamina',
     
     'seo.about.title': 'About PT Mitra Kawan Bersama - Heavy Equipment Rental Expert Indonesia',
-    'seo.about.description': 'PT Mitra Kawan Bersama established in 2008 as heavy equipment rental specialist. 15+ years experience, 200+ equipment units, 99.8% safety record, serving 50+ major clients in Indonesia.',
+    'seo.about.description': 'PT Mitra Kawan Bersama established in 2008 as heavy equipment rental specialist. experience, 200+ equipment units, safety record, serving major clients in Indonesia.',
     'seo.about.keywords': 'about MKB, company profile, heavy equipment specialist, Jakarta equipment rental, oil gas contractor, industrial equipment',
     
     'seo.news.title': 'Latest News & Updates - Heavy Equipment Industry | PT Mitra Kawan Bersama',
@@ -406,7 +406,7 @@ const translations: Record<Language, Record<string, string>> = {
     'partnership.list.distributors': 'Authorized distributors for renowned brands',
     
     // Footer
-    'footer.about': 'PT Mitra Kawan Bersama is a trusted heavy equipment rental company with 15+ years of experience serving the oil & gas, power plant, and construction industries in Indonesia.',
+    'footer.about': 'PT Mitra Kawan Bersama is a trusted heavy equipment rental company with  experience serving the oil & gas, power plant, and construction industries in Indonesia.',
     'footer.quicklinks': 'Quick Links',
     'footer.services': 'Services',
     'footer.contact': 'Contact',
