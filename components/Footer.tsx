@@ -4,57 +4,28 @@ import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
 
-type SingleFooterListItem = { title: string; href: string };
-type FooterListItems = SingleFooterListItem[];
-type SingleFooterList = { title: string; items: FooterListItems };
-type FooterItems = SingleFooterList[];
+type ListItemProps = {
+  title: string;
+  href: string;
+};
 
-const footerItems: FooterItems = [
-  {
-    title: 'Company',
-    items: [
-      { title: 'Privacy Policy', href: '/privacy-policy' },
-      { title: 'Cookies Policy', href: '/cookies-policy' },
-    ],
-  },
-  {
-    title: 'Product',
-    items: [
-      { title: 'Features', href: '/features' },
-      { title: 'Something', href: '/something' },
-      { title: 'Something else', href: '/something-else' },
-      { title: 'And something else', href: '/and-something-else' },
-    ],
-  },
-  {
-    title: 'Knowledge',
-    items: [
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact', href: '/contact' },
-      { title: 'FAQ', href: '/faq' },
-      { title: 'Help Center', href: '/help-center' },
-    ],
-  },
-  {
-    title: 'Something',
-    items: [
-      { title: 'Features2', href: '/features2' },
-      { title: 'Something2', href: '/something2' },
-      { title: 'Something else2', href: '/something-else2' },
-      { title: 'And something else2', href: '/and-something-else2' },
-    ],
-  },
+const footerLinks = [
+  { title: 'Privacy Policy', href: '/privacy-policy' },
+  { title: 'Career', href: '/career' },
+  { title: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {
   return (
     <FooterWrapper>
       <Container>
+        {/* Langsung render list item tanpa judul dan kolom */}
         <ListContainer>
-          {footerItems.map((singleItem) => (
-            <FooterList key={singleItem.title} {...singleItem} />
+          {footerLinks.map((link) => (
+            <ListItem key={link.href} {...link} />
           ))}
         </ListContainer>
+        
         <BottomBar>
           <ShareBar className='flex flex-row justify-start items-center'>
             <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
@@ -82,18 +53,7 @@ export default function Footer() {
   );
 }
 
-function FooterList({ title, items }: SingleFooterList) {
-  return (
-    <ListWrapper>
-      <ListHeader>{title}</ListHeader>
-      {items.map((singleItem) => (
-        <ListItem key={singleItem.href} {...singleItem} />
-      ))}
-    </ListWrapper>
-  );
-}
-
-function ListItem({ title, href }: SingleFooterListItem) {
+function ListItem({ title, href }: ListItemProps) {
   return (
     <ListItemWrapper>
       <NextLink href={href} passHref>
@@ -114,35 +74,18 @@ const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-`;
-
-const ListHeader = styled.p`
-  font-weight: bold;
-  font-size: 2.25rem;
-  margin-bottom: 2.5rem;
-`;
-
-const ListWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5rem;
-  margin-right: 5rem;
-
-  & > *:not(:first-child) {
-    margin-top: 1rem;
-  }
-
-  ${media('<=tablet')} {
-    flex: 0 40%;
-    margin-right: 1.5rem;
-  }
+  justify-content: center; // Pusatkan link di tengah
+  gap: 3rem; // Beri jarak antar link
+  margin-bottom: 6rem; // Beri jarak ke bottom bar
 
   ${media('<=phone')} {
-    flex: 0 100%;
-    margin-right: 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 `;
+
+// ListHeader dan ListWrapper sudah tidak diperlukan lagi
 
 const ListItemWrapper = styled.p`
   font-size: 1.6rem;
@@ -150,6 +93,11 @@ const ListItemWrapper = styled.p`
   a {
     text-decoration: none;
     color: rgba(var(--textSecondary), 0.75);
+    transition: color 0.2s;
+
+    &:hover {
+        color: rgb(var(--textSecondary));
+    }
   }
 `;
 
@@ -173,5 +121,10 @@ const BottomBar = styled.div`
 
   ${media('<=tablet')} {
     flex-direction: column;
+    justify-content: center; // Pusatkan saat di mobile
+
+    & > *:first-child {
+        margin-bottom: 2rem;
+    }
   }
 `;

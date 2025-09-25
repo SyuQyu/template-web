@@ -2,11 +2,13 @@ import Head from 'next/head';
 import { SetStateAction, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
+import BasicSection3 from 'components/BasicSection3';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
+import SectionsWrapper from 'components/SectionsWrapper';
 
 export default function ServicesPage() {
   const { t, language } = useLanguage();
@@ -194,19 +196,82 @@ export default function ServicesPage() {
           </HeaderSection>
         </Container>
 
-        <BasicSection 
-          imageUrl="/Trucks.png" 
-          title={t('services.rental.title')} 
-        >
-          <ServiceDescription>
-            <h4>{t('services.rental.title2')}</h4>
-            <ServiceList2>
-              {rentalItems.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ServiceList2>
-          </ServiceDescription>
-        </BasicSection>
+
+        <SectionsWrapper>
+          <BasicSection3 
+            imageUrl="/Trucks.png" 
+            title={t('services.rental.title3')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+          <BasicSection3 
+            imageUrl="/operational/19.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+          <BasicSection3 
+            imageUrl="/operational/20.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+          <BasicSection3 
+            imageUrl="/operational/24.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+          <BasicSection3 
+            imageUrl="/operational/25.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+          <BasicSection3 
+            imageUrl="/operational/26.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+        <BasicSection3 
+            imageUrl="/operational/27.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+
+         <BasicSection3 
+            imageUrl="/operational/20.JPG" 
+            title={t('services.rental.title')} 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+        </SectionsWrapper>
+          
+
 
         <BasicSection 
           imageUrl="/rigmoving.JPG" 

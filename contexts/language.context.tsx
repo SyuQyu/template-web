@@ -31,14 +31,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Core Strengths
     'strengths.title': 'Mengapa Memilih PT Mitra Kawan Bersama',
     'strengths.overtitle': 'Kekuatan Inti Kami',
-    'strengths.experience.title': '15+ Tahun Pengalaman',
-    'strengths.experience.desc': 'Pengalaman lebih dari 15 tahun dalam heavy equipment rental dan construction support untuk major projects.',
+    'strengths.experience.title': 'Pengalaman',
+    'strengths.experience.desc': 'Berpengalaman dalam heavy duty equipment rental dan construction support untuk major projects.',
     'strengths.fleet.title': 'Armada Premium Equipment',
-    'strengths.fleet.desc': '200+ unit heavy equipment dari brand terkemuka: Liebherr, Manitowoc, Demag, Grove dengan capacity hingga 2300 ton.',
-    'strengths.safety.title': '99.8% Safety Record',
+    'strengths.fleet.desc': 'Unit heavy equipment dari brand terkemuka: Liebherr, Manitowoc, Demag, Grove dengan capacity hingga 2300 ton.',
+    'strengths.safety.title': 'Safety Record',
     'strengths.safety.desc': 'Track record keselamatan yang outstanding dengan zero accident selama 24 bulan berturut-turut.',
     'strengths.trusted.title': 'Dipercaya Industry Leaders',
-    'strengths.trusted.desc': 'Dipercaya oleh 50+ major clients termasuk BP, PLN, Pertamina, Chevron, ExxonMobil untuk proyek-proyek strategis.',
+    'strengths.trusted.desc': 'Dipercaya oleh major clients termasuk BP, PLN, Pertamina, Chevron, ExxonMobil untuk proyek-proyek strategis.',
     
     // Key Projects
     'projects.title': 'Pencapaian Proyek Unggulan',
@@ -80,6 +80,10 @@ const translations: Record<Language, Record<string, string>> = {
     'services.engineering.title': 'Engineering Support',
     'services.engineering.desc': 'Konsultasi teknis dan engineering support untuk optimalisasi operasi construction.',
     
+    // Service Page Examples
+    'services.rental.title3': 'Lattice Crawler Cranes',
+    'services.rental.title4': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
     // Fleet Page
     'fleet.title': 'Armada / Peralatan',
     'fleet.subtitle': '200+ unit heavy equipment modern dari brand terkemuka dunia dengan maintenance berkala dan operator bersertifikat',
@@ -212,8 +216,8 @@ const translations: Record<Language, Record<string, string>> = {
     // Core Strengths
     'strengths.title': 'Why Choose PT Mitra Kawan Bersama',
     'strengths.overtitle': 'Our Core Strengths',
-    'strengths.experience.title': '15+ Years Experience',
-    'strengths.experience.desc': 'Over 15 years of experience in heavy equipment rental and construction support for major projects.',
+    'strengths.experience.title': 'Experience',
+    'strengths.experience.desc': 'Experience in heavy equipment rental and construction support.',
     'strengths.fleet.title': 'Premium Equipment Fleet',
     'strengths.fleet.desc': '200+ heavy equipment units from leading brands: Liebherr, Manitowoc, Demag, Grove with capacity up to 2300 tons.',
     'strengths.safety.title': '99.8% Safety Record',
@@ -260,6 +264,12 @@ const translations: Record<Language, Record<string, string>> = {
     'services.maintenance.desc': 'Maintenance and repair services for heavy equipment with certified technicians.',
     'services.engineering.title': 'Engineering Support',
     'services.engineering.desc': 'Technical consultation and engineering support for construction operation optimization.',
+
+
+    // Service Page Examples
+    'services.rental.title3': 'Lattice Crawler Cranes',
+    'services.rental.title4': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
     
     // Fleet Page
     'fleet.title': 'Fleet / Equipment',

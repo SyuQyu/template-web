@@ -10,6 +10,7 @@ import { media } from 'utils/media';
 import Features from 'views/HomePage/Features';
 import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
+// import Partners from 'views/HomePage/Partners';
 
 export default function Homepage({ posts }: any) {
   const { t, language } = useLanguage();
@@ -147,7 +148,7 @@ export default function Homepage({ posts }: any) {
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
-          <Partners />
+          {/* <Partners /> */}
         </WhiteBackgroundContainer>
 
         <CoreStrengthsSection>
@@ -240,7 +241,7 @@ export default function Homepage({ posts }: any) {
             </ProjectsGrid>
             
             <ProjectsCTA>
-              <Link href="/projects">
+              <Link href="/our-client-achievements">
                 <Button>{t('projects.cta')}</Button>
               </Link>
             </ProjectsCTA>
@@ -295,6 +296,8 @@ export default function Homepage({ posts }: any) {
         <DarkerBackgroundContainer>
           <Features />
         </DarkerBackgroundContainer>
+        <Partners/>
+
       </HomepageWrapper>
     </>
   );
@@ -344,7 +347,7 @@ const WhiteBackgroundContainer = styled.div`
   }
 
   & > :last-child {
-    padding-bottom: 15rem;
+    padding-bottom: 30rem;
   }
 
   & > *:not(:first-child) {

@@ -200,13 +200,19 @@ const NavbarContainer = styled.div`
   height: 8rem;
   z-index: var(--z-navbar);
 
-  background-color: rgb(var(--secpondaryBackground));
+  background-color: #1A202C;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  
+    .next-light-theme & {
+    background-color: #fff;
+  }
 
-  transition-property: transform, visibility, height, box-shadow, background-color;
+  transition-property: height, box-shadow;
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
 `;
+
+
 
 const Content = styled(Container)`
   display: flex;

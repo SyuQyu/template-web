@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import BasicSection from 'components/BasicSection';
+import BasicSection4 from 'components/BasicSection4';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
@@ -118,12 +118,7 @@ const ACHIEVEMENTS = [
 ];
 
 const MAJOR_CLIENTS = [
-	{ name: 'BP Indonesia', logo: '/partners/gdap.png', sector: 'Oil & Gas' },
-	{ name: 'PT. Pertamina', logo: '/partners/gdap.png', sector: 'Oil & Gas' },
-	{ name: 'PT. PLN', logo: '/partners/gdap.png', sector: 'Power Generation' },
-	{ name: 'PT. Freeport', logo: '/partners/gdap.png', sector: 'Mining' },
-	{ name: 'Chevron Indonesia', logo: '/partners/gdap.png', sector: 'Oil & Gas' },
-	{ name: 'ExxonMobil', logo: '/partners/gdap.png', sector: 'Oil & Gas' },
+	{ name: 'BP Indonesia', logo: '/partners/gdap.png', sector: 'Oil & Gas' }
 ];
 
 export default function ClientsAchievementsPage() {
@@ -141,8 +136,8 @@ export default function ClientsAchievementsPage() {
 					name="description"
 					content={
 						language === 'id'
-							? 'Partner terpercaya 50+ klien major: BP Indonesia, Pertamina, PLN, Freeport. 15+ tahun pengalaman, 99.8% safety record, USD 500M+ total project value. Lihat testimoni dan pencapaian kami.'
-							: 'Trusted partner of 50+ major clients: BP Indonesia, Pertamina, PLN, Freeport. 15+ years experience, 99.8% safety record, USD 500M+ total project value. See our testimonials and achievements.'
+							? 'Partner terpercaya 50+ klien major: BP Indonesia, Pertamina, PLN, Freeport. pengalaman, safety record, USD 500M+ total project value. Lihat testimoni dan pencapaian kami.'
+							: 'Trusted partner of 50+ major clients: BP Indonesia, Pertamina, PLN, Freeport. experience, safety record, USD 500M+ total project value. See our testimonials and achievements.'
 					}
 				/>
 				<meta
@@ -167,7 +162,7 @@ export default function ClientsAchievementsPage() {
 					property="og:description"
 					content={
 						language === 'id'
-							? 'Partner terpercaya 50+ klien major. 15+ tahun pengalaman, 99.8% safety record, USD 500M+ project value.'
+							? 'Partner terpercaya 50+ klien major. pengalaman, safety record, USD 500M+ project value.'
 							: 'Trusted partner of 50+ major clients. 15+ years experience, 99.8% safety record, USD 500M+ total project value.'
 					}
 				/>
@@ -243,19 +238,42 @@ export default function ClientsAchievementsPage() {
 					</HeaderSection>
 				</Container>
 
-				<BasicSection
-					imageUrl="/demo-illustration-1.svg"
-					title="Company Achievements"
-				>
-					<StatsGrid>
-						{ACHIEVEMENTS.map((achievement, idx) => (
-							<StatCard key={idx}>
-								<StatNumber>{achievement.number}</StatNumber>
-								<StatLabel>{achievement.label}</StatLabel>
-							</StatCard>
-						))}
-					</StatsGrid>
-				</BasicSection>
+				<BasicSection4 
+					imageUrl="/iso/iso9001.jpg" 
+					title="Certification of ISO 9001:2015" 
+					>
+					<ServiceDescription>
+						<h4>Certification of ISO 9001:2015</h4>
+						<ServiceList>
+							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+						</ServiceList>
+					</ServiceDescription>
+				</BasicSection4>				
+
+				<BasicSection4 
+					imageUrl="/iso/iso14001.jpg" 
+					title="Certification of ISO 14001:2015"
+					reversed 
+					>
+					<ServiceDescription>
+						<h4>Certification of ISO 14001:2015</h4>
+						<ServiceList>
+							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+						</ServiceList>
+					</ServiceDescription>
+				</BasicSection4>	
+
+				<BasicSection4 
+					imageUrl="/iso/iso45001.jpg" 
+					title="Certification of ISO 45001:2018" 
+					>
+					<ServiceDescription>
+						<h4>Certification of ISO 45001:2018</h4>
+						<ServiceList>
+							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+						</ServiceList>
+					</ServiceDescription>
+				</BasicSection4>	
 
 				<Container>
 					<ClientsSection>
@@ -571,7 +589,6 @@ const ClientLogosSection = styled.div`
 
 const ClientsGrid = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 3rem;
 	margin-top: 4rem;
 
@@ -616,4 +633,34 @@ const ClientSector = styled.div`
 	font-size: 1.2rem;
 	color: var(--text-secondary);
 	text-align: center;
+`;
+
+const ServiceList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  
+  li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    
+    &:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+`;
+
+const ServiceDescription = styled.div`
+  h4 {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
 `;

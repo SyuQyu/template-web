@@ -42,6 +42,7 @@ export default function Hero() {
 const HeroWrapper = styled(Container)`
   display: flex;
   padding-top: 5rem;
+  align-items: center;
 
   ${media('<=desktop')} {
     padding-top: 1rem;
@@ -53,7 +54,7 @@ const HeroWrapper = styled(Container)`
 const Contents = styled.div`
   flex: 1;
   max-width: 60rem;
-
+  padding-top: 20rem;
   ${media('<=desktop')} {
     max-width: 100%;
   }
