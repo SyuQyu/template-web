@@ -5,10 +5,10 @@ import BasicSection from 'components/BasicSection';
 import BasicSection3 from 'components/BasicSection3';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
+import SectionsWrapper from 'components/SectionsWrapper';
 import SectionTitle from 'components/SectionTitle';
 import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
-import SectionsWrapper from 'components/SectionsWrapper';
 
 export default function ServicesPage() {
   const { t, language } = useLanguage();
@@ -200,7 +200,7 @@ export default function ServicesPage() {
         <SectionsWrapper>
           <BasicSection3 
             imageUrl="/Trucks.png" 
-            title={t('services.rental.title3')} 
+            title="Lattice Crawler Crane" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -209,7 +209,7 @@ export default function ServicesPage() {
 
           <BasicSection3 
             imageUrl="/operational/19.JPG" 
-            title={t('services.rental.title')} 
+            title="Telescopic Crawler Crane" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -218,7 +218,7 @@ export default function ServicesPage() {
 
           <BasicSection3 
             imageUrl="/operational/20.JPG" 
-            title={t('services.rental.title')} 
+            title="Mobile Crane" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -227,7 +227,7 @@ export default function ServicesPage() {
 
           <BasicSection3 
             imageUrl="/operational/24.JPG" 
-            title={t('services.rental.title')} 
+            title="Bulldozer" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -236,7 +236,7 @@ export default function ServicesPage() {
 
           <BasicSection3 
             imageUrl="/operational/25.JPG" 
-            title={t('services.rental.title')} 
+            title="Foco Truck" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -245,7 +245,7 @@ export default function ServicesPage() {
 
           <BasicSection3 
             imageUrl="/operational/26.JPG" 
-            title={t('services.rental.title')} 
+            title="Lowbed Truck" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -254,7 +254,7 @@ export default function ServicesPage() {
 
         <BasicSection3 
             imageUrl="/operational/27.JPG" 
-            title={t('services.rental.title')} 
+            title="Highbed Truck" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>
@@ -263,7 +263,15 @@ export default function ServicesPage() {
 
          <BasicSection3 
             imageUrl="/operational/20.JPG" 
-            title={t('services.rental.title')} 
+            title="Vacuum Truck" 
+          >
+            <ServiceDescription>
+              <h4>{t('services.rental.title4')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
+           <BasicSection3 
+            imageUrl="/operational/20.JPG" 
+            title="Cargo Truck" 
           >
             <ServiceDescription>
               <h4>{t('services.rental.title4')}</h4>

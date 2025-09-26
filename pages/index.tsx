@@ -200,44 +200,9 @@ export default function Homepage({ posts }: any) {
               <SectionTitle>{t('projects.title')}</SectionTitle>
             </SectionHeader>
             <ProjectsGrid>
-              <ProjectCard>
-                <ProjectImage src="/demo-illustration-1.svg" alt="LNG Tangguh Project" />
-                <ProjectContent>
-                  <ProjectTitle>LNG Plant Expansion - Tangguh Papua</ProjectTitle>
-                  <ProjectClient>BP Indonesia</ProjectClient>
-                  <ProjectDescription>
-                    Heavy lift operations untuk LNG plant expansion menggunakan 
-                    crawler cranes hingga 750 ton capacity.
-                  </ProjectDescription>
-                  <ProjectValue>USD 45 Million</ProjectValue>
-                </ProjectContent>
-              </ProjectCard>
-              
-              <ProjectCard>
-                <ProjectImage src="/demo-illustration-2.svg" alt="PLTU Jawa Project" />
-                <ProjectContent>
-                  <ProjectTitle>Power Plant Construction - PLTU Jawa-7</ProjectTitle>
-                  <ProjectClient>PT PLN (Persero)</ProjectClient>
-                  <ProjectDescription>
-                    Rig move dan heavy equipment support untuk pembangunan 
-                    power plant 1000 MW capacity.
-                  </ProjectDescription>
-                  <ProjectValue>USD 38 Million</ProjectValue>
-                </ProjectContent>
-              </ProjectCard>
-              
-              <ProjectCard>
-                <ProjectImage src="/demo-illustration-3.png" alt="Pertamina Refinery" />
-                <ProjectContent>
-                  <ProjectTitle>Oil Refinery Expansion - Kilang Cilacap</ProjectTitle>
-                  <ProjectClient>PT Pertamina (Persero)</ProjectClient>
-                  <ProjectDescription>
-                    Equipment rental dan maintenance support untuk refinery 
-                    capacity expansion project.
-                  </ProjectDescription>
-                  <ProjectValue>USD 52 Million</ProjectValue>
-                </ProjectContent>
-              </ProjectCard>
+              <ProjectGridItem>HDE Services for Land Drilling Rig 550HP - 336</ProjectGridItem>
+              <ProjectGridItem>HDE Services for Land Drilling Rig 550HP - 337</ProjectGridItem>
+              <ProjectGridItem>HDE Services for Land Drilling Rig 550HP - 338</ProjectGridItem>
             </ProjectsGrid>
             
             <ProjectsCTA>
@@ -410,62 +375,34 @@ const KeyProjectsSection = styled.div`
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-top: 4rem;
-  
-  ${media('<=tablet')} {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 `;
 
-const ProjectCard = styled.div`
+const ProjectGridItem = styled.div`
   background: var(--cardBackground);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-`;
-
-const ProjectImage = styled.img`
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-`;
-
-const ProjectContent = styled.div`
-  padding: 2.5rem;
-`;
-
-const ProjectTitle = styled.h3`
-  font-size: 1.8rem;
-  color: rgb(var(--text));
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-`;
-
-const ProjectClient = styled.div`
-  font-size: 1.4rem;
-  color: var(--primary);
-  font-weight: 600;
-  margin-bottom: 1rem;
-`;
-
-const ProjectDescription = styled.p`
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: center;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-`;
-
-const ProjectValue = styled.div`
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--primary);
+  transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s cubic-bezier(.4,2,.3,1);
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    background: var(--cardBackground);
+  }
 `;
 
 const ProjectsCTA = styled.div`
