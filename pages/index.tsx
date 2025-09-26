@@ -328,7 +328,7 @@ const WhiteBackgroundContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(203, 205, 224, 0.6);
+    background: rgba(203, 205, 224, 0.7);
     z-index: 1;
     
   }

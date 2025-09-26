@@ -68,7 +68,7 @@ export default function Navbar({ items }: NavbarProps) {
           <div className='flex justify-start items-center cursor-pointer mr-auto gap-2'>
             <NextImage src={"/mkb_logo_png_new.png"} alt={"logo"} width={40} height={40} objectFit="cover" />
              <NavItemWrapper>
-              <NextLink href={"#"} passHref>
+              <NextLink href="/"  passHref>
                 <h1 className='xl:!block !hidden'>Mitra Kawan Bersama</h1>
               </NextLink>
             </NavItemWrapper>

@@ -41,9 +41,9 @@ const translations: Record<Language, Record<string, string>> = {
     'strengths.trusted.desc': 'Dipercaya oleh major clients termasuk BP, PLN, Pertamina, Chevron, ExxonMobil untuk proyek-proyek strategis.',
     
     // Key Projects
-    'projects.title': 'Pencapaian Proyek Unggulan',
-    'projects.overtitle': 'Proyek Kunci',
-    'projects.cta': 'Lihat Semua Proyek',
+    'projects.title': 'Pencapaian Unggulan',
+    'projects.overtitle': 'Pencapaian Utama',
+    'projects.cta': 'Lihat Semua Pencapaian',
     
     // Quick Contact
     'contact.title': 'Siap Memulai Proyek Anda?',
@@ -226,10 +226,10 @@ const translations: Record<Language, Record<string, string>> = {
     'strengths.trusted.desc': 'Trusted by major clients including BP, PLN, Pertamina, Chevron, ExxonMobil for strategic projects.',
     
     // Key Projects
-    'projects.title': 'Featured Project Achievements',
-    'projects.overtitle': 'Key Projects',
-    'projects.cta': 'View All Projects',
-    
+    'projects.title': 'Featured Achievements',
+    'projects.overtitle': 'Key Achievements',
+    'projects.cta': 'View All Achievements',
+
     // Quick Contact
     'contact.title': 'Ready to Start Your Project?',
     'contact.subtitle': 'Contact our expert team for consultation and quotation. We are ready to provide the best heavy equipment rental solutions for your project.',

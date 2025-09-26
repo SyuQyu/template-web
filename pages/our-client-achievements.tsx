@@ -1,3 +1,6 @@
+// ...existing imports...
+
+
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection4 from 'components/BasicSection4';
@@ -7,115 +10,39 @@ import SectionTitle from 'components/SectionTitle';
 import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
-const CLIENT_PROFILES = [
-	{
-		id: 1,
-		name: 'BP Indonesia',
-		sector: 'Oil & Gas',
-		partnership: '2015 - Present',
-		location: 'Jakarta & Papua',
-		description:
-			'Strategic partner dalam LNG operations dan upstream oil & gas activities di Indonesia',
-		services: [
-			'Heavy Lift Operations',
-			'Marine Equipment Rental',
-			'Project Management',
-		],
-		achievements: [
-			'150+ successful operations',
-			'Zero accident record',
-			'99.8% equipment uptime',
-		],
-		image: '/demo-illustration-1.svg',
-		testimonial: {
-			text: 'PT. MKB telah menjadi partner terpercaya dalam mendukung operasi LNG kami. Professional service dan commitment terhadap safety excellence.',
-			author: 'John Anderson',
-			position: 'Operations Director, BP Indonesia',
-		},
-	},
-	{
-		id: 2,
-		name: 'PT. PLN (Persero)',
-		sector: 'Power Generation',
-		partnership: '2018 - Present',
-		location: 'Seluruh Indonesia',
-		description:
-			'Supporting power plant construction dan maintenance operations dengan heavy equipment rental',
-		services: [
-			'Mobile Crane Rental',
-			'Transportation Services',
-			'Maintenance Support',
-		],
-		achievements: [
-			'25+ power plant projects',
-			'2.5GW total capacity supported',
-			'100% on-time delivery',
-		],
-		image: '/demo-illustration-2.svg',
-		testimonial: {
-			text: 'Reliability dan professional service dari MKB sangat membantu kelancaran pembangunan pembangkit listrik nasional.',
-			author: 'Ir. Bambang Sutrisno',
-			position: 'Construction Director, PLN',
-		},
-	},
-	{
-		id: 3,
-		name: 'PT. Pertamina (Persero)',
-		sector: 'Oil Refinery',
-		partnership: '2012 - Present',
-		location: 'Cilacap, Balongan, Balikpapan',
-		description:
-			'Long-term partnership dalam refinery expansion dan maintenance operations',
-		services: [
-			'Heavy Equipment Rental',
-			'Specialized Transportation',
-			'Technical Support',
-		],
-		achievements: [
-			'3 major refinery expansions',
-			'USD 150M+ project value',
-			'12 years partnership',
-		],
-		image: '/demo-illustration-3.png',
-		testimonial: {
-			text: 'MKB telah membuktikan konsistensi dalam memberikan service excellence untuk berbagai project refinery kami.',
-			author: 'Drs. Ahmad Mulyadi',
-			position: 'Project Director, Pertamina',
-		},
-	},
-	{
-		id: 4,
-		name: 'PT. Freeport Indonesia',
-		sector: 'Mining',
-		partnership: '2019 - Present',
-		location: 'Papua',
-		description:
-			'Supporting mining operations dengan specialized heavy equipment untuk kondisi ekstrem',
-		services: [
-			'Mining Equipment Rental',
-			'Maintenance Services',
-			'Logistics Support',
-		],
-		achievements: [
-			'5+ years mining support',
-			'Extreme weather operations',
-			'24/7 availability',
-		],
-		image: '/demo-illustration-4.png',
-		testimonial: {
-			text: 'Dalam kondisi operasi mining yang challenging, MKB selalu deliver dengan service quality yang exceptional.',
-			author: 'Michael Johnson',
-			position: 'Operations Manager, Freeport Indonesia',
-		},
-	},
-];
+const ProjectsGrid = styled.div`
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin: 3rem 0 0 0;
+	padding: 0;
+	font-size: 1.5rem;
+	color: var(--text-secondary);
+	@media (max-width: 900px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
+`;
 
-const ACHIEVEMENTS = [
-	{ number: '50+', label: 'Satisfied Clients' },
-	{ number: '15+', label: 'Years Experience' },
-	{ number: '99.8%', label: 'Safety Record' },
-	{ number: 'USD 500M+', label: 'Total Project Value' },
-];
+const ProjectGridItem = styled.div`
+	background: rgb(var(--cardBackground));
+	border-radius: 0.8rem;
+	padding: 1.5rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	text-align: center;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s cubic-bezier(.4,2,.3,1);
+	cursor: pointer;
+	&:hover {
+		transform: translateY(-6px) scale(1.03);
+		box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+		background: rgb(var(--cardBackground), 0.98);
+	}
+`;
+
 
 const MAJOR_CLIENTS = [
 	{ name: 'BP Indonesia', logo: '/partners/gdap.png', sector: 'Oil & Gas' }
@@ -245,7 +172,7 @@ export default function ClientsAchievementsPage() {
 					<ServiceDescription>
 						<h4>Certification of ISO 9001:2015</h4>
 						<ServiceList>
-							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
 						</ServiceList>
 					</ServiceDescription>
 				</BasicSection4>				
@@ -258,7 +185,7 @@ export default function ClientsAchievementsPage() {
 					<ServiceDescription>
 						<h4>Certification of ISO 14001:2015</h4>
 						<ServiceList>
-							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
 						</ServiceList>
 					</ServiceDescription>
 				</BasicSection4>	
@@ -270,87 +197,37 @@ export default function ClientsAchievementsPage() {
 					<ServiceDescription>
 						<h4>Certification of ISO 45001:2018</h4>
 						<ServiceList>
-							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
 						</ServiceList>
 					</ServiceDescription>
 				</BasicSection4>	
 
 				<Container>
+
 					<ClientsSection>
 						<OverTitle>
-							{language === 'id' ? 'Klien Utama' : 'Major Clients'}
+							{language === 'id' ? 'Daftar Pekerjaan' : 'Project List'}
 						</OverTitle>
-						<SectionTitle>Industry Leaders We Serve</SectionTitle>
-
-						{CLIENT_PROFILES.map((client, idx) => (
-							<ClientCard key={client.id} reverse={idx % 2 === 1}>
-								<ClientImageWrapper reverse={idx % 2 === 1}>
-									<ClientImage src={client.image} alt={client.name} />
-								</ClientImageWrapper>
-
-								<ClientContent reverse={idx % 2 === 1}>
-									<ClientHeader>
-										<ClientMeta>
-											<MetaItem>
-												<MetaLabel>Sector:</MetaLabel>
-												<MetaValue>{client.sector}</MetaValue>
-											</MetaItem>
-											<MetaItem>
-												<MetaLabel>Partnership:</MetaLabel>
-												<MetaValue>{client.partnership}</MetaValue>
-											</MetaItem>
-											<MetaItem>
-												<MetaLabel>Location:</MetaLabel>
-												<MetaValue>{client.location}</MetaValue>
-											</MetaItem>
-										</ClientMeta>
-
-										<ClientTitle>{client.name}</ClientTitle>
-										<ClientDescription>
-											{client.description}
-										</ClientDescription>
-									</ClientHeader>
-
-									<ClientDetails>
-										<DetailSection>
-											<DetailTitle>Services Provided:</DetailTitle>
-											<ServicesList>
-												{client.services.map((service, serviceIdx) => (
-													<ServiceItem key={serviceIdx}>
-														{service}
-													</ServiceItem>
-												))}
-											</ServicesList>
-										</DetailSection>
-
-										<ClientAchievements>
-											<DetailTitle>Key Achievements:</DetailTitle>
-											<AchievementsList>
-												{client.achievements.map(
-													(achievement, achIdx) => (
-														<AchievementItem key={achIdx}>
-															✓ {achievement}
-														</AchievementItem>
-													)
-												)}
-											</AchievementsList>
-										</ClientAchievements>
-									</ClientDetails>
-
-									<TestimonialSection>
-										<TestimonialText>
-											&ldquo;{client.testimonial.text}&rdquo;
-										</TestimonialText>
-										<TestimonialAuthor>
-											<AuthorName>{client.testimonial.author}</AuthorName>
-											<AuthorPosition>
-												{client.testimonial.position}
-											</AuthorPosition>
-										</TestimonialAuthor>
-									</TestimonialSection>
-								</ClientContent>
-							</ClientCard>
-						))}
+						<SectionTitle>{language === 'id' ? 'Pekerjaan yang Telah Dilakukan' : 'Completed Works'}</SectionTitle>
+						<ProjectsGrid>
+							{[
+								"HDE Services for Land Drilling Rig 550HP - 336",
+								"HDE Services for Land Drilling Rig 550HP - 337",
+								"HDE Services for Land Drilling Rig 550HP - 338",
+								"HDE Services for Land Drilling Rig 550HP - 339",
+								"HDE Services for Workover Rig 450HP - 363",
+								"HDE Services for Workover Rig 450HP - 364",
+								"HDE Services for Workover Rig 450HP - 365",
+								"HDE Services for Workover Rig 450HP - 366",
+								"HDE Services for Workover Rig 450HP - 367",
+								"Rig Land Transport Services",
+								"Rig Sea Transport Services",
+								"Light Vehicle and Bus Rent Services for Drilling Project",
+								"Light Vehicle and Bus Rent Services for Workover Project"
+							].map((project, idx) => (
+								<ProjectGridItem key={idx}>{project}</ProjectGridItem>
+							))}
+						</ProjectsGrid>
 					</ClientsSection>
 
 					<ClientLogosSection>
@@ -429,158 +306,6 @@ const ClientsSection = styled.div`
 	margin: 8rem 0;
 `;
 
-const ClientCard = styled.div<{ reverse?: boolean }>`
-	display: grid;
-	grid-template-columns: ${(props) => (props.reverse ? '1fr 1fr' : '1fr 1fr')};
-	gap: 4rem;
-	align-items: center;
-	margin: 6rem 0;
-	padding: 4rem;
-	background: rgb(var(--cardBackground));
-	;
-	border-radius: 1rem;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-
-	${media('<=tablet')} {
-		grid-template-columns: 1fr;
-		gap: 3rem;
-		padding: 3rem 2rem;
-	}
-`;
-
-const ClientImageWrapper = styled.div<{ reverse?: boolean }>`
-	${media('<=tablet')} {
-		order: 1;
-	}
-`;
-
-const ClientImage = styled.img`
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-	border-radius: 0.8rem;
-`;
-
-const ClientContent = styled.div<{ reverse?: boolean }>`
-	text-align: left;
-
-	${media('<=tablet')} {
-		order: 2;
-	}
-`;
-
-const ClientHeader = styled.div`
-	margin-bottom: 2rem;
-`;
-
-const ClientMeta = styled.div`
-	display: flex;
-	flex-wrap: wrap;
-	gap: 2rem;
-	margin-bottom: 1.5rem;
-`;
-
-const MetaItem = styled.div`
-	display: flex;
-	gap: 0.5rem;
-`;
-
-const MetaLabel = styled.span`
-	font-weight: bold;
-	color: var(--primary);
-	font-size: 1.4rem;
-`;
-
-const MetaValue = styled.span`
-	color: var(--text-secondary);
-	font-size: 1.4rem;
-`;
-
-const ClientTitle = styled.h3`
-	font-size: 2.2rem;
-	margin-bottom: 1rem;
-	color: rgb(var(--text));
-`;
-
-const ClientDescription = styled.p`
-	font-size: 1.6rem;
-	line-height: 1.6;
-	color: var(--text-secondary);
-`;
-
-const ClientDetails = styled.div`
-	margin: 2rem 0;
-`;
-
-const DetailSection = styled.div`
-	margin-bottom: 2rem;
-`;
-
-const DetailTitle = styled.h4`
-	font-size: 1.6rem;
-	color: var(--primary);
-	margin-bottom: 1rem;
-`;
-
-const ServicesList = styled.div`
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-`;
-
-const ServiceItem = styled.span`
-	background: var(--tertiary);
-	padding: 0.5rem 1rem;
-	border-radius: 2rem;
-	font-size: 1.3rem;
-	color: var(--primary);
-`;
-
-const ClientAchievements = styled.div`
-	margin-top: 2rem;
-`;
-
-const AchievementsList = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 0.8rem;
-`;
-
-const AchievementItem = styled.div`
-	font-size: 1.4rem;
-	color: var(--text-secondary);
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-`;
-
-const TestimonialSection = styled.div`
-	margin-top: 3rem;
-	padding: 2rem;
-	background: var(--tertiary);
-	border-radius: 0.8rem;
-`;
-
-const TestimonialText = styled.p`
-	font-style: italic;
-	font-size: 1.5rem;
-	line-height: 1.6;
-	margin-bottom: 1.5rem;
-	color: rgb(var(--text));
-`;
-
-const TestimonialAuthor = styled.div``;
-
-const AuthorName = styled.div`
-	font-weight: bold;
-	color: var(--primary);
-	font-size: 1.4rem;
-`;
-
-const AuthorPosition = styled.div`
-	font-size: 1.3rem;
-	color: var(--text-secondary);
-`;
 
 const ClientLogosSection = styled.div`
 	text-align: center;
@@ -589,13 +314,11 @@ const ClientLogosSection = styled.div`
 
 const ClientsGrid = styled.div`
 	display: grid;
-	gap: 3rem;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 2rem;
 	margin-top: 4rem;
-
-	${media('<=tablet')} {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
-	}
+	font-size: 1.5rem;
+	color: var(--text-secondary);
 `;
 
 const ClientLogo = styled.div`

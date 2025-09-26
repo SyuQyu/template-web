@@ -22,11 +22,11 @@ export default function WaveCta() {
           <Title>Siap untuk berkembang bersama mitra terpercaya? Hubungi kami sekarang!</Title>
           <CustomButtonGroup>
             <Button >
-              Hubungi Kami <span>&rarr;</span>
+              Hubungi Kami
             </Button>
             <NextLink href="/about" passHref>
               <OutlinedButton transparent>
-                Tentang Kami <span>&rarr;</span>
+                Tentang Kami
               </OutlinedButton>
             </NextLink>
           </CustomButtonGroup>

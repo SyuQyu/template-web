@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
-import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
 import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
@@ -25,16 +24,13 @@ export default function Hero() {
               {t('hero.cta.consultation')}
             </Button>
           </NextLink>
-          <NextLink href="/fleet" passHref>
-            <Button transparent>
+          {/* <NextLink href="/fleet" passHref>
+            <OutlinedButton transparent>
               {t('hero.cta.fleet')}
-            </Button>
-          </NextLink>
+            </OutlinedButton>
+          </NextLink> */}
         </CustomButtonGroup>
       </Contents>
-      {/* <ImageContainer>
-        <HeroIllustration />
-      </ImageContainer> */}
     </HeroWrapper>
   );
 }
@@ -62,25 +58,6 @@ const Contents = styled.div`
 const CustomButtonGroup = styled(ButtonGroup)`
   margin-top: 4rem;
   justify-content: center; 
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: flex-start;
-
-  svg {
-    max-width: 45rem;
-  }
-
-  ${media('<=desktop')} {
-    margin-top: 2rem;
-    justify-content: center;
-    svg {
-      max-width: 80%;
-    }
-  }
 `;
 
 const Description = styled.p`
