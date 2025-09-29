@@ -166,7 +166,7 @@ export default function ClientsAchievementsPage() {
 				</Container>
 
 				<BasicSection4 
-					imageUrl="/iso/iso9001.jpg" 
+					imageUrl="/iso/iso-1.jpg" 
 					title="Certification of ISO 9001:2015" 
 					>
 					<ServiceDescription>
@@ -178,7 +178,7 @@ export default function ClientsAchievementsPage() {
 				</BasicSection4>				
 
 				<BasicSection4 
-					imageUrl="/iso/iso14001.jpg" 
+					imageUrl="/iso/iso-2.jpg" 
 					title="Certification of ISO 14001:2015"
 					reversed 
 					>
@@ -191,7 +191,7 @@ export default function ClientsAchievementsPage() {
 				</BasicSection4>	
 
 				<BasicSection4 
-					imageUrl="/iso/iso45001.jpg" 
+					imageUrl="/iso/iso-3.jpg" 
 					title="Certification of ISO 45001:2018" 
 					>
 					<ServiceDescription>
