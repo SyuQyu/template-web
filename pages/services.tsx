@@ -199,7 +199,7 @@ export default function ServicesPage() {
 
         <SectionsWrapper>
           <BasicSection3 
-            imageUrl="/Trucks.png" 
+            imageUrl="/services/crane.jpg" 
             title="Lattice Crawler Crane" 
           >
             <ServiceDescription>
@@ -208,7 +208,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
           <BasicSection3 
-            imageUrl="/operational/19.JPG" 
+            imageUrl="/services/telescopic.jpg" 
             title="Telescopic Crawler Crane" 
           >
             <ServiceDescription>
@@ -217,7 +217,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
           <BasicSection3 
-            imageUrl="/operational/20.JPG" 
+            imageUrl="/services/mobilecrane.jpg" 
             title="Mobile Crane" 
           >
             <ServiceDescription>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
           <BasicSection3 
-            imageUrl="/operational/24.JPG" 
+            imageUrl="/operational/27.JPG" 
             title="Bulldozer" 
           >
             <ServiceDescription>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
         <BasicSection3 
-            imageUrl="/operational/27.JPG" 
+            imageUrl="/operational/6.JPG" 
             title="Highbed Truck" 
           >
             <ServiceDescription>
@@ -262,7 +262,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
          <BasicSection3 
-            imageUrl="/operational/20.JPG" 
+            imageUrl="/operational/19.JPG" 
             title="Vacuum Truck" 
           >
             <ServiceDescription>
@@ -270,7 +270,7 @@ export default function ServicesPage() {
             </ServiceDescription>
           </BasicSection3>
            <BasicSection3 
-            imageUrl="/operational/20.JPG" 
+            imageUrl="/services/cargo.jpg" 
             title="Cargo Truck" 
           >
             <ServiceDescription>
@@ -683,7 +683,7 @@ const AdditionalServicesSection = styled.div`
 const ServicesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 3rem;
+  gap: 4rem;
   margin-top: 4rem;
   
   ${media('<=tablet')} {

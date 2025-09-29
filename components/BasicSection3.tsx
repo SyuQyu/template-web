@@ -29,6 +29,7 @@ const BasicSection3Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 2rem;
 `;
 
 const Title = styled.h2`
