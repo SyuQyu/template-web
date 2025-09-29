@@ -7,7 +7,7 @@ import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
-import Features from 'views/HomePage/Features';
+// import Features from 'views/HomePage/Features';
 import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
 // import Partners from 'views/HomePage/Partners';
@@ -258,9 +258,9 @@ export default function Homepage({ posts }: any) {
           </Container>
         </QuickContactSection>
 
-        <DarkerBackgroundContainer>
+        {/* <DarkerBackgroundContainer>
           <Features />
-        </DarkerBackgroundContainer>
+        </DarkerBackgroundContainer> */}
         <Partners/>
 
       </HomepageWrapper>

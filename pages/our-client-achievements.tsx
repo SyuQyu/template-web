@@ -45,7 +45,7 @@ const ProjectGridItem = styled.div`
 
 
 const MAJOR_CLIENTS = [
-	{ name: 'BP Indonesia', logo: '/partners/gdap.png', sector: 'Oil & Gas' }
+	{ name: 'Great Wall Drilling Asia', logo: '/partners/gdap.png' }
 ];
 
 export default function ClientsAchievementsPage() {
@@ -241,7 +241,7 @@ export default function ClientsAchievementsPage() {
 								<ClientLogo key={idx}>
 									<img src={client.logo} alt={client.name} />
 									<ClientName>{client.name}</ClientName>
-									<ClientSector>{client.sector}</ClientSector>
+									{/* <ClientSector>{client.sector}</ClientSector> */}
 								</ClientLogo>
 							))}
 						</ClientsGrid>
