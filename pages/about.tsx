@@ -184,7 +184,7 @@ export default function AboutPage() {
         >
           <CoreStrengthsList>
             <li><strong>Fleet Terlengkap:</strong> 200+ unit heavy equipment dari berbagai kategori dan kapasitas</li>
-            <li><strong>Tim Berpengalaman:</strong> Operator, teknisi, dan engineer bersertifikat dengan pengalaman 10+ tahun</li>
+            <li><strong>Tim Berpengalaman:</strong> Operator, teknisi, dan engineer bersertifikat dan berpengalaman</li>
             <li><strong>Coverage Area Luas:</strong> Melayani seluruh Indonesia dengan base operation di Jakarta dan Duri</li>
             <li><strong>Quality Assurance:</strong> Sistem QAQC terintegrasi untuk memastikan standar kualitas terbaik</li>
             <li><strong>24/7 Support:</strong> Layanan maintenance dan emergency response siap 24 jam</li>

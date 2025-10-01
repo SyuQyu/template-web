@@ -208,7 +208,7 @@ export default function ClientsAchievementsPage() {
 						<OverTitle>
 							{language === 'id' ? 'Daftar Pekerjaan' : 'Project List'}
 						</OverTitle>
-						<SectionTitle>{language === 'id' ? 'Pekerjaan yang Telah Dilakukan' : 'Completed Works'}</SectionTitle>
+						<SectionTitle>{language === 'id' ? 'Pekerjaan yang Telah Dilakukan' : 'Completed Projects'}</SectionTitle>
 						<ProjectsGrid>
 							{[
 								"HDE Services for Land Drilling Rig 550HP - 336",

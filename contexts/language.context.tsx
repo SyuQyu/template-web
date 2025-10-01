@@ -18,7 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'Tentang Kami',
     'nav.services': 'Layanan',
     'nav.fleet': 'Armada / Peralatan',
-    'nav.projects': 'Klien kami & Pencapaian',
+    'nav.projects': 'Sertifikat & Pencapaian',
     'nav.news': 'Berita',
     'nav.contact': 'Kontak',
     
@@ -41,7 +41,7 @@ const translations: Record<Language, Record<string, string>> = {
     'strengths.trusted.desc': 'Dipercaya oleh major clients termasuk BP, PLN, Pertamina, Chevron, ExxonMobil untuk proyek-proyek strategis.',
     
     // Key Projects
-    'projects.title': 'Pencapaian Unggulan',
+    'projects.title': 'Proyek Kami',
     'projects.overtitle': 'Pencapaian Utama',
     'projects.cta': 'Lihat Semua Pencapaian',
     
@@ -203,7 +203,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About Us',
     'nav.services': 'Services',
     'nav.fleet': 'Fleet / Equipment',
-    'nav.projects': 'Our Clients & Achievements',
+    'nav.projects': 'Certifications & Achievements',
     'nav.news': 'News',
     'nav.contact': 'Contact',
     
@@ -226,7 +226,7 @@ const translations: Record<Language, Record<string, string>> = {
     'strengths.trusted.desc': 'Trusted by major clients including BP, PLN, Pertamina, Chevron, ExxonMobil for strategic projects.',
     
     // Key Projects
-    'projects.title': 'Featured Achievements',
+    'projects.title': 'Our Projects',
     'projects.overtitle': 'Key Achievements',
     'projects.cta': 'View All Achievements',
 
