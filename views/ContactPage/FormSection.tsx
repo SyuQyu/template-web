@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import Input from 'components/Input';
 import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
-import MailSentState from '../../components/MailSentState';
 
 interface EmailPayload {
   name: string;
@@ -17,92 +15,70 @@ interface EmailPayload {
 
 export default function FormSection() {
   const { t } = useLanguage();
-  const [hasSuccessfullySentMail, setHasSuccessfullySentMail] = useState(false);
-  const [hasErrored, setHasErrored] = useState(false);
   const { register, handleSubmit, formState } = useForm();
-  const { isSubmitSuccessful, isSubmitting, isSubmitted, errors } = formState;
+  const { isSubmitting, errors } = formState;
 
-  async function onSubmit(payload: EmailPayload) {
-    try {
-      const res = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-          subject: `Equipment Rental Inquiry from ${payload.name} - ${payload.company}`, 
-          ...payload 
-        }),
-      });
 
-      if (res.status !== 204) {
-        setHasErrored(true);
-      }
-    } catch {
-      setHasErrored(true);
-      return;
-    }
+  function handleMailto(payload: EmailPayload) {
+    const subject = encodeURIComponent(
+      `Equipment Rental Inquiry from ${payload.name} - ${payload.company}`
+    );
 
-    setHasSuccessfullySentMail(true);
+    const body = encodeURIComponent(payload.message);
+
+    const mailtoLink = `mailto:info@mk-bersama.com?cc=darren@mk-bersama.com&subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
   }
 
-  const isSent = isSubmitSuccessful && isSubmitted;
-  const isDisabled = isSubmitting || isSent;
-  const isSubmitDisabled = Object.keys(errors).length > 0 || isDisabled;
-
-  if (hasSuccessfullySentMail) {
-    return <MailSentState />;
-  }
+  const isSubmitDisabled = Object.keys(errors).length > 0 || isSubmitting;
 
   return (
     <Wrapper>
       <FormTitle>{t('contact.form.title')}</FormTitle>
       <FormSubtitle>{t('contact.form.subtitle')}</FormSubtitle>
-      
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        {hasErrored && <ErrorMessage>Couldn&apos;t send email. Please try again.</ErrorMessage>}
-        
+
+      <Form onSubmit={handleSubmit(handleMailto)}>
         {/* Personal Information */}
         <InputGroup>
           <InputStack>
             {errors.name && <ErrorMessage>{t('contact.form.name')} is required</ErrorMessage>}
-            <Input 
-              placeholder={t('contact.form.name')} 
-              id="name" 
-              disabled={isDisabled} 
-              {...register('name', { required: true })} 
+            <Input
+              placeholder={t('contact.form.name')}
+              id="name"
+              disabled={isSubmitting}
+              {...register('name', { required: true })}
             />
           </InputStack>
           <InputStack>
             {errors.company && <ErrorMessage>{t('contact.form.company')} is required</ErrorMessage>}
-            <Input 
-              placeholder={t('contact.form.company')} 
-              id="company" 
-              disabled={isDisabled} 
-              {...register('company', { required: true })} 
+            <Input
+              placeholder={t('contact.form.company')}
+              id="company"
+              disabled={isSubmitting}
+              {...register('company', { required: true })}
             />
           </InputStack>
         </InputGroup>
-        
+
         <InputGroup>
           <InputStack>
             {errors.email && <ErrorMessage>{t('contact.form.email')} is required</ErrorMessage>}
-            <Input 
-              placeholder={t('contact.form.email')} 
-              id="email" 
+            <Input
+              placeholder={t('contact.form.email')}
+              id="email"
               type="email"
-              disabled={isDisabled} 
-              {...register('email', { required: true })} 
+              disabled={isSubmitting}
+              {...register('email', { required: true })}
             />
           </InputStack>
           <InputStack>
             {errors.phone && <ErrorMessage>{t('contact.form.phone')} is required</ErrorMessage>}
-            <Input 
-              placeholder={t('contact.form.phone')} 
-              id="phone" 
+            <Input
+              placeholder={t('contact.form.phone')}
+              id="phone"
               type="tel"
-              disabled={isDisabled} 
-              {...register('phone', { required: true })} 
+              disabled={isSubmitting}
+              {...register('phone', { required: true })}
             />
           </InputStack>
         </InputGroup>
@@ -113,14 +89,14 @@ export default function FormSection() {
             as="textarea"
             placeholder={t('contact.form.message')}
             id="message"
-            disabled={isDisabled}
+            disabled={isSubmitting}
             rows={5}
             {...register('message', { required: true })}
           />
         </InputStack>
 
         <Button as="button" type="submit" disabled={isSubmitDisabled}>
-          {isSubmitting ? 'Sending...' : t('contact.form.submit')}
+          {isSubmitting ? 'Loading...' : t('contact.form.submit')}
         </Button>
       </Form>
     </Wrapper>
@@ -136,7 +112,7 @@ const FormTitle = styled.h3`
   margin-bottom: 1rem;
   color: rgba(var(--text), 1);
   font-weight: bold;
-  
+
   ${media('<=tablet')} {
     font-size: 2rem;
   }

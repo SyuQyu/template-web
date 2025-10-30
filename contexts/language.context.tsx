@@ -290,6 +290,19 @@ const translations: Record<Language, Record<string, string>> = {
     'strengths.trusted.title': 'Trusted by Industry Leaders',
     'strengths.trusted.desc': 'Trusted by major clients including BP, PLN, Pertamina, Chevron, ExxonMobil for strategic projects.',
     
+
+    // Core Strengths
+    'strengthsachievment.title': 'Why Choose PT Mitra Kawan Bersama',
+    'strengthsachievment.overtitle': 'Our Core Strengths',
+    'strengthsachievment.experience.title': 'Remote Operations Expertise',
+    'strengthsachievment.experience.desc': 'Proven expertise in remote field operations and logistics coordination.',
+    'strengthsachievment.fleet.title': 'Certified Manpower',
+    'strengthsachievment.fleet.desc': 'Access to a large pool of certified and experienced manpower.',
+    'strengthsachievment.safety.title': 'Safety & Compliance',
+    'strengthsachievment.safety.desc': 'Strong emphasis on safety, quality, and compliance.',
+    'strengthsachievment.trusted.title': 'Fleet & Equipment Resources',
+    'strengthsachievment.trusted.desc': 'Backed by comprehensive in-house equipment and fleet resources.',
+
     // Key Projects
     'projects.title': 'Our Projects',
     'projects.overtitle': 'Key Achievements',
@@ -336,7 +349,7 @@ const translations: Record<Language, Record<string, string>> = {
     'services.engineering.desc': 'Technical consultation and engineering support for construction operation optimization.',
 
     // Services: Field Operations & Manpower
-    'services.fieldops.title': '1. Field Operation Support',
+    'services.fieldops.title': 'Field Operation Support',
     'services.fieldops.intro': 'MKB offers integrated field support solutions tailored to meet the unique demands of the oil and gas industries. With deep operational experience and proven project management capability, our team ensures smooth coordination between logistics, equipment, and personnel at every stage of the project lifecycle.',
     'services.fieldops.scopeTitle': 'Our scope of support includes:',
     'services.fieldops.item1': 'Rig and site mobilization – coordinating logistics and heavy equipment movement to remote and offshore locations.',
@@ -344,13 +357,20 @@ const translations: Record<Language, Record<string, string>> = {
     'services.fieldops.item3': 'Maintenance and inspection – conducting preventive maintenance and operational checks to guarantee equipment reliability and safety compliance.',
     'services.fieldops.item4': 'HSE implementation – reinforcing Health, Safety, and Environmental (HSE) best practices across all site operations in accordance with ISO 45001 and company policies.',
 
-    'services.manpower.title': '2. Manpower Supply',
+    'services.manpower.title': 'Manpower Supply',
     'services.manpower.desc': 'MKB offers integrated field support solutions tailored to meet the unique demands of the oil and gas, mining, and construction industries. With deep operational experience and proven project management capability, our team ensures smooth coordination between logistics, equipment, and personnel at every stage of the project lifecycle.',
     'services.manpower.scopeTitle': 'Our scope of support includes:',
     'services.manpower.item1': 'Rig and site mobilization – coordinating logistics and heavy equipment movement to remote and offshore locations.',
     'services.manpower.item2': 'Operational coordination – providing on-site administrative and technical support to ensure daily activities meet client standards and timelines.',
     'services.manpower.item3': 'Maintenance and inspection – conducting preventive maintenance and operational checks to guarantee equipment reliability and safety compliance.',
     'services.manpower.item4': 'HSE implementation – reinforcing Health, Safety, and Environmental (HSE) best practices across all site operations in accordance with ISO 45001 and company policies.',
+
+    'services.manpowerachivement.title': 'Manpower Supply',
+    'services.manpowerachivement.desc': 'MKB provides qualified, trained, and certified personnel to meet diverse project requirements. Our manpower solutions are built around flexibility, compliance, and performance, ensuring that each deployment enhances productivity while maintaining strict adherence to safety and operational excellence.',
+    'services.manpowerachivement.scopeTitle': 'Our manpower categories include:',
+    'services.manpowerachivement.item1': 'Skilled technical workers (mechanics, operators, riggers, electricians, welders)',
+    'services.manpowerachivement.item2': 'Professional and administrative staff (supervisors, logistics coordinators, HSE officers, project administrators)',
+    'services.manpowerachivement.item3': 'Support personnel (drivers, helpers, camp crew, and other general support staff). We maintain a continuously updated database of experienced personnel, ready for both short-term project-based and long-term contract deployments across Indonesia',
 
     // Services: Additional sections
     'services.lightvehicle.title': 'Light Vehicle Rental Operation Support',
@@ -367,6 +387,8 @@ const translations: Record<Language, Record<string, string>> = {
     'services.mobilization.item4.title': 'Project Management',
     'services.mobilization.item4.desc': 'Safety compliance and documentation support',
 
+    'services.achievment.title': 'Field Operations Support & Manpower Supply',
+    'services.achievment.desc': 'At PT Mitra Kawan Bersama (MKB), we understand that the success of every project depends not only on equipment performance but also on the efficiency, expertise, and dedication of the people behind it. Our Field Operations Support & Manpower Supply services are designed to provide end-to-end operational assistance, ensuring that every aspect of site activity runs seamlessly, safely, and on schedule.',
 
     // Service Page Examples
     'services.rental.title3': 'Lattice Crawler Cranes',
@@ -455,10 +477,10 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Contact Information
     'contact.info.title': 'Contact Information',
-    'contact.jakarta.title': 'Jakarta Head Office',
-    'contact.jakarta.address': 'The East Floor 35 Unit 3, Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Bar., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950',
-    'contact.jakarta.phone': '+62 21 4682 1234',
-    'contact.jakarta.fax': '+62 21 4682 1235',
+    'contact.jakarta.title': 'Adresss Site',
+    'contact.jakarta.address': 'Yard GWDC Duri, Jalan Lintas Duri–Dumai KM 14, Belakang Kantor Camat Bathin Solapan, Desa Sebangar, Kecamatan Bathin Solapan, Kabupaten Bengkalis, Provinsi Riau 28785',
+    'contact.jakarta.phone': 'Semua email yg dikirim dari client dikirim ke info@mk.bersama.com *automatically cc ke darren@mk-bersama.com',
+    // 'contact.jakarta.fax': '+62 21 4682 1235',
     'contact.duri.title': 'Duri Yard - Operational Base',
     'contact.duri.address': 'Jl. Lintas Timur KM 85, Duri, Bengkalis, Riau 28784, Indonesia',
     'contact.duri.phone': '+62 765 41234',

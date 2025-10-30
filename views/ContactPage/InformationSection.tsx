@@ -17,14 +17,19 @@ export default function InformationSection() {
             <Label>📍 Alamat:</Label>
             <Value>{t('contact.jakarta.address')}</Value>
           </ContactItem>
-          <ContactItem>
-            <Label>📞 Telepon:</Label>
-            <Value>{t('contact.jakarta.phone')}</Value>
-          </ContactItem>
-          <ContactItem>
+          {/* <ContactItem>
+            <Label>📧 Email:</Label>
+            <a
+              href="mailto:info@mk-bersama.com?cc=darren@mk-bersama.com&subject=Inquiry%20from%20Client"
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              info@mk.bersama.com
+            </a>
+          </ContactItem> */}
+          {/* <ContactItem>
             <Label>📠 Fax:</Label>
             <Value>{t('contact.jakarta.fax')}</Value>
-          </ContactItem>
+          </ContactItem> */}
         </ContactDetails>
       </OfficeSection>
     </Wrapper>

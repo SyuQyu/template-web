@@ -56,7 +56,7 @@ export default function ContactPage() {
                 "streetAddress": "The East Building Lt.39 Unit 3912-3914, Jl. Dr. Ide Anak Agung Gde Agung Lot 8.6-8.7 Kawasan Mega Kuningan",
                 "addressLocality": "Jakarta Selatan",
                 "addressRegion": "DKI Jakarta",
-                "postalCode": "12950",
+                "postalCode": "28785",
                 "addressCountry": "ID"
               },
               "contactPoint": [

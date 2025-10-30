@@ -4,6 +4,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection4 from 'components/BasicSection4';
+import BasicSection from 'components/BasicSection';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
@@ -159,8 +160,8 @@ export default function ClientsAchievementsPage() {
 						<SectionTitle>Trusted Partnership Excellence</SectionTitle>
 						<Description>
 							{language === 'id'
-								? 'Membanggakan kerjasama dengan klien terkemuka di Indonesia. Berpengalaman melayani sektor Oil & Gas, Power Generation, dan Mining dengan standar safety dan total project value USD 500M+'
-								: 'Proud to partner with leading clients across Indonesia. Experience serving Oil & Gas, Power Generation, and Mining sectors with safety standards and USD 500M+ total project value.'}
+								? 'Kami membangun kemitraan yang kuat dan berjangka panjang berdasarkan kepercayaan, keandalan, dan kinerja yang terbukti. Kolaborasi berkelanjutan kami dengan Greatwall Drilling Asia Pacific mencerminkan komitmen kami untuk memberikan kualitas yang konsisten dan layanan yang dapat diandalkan.'
+								: 'We build strong, long-term partnerships based on trust, reliability, and proven performance. Our ongoing collaboration with Greatwall Drilling Asia Pacific reflects our commitment to delivering consistent quality and dependable service.'}
 						</Description>
 					</HeaderSection>
 				</Container>
@@ -200,8 +201,56 @@ export default function ClientsAchievementsPage() {
 							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
 						</ServiceList>
 					</ServiceDescription>
-				</BasicSection4>	
+				</BasicSection4>
 
+						<Container>
+						  <AdditionalServicesSection>
+							<SectionTitle>{t('services.achievment.title')}</SectionTitle>
+							<ServicesGrid>
+							  <ServiceCard>
+								<ServiceDetails>
+								  <p>{t('services.achievment.desc')}</p>
+								</ServiceDetails>
+							  </ServiceCard>
+							</ServicesGrid>
+						  </AdditionalServicesSection>
+						</Container>
+
+						<BasicSection 
+						  imageUrl="/rigmoving.JPG" 
+						  title={t('services.fieldops.title')} 
+						  reversed={true}
+						>
+						  <ServiceDescription>
+							<SectionBlock>
+							  <p>{t('services.fieldops.intro')}</p>
+							  <p>{t('services.fieldops.scopeTitle')}</p>
+							  <BulletList>
+								<li>{t('services.fieldops.item1')}</li>
+								<li>{t('services.fieldops.item2')}</li>
+								<li>{t('services.fieldops.item3')}</li>
+								<li>{t('services.fieldops.item4')}</li>
+							  </BulletList>
+							</SectionBlock>
+						  </ServiceDescription>
+						</BasicSection>
+				
+						<BasicSection 
+						  imageUrl="/maintenance.webp" 
+						  title={t('services.manpower.title')} 
+						>
+						  <ServiceDescription>
+						  <SectionBlock>
+							  <p>{t('services.manpowerachivement.desc')}</p>
+							  <p>{t('services.manpowerachivement.scopeTitle')}</p>
+							  <BulletList>
+								<li>{t('services.manpowerachivement.item1')}</li>
+								<li>{t('services.manpowerachivement.item2')}</li>
+								<li>{t('services.manpowerachivement.item3')}</li>
+							  </BulletList>
+							</SectionBlock>
+						  </ServiceDescription>
+						</BasicSection>
 				<Container>
 
 					<ClientsSection>
@@ -247,6 +296,49 @@ export default function ClientsAchievementsPage() {
 						</ClientsGrid>
 					</ClientLogosSection>
 				</Container>
+
+						<CoreStrengthsSection>
+						  <Container>
+							<SectionHeader>
+							  <OverTitle>{t('strengths.overtitle')}</OverTitle>
+							  <SectionTitle>{t('strengths.title')}</SectionTitle>
+							</SectionHeader>
+							<StrengthsGrid>
+							  <StrengthCard>
+								<StrengthIcon>🌍</StrengthIcon>
+								<StrengthTitle>{t('strengths.experience.title')}</StrengthTitle>
+								<StrengthDescription>
+								  {t('strengthsachievment.experience.desc')}
+								</StrengthDescription>
+							  </StrengthCard>
+							  
+							  <StrengthCard>
+								<StrengthIcon>👷‍♂️</StrengthIcon>
+								<StrengthTitle>{t('strengthsachievment.fleet.title')}</StrengthTitle>
+								<StrengthDescription>
+								  {t('strengthsachievment.fleet.desc')}
+								</StrengthDescription>
+							  </StrengthCard>
+							  
+							  <StrengthCard>
+								<StrengthIcon>🛡️</StrengthIcon>
+								<StrengthTitle>{t('strengthsachievment.safety.title')}</StrengthTitle>
+								<StrengthDescription>
+								  {t('strengthsachievment.safety.desc')}
+								</StrengthDescription>
+							  </StrengthCard>
+							  
+							  <StrengthCard>
+								<StrengthIcon>🚚</StrengthIcon>
+								<StrengthTitle>{t('strengthsachievment.trusted.title')}</StrengthTitle>
+								<StrengthDescription>
+								  {t('strengthsachievment.trusted.desc')}
+								</StrengthDescription>
+							  </StrengthCard>
+							</StrengthsGrid>
+						  </Container>
+						</CoreStrengthsSection>
+
 			</ClientsWrapper>
 		</>
 	);
@@ -381,9 +473,116 @@ const ServiceList = styled.ul`
   }
 `;
 
+
 const ServiceDescription = styled.div`
   h4 {
-    font-size: 1.5rem;
-    color: var(--primary);
+	font-size: 1.5rem;
+	color: var(--primary);
   }
+`;
+
+const SectionBlock = styled.div`
+  text-align: left;
+  margin-top: 1.5rem;
+  p {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: var(--text-secondary);
+	margin: 0 0 1rem 0;
+  }
+`;
+
+const BulletList = styled.ul`
+  list-style: disc;
+  padding-left: 1.8rem;
+  margin-top: 0.5rem;
+  li {
+	margin-bottom: 0.75rem;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: var(--text-secondary);
+  }
+`;
+
+const AdditionalServicesSection = styled.div`
+  text-align: left;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 2rem 0;
+`;
+
+const ServicesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2rem;
+`;
+
+const ServiceCard = styled.div`
+  background: rgb(var(--cardBackground));
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+`;
+
+const ServiceDetails = styled.div`
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    
+  }
+`;
+
+
+const CoreStrengthsSection = styled.div`
+  padding: 8rem 0;
+  background: rgb(var(--background));
+`;
+
+const SectionHeader = styled.div`
+  text-align: center;
+  margin-bottom: 5rem;
+`;
+
+const StrengthsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+`;
+
+const StrengthCard = styled.div`
+  background: var(--cardBackground);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+const StrengthIcon = styled.div`
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+`;
+
+const StrengthTitle = styled.h3`
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+`;
+
+const StrengthDescription = styled.p`
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 `;
