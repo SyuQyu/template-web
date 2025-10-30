@@ -35,7 +35,7 @@ const BasicSection3Wrapper = styled(Container)`
 const Title = styled.h2`
   font-size: 3.6rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
 

@@ -52,6 +52,10 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.email': 'Email',
     'contact.call': 'Telepon',
     'contact.cta': 'Konsultasi Gratis',
+    // CTA
+    'cta.title': 'Siap untuk berkembang bersama mitra terpercaya? Hubungi kami sekarang!',
+    'cta.contact': 'Hubungi Kami',
+    'cta.about': 'Tentang Kami',
     
     // About Page
     'about.title': 'Tentang PT Mitra Kawan Bersama',
@@ -66,6 +70,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Services Page
     'services.title': 'Layanan Kami',
     'services.subtitle': 'Solusi lengkap heavy equipment rental dan construction support untuk berbagai kebutuhan industri',
+    'services.header.title': 'Layanan Peralatan Berat',
     'services.rental.title': 'Heavy Equipment Rental',
     'services.rental.title2': 'Kami menyediakan berbagai peralatan berat berkualitas tinggi untuk mendukung kebutuhan proyek Anda, termasuk:',
     'services.rental.desc': 'lattice crawler cranes, telescopic crawler cranes, mobile cranes, bulldozers, foco trucks, lowbed trucks, highbed trucks, vacuum trucks, cargo',
@@ -79,10 +84,70 @@ const translations: Record<Language, Record<string, string>> = {
     'services.maintenance.desc': 'Maintenance dan repair services untuk heavy equipment dengan teknisi bersertifikat.',
     'services.engineering.title': 'Engineering Support',
     'services.engineering.desc': 'Konsultasi teknis dan engineering support untuk optimalisasi operasi construction.',
+
+    // Services: Field Operations & Manpower
+    'services.fieldops.title': '1. Field Operation Support',
+    'services.fieldops.intro': 'MKB menawarkan solusi dukungan lapangan terintegrasi yang disesuaikan dengan kebutuhan unik industri migas. Dengan pengalaman operasional yang mendalam dan kapabilitas manajemen proyek yang terbukti, tim kami memastikan koordinasi yang mulus antara logistik, peralatan, dan personel di setiap tahap siklus proyek.',
+    'services.fieldops.scopeTitle': 'Ruang lingkup dukungan kami meliputi:',
+    'services.fieldops.item1': 'Mobilisasi rig dan lokasi – mengoordinasikan logistik dan pergerakan alat berat ke lokasi terpencil maupun offshore.',
+    'services.fieldops.item2': 'Koordinasi operasional – menyediakan dukungan administratif dan teknis di lokasi untuk memastikan aktivitas harian memenuhi standar dan timeline klien.',
+    'services.fieldops.item3': 'Perawatan dan inspeksi – melakukan preventive maintenance dan pemeriksaan operasional untuk menjamin keandalan peralatan dan kepatuhan keselamatan.',
+    'services.fieldops.item4': 'Implementasi HSE – memperkuat praktik terbaik K3L di seluruh operasi lokasi sesuai ISO 45001 dan kebijakan perusahaan.',
+
+    'services.manpower.title': '2. Manpower Supply',
+    'services.manpower.desc': 'MKB menyediakan dukungan lapangan terintegrasi untuk kebutuhan industri migas, pertambangan, dan konstruksi. Dengan pengalaman operasional serta kapabilitas manajemen proyek yang kuat, kami memastikan koordinasi yang lancar antara logistik, peralatan, dan personel di seluruh tahapan proyek.',
+    'services.manpower.scopeTitle': 'Ruang lingkup dukungan kami meliputi:',
+    'services.manpower.item1': 'Mobilisasi rig dan lokasi – mengoordinasikan logistik dan pergerakan alat berat ke lokasi terpencil maupun offshore.',
+    'services.manpower.item2': 'Koordinasi operasional – menyediakan dukungan administratif dan teknis di lokasi untuk memastikan aktivitas harian memenuhi standar dan timeline klien.',
+    'services.manpower.item3': 'Perawatan dan inspeksi – melakukan preventive maintenance dan pemeriksaan operasional untuk menjamin keandalan peralatan dan kepatuhan keselamatan.',
+    'services.manpower.item4': 'Implementasi HSE – memperkuat praktik terbaik K3L sesuai ISO 45001 dan kebijakan perusahaan.',
+
+    // Services: Additional sections
+    'services.lightvehicle.title': 'Dukungan Operasi Rental Kendaraan Ringan',
+    'services.lightvehicle.desc': 'Kami menyediakan pilihan kendaraan ringan berkualitas untuk mendukung berbagai kebutuhan proyek, termasuk Double Cabin, Mini Bus, dan Elf Bus. Seluruh kendaraan dirawat sesuai standar tinggi untuk memastikan keandalan, kenyamanan, dan keselamatan selama operasional.',
+
+    'services.mobilization.title': 'Mobilisasi dan De‑Mobilisasi Rig Moving',
+    'services.mobilization.desc': 'Kami menyediakan layanan mobilisasi dan de‑mobilisasi yang efisien untuk memastikan pemindahan peralatan, kendaraan, dan personel ke dan dari lokasi proyek dengan aman dan tepat waktu.',
+    'services.mobilization.item1.title': 'Respon Cepat',
+    'services.mobilization.item1.desc': 'Perencanaan rute dan perizinan',
+    'services.mobilization.item2.title': 'Penanganan Alat Berat',
+    'services.mobilization.item2.desc': 'Transportasi alat berat dan ringan',
+    'services.mobilization.item3.title': 'Dukungan Operasional',
+    'services.mobilization.item3.desc': 'Koordinasi setup dan pembongkaran lokasi',
+    'services.mobilization.item4.title': 'Manajemen Proyek',
+    'services.mobilization.item4.desc': 'Kepatuhan keselamatan dan dukumentasi',
     
     // Service Page Examples
     'services.rental.title3': 'Lattice Crawler Cranes',
     'services.rental.title4': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
+    // Per-equipment (ID localized)
+    'services.rental.lattice.brands': 'Merek: XCMG, Zoomlion, Sany, Shantui, dll',
+    'services.rental.lattice.desc': 'Lattice Crawler Crane kami dirancang untuk performa pengangkatan maksimum pada proyek konstruksi skala besar dan operasi rig. Dibangun untuk stabilitas dan kapasitas tinggi, crane ini memberikan daya angkat dan presisi yang luar biasa di medan menantang, memastikan performa optimal untuk pengangkatan berat dan pekerjaan instalasi.',
+
+    'services.rental.telescopic.brands': 'Merek: XCMG, Zoomlion, Shantui, dll',
+    'services.rental.telescopic.desc': 'Telescopic Crawler Crane MKB menggabungkan mobilitas sistem crawler dengan fleksibilitas boom teleskopik. Dirancang untuk setup cepat dan operasi yang mulus, ideal untuk area terbatas dan lingkungan proyek dinamis yang menuntut tenaga dan fleksibilitas.',
+
+    'services.rental.mobile.brands': 'Merek: SANY, XCMG, dll',
+    'services.rental.mobile.desc': 'Mobile Crane kami dari SANY, XCMG, dll merupakan solusi pengangkatan yang efisien dan dapat berjalan di jalan raya, menawarkan mobilisasi cepat dan kemampuan angkat yang kuat. Cocok untuk proyek onshore maupun industri, memberikan operasi yang aman, andal, dan fleksibel untuk beragam kebutuhan.',
+
+    'services.rental.bulldozer.brands': 'Merek: Caterpillar, Komatsu, Shantui, HOWO, dll',
+    'services.rental.bulldozer.desc': 'Dilengkapi untuk pekerjaan pemindahan tanah dan persiapan lahan, Bulldozer MKB memberikan daya dan traksi yang unggul. Didukung merek terkemuka seperti Caterpillar, Komatsu, Shantui, dll, armada kami memastikan performa optimal untuk grading, clearing, dan material handling di berbagai medan.',
+
+    'services.rental.foco.brands': 'Merek: HOWO, FAW, Sinotruck, dll',
+    'services.rental.foco.desc': 'FOCO Truck kami dilengkapi crane hidrolik pemuat, memberikan solusi pengangkatan dan transportasi yang efisien. Sempurna untuk logistik di lokasi, mobilisasi peralatan, dan penanganan material, menawarkan fleksibilitas dan keselamatan untuk kebutuhan operasional harian.',
+
+    'services.rental.lowbed.brands': 'Merek: FAW, Volvo, HOWO, Sinotruck, dll',
+    'services.rental.lowbed.desc': 'Lowbed Truck MKB dirancang untuk transportasi yang aman dan efisien bagi alat berat dan muatan berukuran besar. Dengan kualitas konstruksi yang tangguh dan penggerak andal dari FAW dan Volvo, truk ini memastikan mobilitas yang mulus dan pengiriman peralatan berat yang aman.',
+
+    'services.rental.highbed.brands': 'Merek: Volvo, Sinotruck, HOWO, dll',
+    'services.rental.highbed.desc': 'Highbed Truck kami menyediakan kemampuan angkut yang kuat untuk material curah dan kargo umum. Didukung teknologi Volvo, Sino, dll, unit ini menawarkan durabilitas, stabilitas, dan adaptabilitas untuk berbagai operasi logistik lapangan.',
+
+    'services.rental.vacuum.brands': 'Merek: Howo, Mitsubishi, Isuzu, FAW, Sinotruck, dll',
+    'services.rental.vacuum.desc': 'Vacuum Truck dalam armada MKB terspesialisasi untuk pembersihan industri, penanganan limbah, dan penghisapan fluida. Didukung mesin yang andal dan sistem vakum yang kuat, unit ini memastikan operasi yang efisien dan ramah lingkungan di area onshore maupun lokasi terpencil.',
+
+    'services.rental.cargo.brands': 'Merek: Isuzu, Mitsubishi, Sinotruck, SANY, dll',
+    'services.rental.cargo.desc': 'Cargo Truck kami merupakan solusi transportasi serbaguna untuk material, peralatan, dan logistik umum. Dibangun dengan performa andal dan efisiensi bahan bakar, truk ini mendukung kelancaran operasional harian di berbagai lokasi proyek.',
 
     // Fleet Page
     'fleet.title': 'Armada / Peralatan',
@@ -237,6 +302,10 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.email': 'Email',
     'contact.call': 'Call Us',
     'contact.cta': 'Free Consultation',
+    // CTA
+    'cta.title': 'Ready to grow with a trusted partner? Contact us today!',
+    'cta.contact': 'Contact Us',
+    'cta.about': 'About Us',
     
     // About Page
     'about.title': 'About PT Mitra Kawan Bersama',
@@ -251,6 +320,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Services Page
     'services.title': 'Our Services',
     'services.subtitle': 'Complete heavy equipment rental and construction support solutions for various industrial needs',
+    'services.header.title': 'Heavy Duty Equipment Services',
     'services.rental.title': 'Heavy Equipment Rental',
     'services.rental.title2': 'We provide a wide range of high-quality heavy equipment to support your project needs, including:',
     'services.rental.desc': 'lattice crawler cranes, telescopic crawler cranes, mobile cranes, bulldozers, foco trucks, lowbed trucks, highbed trucks, vacuum trucks, cargo',
@@ -265,10 +335,70 @@ const translations: Record<Language, Record<string, string>> = {
     'services.engineering.title': 'Engineering Support',
     'services.engineering.desc': 'Technical consultation and engineering support for construction operation optimization.',
 
+    // Services: Field Operations & Manpower
+    'services.fieldops.title': '1. Field Operation Support',
+    'services.fieldops.intro': 'MKB offers integrated field support solutions tailored to meet the unique demands of the oil and gas industries. With deep operational experience and proven project management capability, our team ensures smooth coordination between logistics, equipment, and personnel at every stage of the project lifecycle.',
+    'services.fieldops.scopeTitle': 'Our scope of support includes:',
+    'services.fieldops.item1': 'Rig and site mobilization – coordinating logistics and heavy equipment movement to remote and offshore locations.',
+    'services.fieldops.item2': 'Operational coordination – providing on-site administrative and technical support to ensure daily activities meet client standards and timelines.',
+    'services.fieldops.item3': 'Maintenance and inspection – conducting preventive maintenance and operational checks to guarantee equipment reliability and safety compliance.',
+    'services.fieldops.item4': 'HSE implementation – reinforcing Health, Safety, and Environmental (HSE) best practices across all site operations in accordance with ISO 45001 and company policies.',
+
+    'services.manpower.title': '2. Manpower Supply',
+    'services.manpower.desc': 'MKB offers integrated field support solutions tailored to meet the unique demands of the oil and gas, mining, and construction industries. With deep operational experience and proven project management capability, our team ensures smooth coordination between logistics, equipment, and personnel at every stage of the project lifecycle.',
+    'services.manpower.scopeTitle': 'Our scope of support includes:',
+    'services.manpower.item1': 'Rig and site mobilization – coordinating logistics and heavy equipment movement to remote and offshore locations.',
+    'services.manpower.item2': 'Operational coordination – providing on-site administrative and technical support to ensure daily activities meet client standards and timelines.',
+    'services.manpower.item3': 'Maintenance and inspection – conducting preventive maintenance and operational checks to guarantee equipment reliability and safety compliance.',
+    'services.manpower.item4': 'HSE implementation – reinforcing Health, Safety, and Environmental (HSE) best practices across all site operations in accordance with ISO 45001 and company policies.',
+
+    // Services: Additional sections
+    'services.lightvehicle.title': 'Light Vehicle Rental Operation Support',
+    'services.lightvehicle.desc': 'We offer a comprehensive selection of high-quality light vehicles to support a wide range of project requirements, including Double Cabins, Mini Buses, and Elf Buses. All vehicles are maintained to the highest standards to ensure reliability, comfort, and safety on the job.',
+
+    'services.mobilization.title': 'Mobilization and De‑Mobilization Rig Moving',
+    'services.mobilization.desc': 'We provide efficient mobilization and de‑mobilization services to ensure the timely and safe transfer of equipment, vehicles, and personnel to and from project sites.',
+    'services.mobilization.item1.title': 'Rapid Response',
+    'services.mobilization.item1.desc': 'Route and permit planning',
+    'services.mobilization.item2.title': 'Heavy Equipment Handling',
+    'services.mobilization.item2.desc': 'Transportation of heavy and light equipment',
+    'services.mobilization.item3.title': 'Operational Support',
+    'services.mobilization.item3.desc': 'Site setup and dismantling coordination',
+    'services.mobilization.item4.title': 'Project Management',
+    'services.mobilization.item4.desc': 'Safety compliance and documentation support',
+
 
     // Service Page Examples
     'services.rental.title3': 'Lattice Crawler Cranes',
     'services.rental.title4': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
+    // Per-equipment (EN shown for both languages until localized)
+    'services.rental.lattice.brands': 'Brands: XCMG, Zoomlion, Sany, Shantui, etc',
+    'services.rental.lattice.desc': 'Our Lattice Crawler Cranes are engineered for maximum lifting performance in large-scale construction and rig operations. Built for stability and high capacity, these cranes deliver exceptional lifting power and precision in challenging terrains, ensuring optimal performance for heavy lifting and installation projects.',
+
+    'services.rental.telescopic.brands': 'Brands: XCMG, Zoomlion, Shantui, etc',
+    'services.rental.telescopic.desc': 'MKB’s Telescopic Crawler Cranes combine the mobility of a crawler system with the versatility of a telescopic boom. Designed for rapid setup and smooth operation, they are ideal for confined spaces and dynamic project environments that demand both power and flexibility.',
+
+    'services.rental.mobile.brands': 'Brands: Sany, XCMG, etc',
+    'services.rental.mobile.desc': 'Our Mobile Cranes from SANY, XCMG, etc are highly efficient, roadable lifting solutions that offer rapid deployment and strong lifting capabilities. Suitable for both onshore and industrial projects, they provide safe, reliable, and flexible operations to meet diverse project needs.',
+
+    'services.rental.bulldozer.brands': 'Brands: Caterpillar, Komatsu, Shantui, HOWO, etc',
+    'services.rental.bulldozer.desc': 'Equipped for earthmoving and site preparation, MKB’s Bulldozers deliver superior power and traction. Supported by industry-leading brands like Caterpillar, Komatsu, Shantui, etc our fleet ensures optimal performance in grading, clearing, and material handling across various terrains.',
+
+    'services.rental.foco.brands': 'Brands: HOWO, FAW, Sinotruck, etc',
+    'services.rental.foco.desc': 'Our FOCO Trucks are equipped with hydraulic loading cranes, providing efficient lifting and transport solutions. Perfect for on-site logistics, equipment mobilization, and material handling, they offer versatility and safety for daily operational demands.',
+
+    'services.rental.lowbed.brands': 'Brands: FAW, Volvo, HOWO, Sinotruck, etc',
+    'services.rental.lowbed.desc': 'MKB’s Lowbed Trucks are designed for the safe and efficient transport of heavy machinery and oversized loads. With durable build quality and trusted powertrains from FAW and Volvo, these trucks ensure smooth mobility and secure delivery of heavy equipment.',
+
+    'services.rental.highbed.brands': 'Brands: Volvo, Sinotruck, HOWO, etc',
+    'services.rental.highbed.desc': 'Our Highbed Trucks provide strong hauling capabilities for bulk materials and general cargo. Supported by Volvo, Sino, etc technology, they offer durability, stability, and adaptability for a wide range of field logistics operations.',
+
+    'services.rental.vacuum.brands': 'Brands: Howo, Mitsubishi, Isuzu, FAW, Sinotruck, etc',
+    'services.rental.vacuum.desc': 'The Vacuum Trucks in MKB’s fleet are specialized for industrial cleaning, waste handling, and fluid removal. Backed by reliable engines and robust suction systems, these units ensure efficient and environmentally safe operations in both onshore and remote field sites.',
+
+    'services.rental.cargo.brands': 'Brands: Isuzu, Mitsubishi, Sinotruck, SANY, etc',
+    'services.rental.cargo.desc': 'Our Cargo Trucks are versatile transport solutions for materials, tools, and general logistics. Built with dependable performance and fuel efficiency in mind, these trucks support seamless day-to-day operations across project locations.',
 
     
     // Fleet Page

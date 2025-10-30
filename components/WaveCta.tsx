@@ -4,10 +4,11 @@ import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
+import { useLanguage } from 'contexts/language.context';
 import { media } from 'utils/media';
 
 export default function WaveCta() {
-
+  const { t } = useLanguage();
   return (
     <>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -19,14 +20,16 @@ export default function WaveCta() {
       </svg>
       <CtaWrapper>
         <Container>
-          <Title>Siap untuk berkembang bersama mitra terpercaya? Hubungi kami sekarang!</Title>
+          <Title>{t('cta.title')}</Title>
           <CustomButtonGroup>
-            <Button >
-              Hubungi Kami
-            </Button>
+            <NextLink href="/contact" passHref>
+              <Button >
+                {t('cta.contact')}
+              </Button>
+            </NextLink>
             <NextLink href="/about" passHref>
               <OutlinedButton transparent>
-                Tentang Kami
+                {t('cta.about')}
               </OutlinedButton>
             </NextLink>
           </CustomButtonGroup>
