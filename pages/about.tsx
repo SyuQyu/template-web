@@ -9,20 +9,25 @@ import { media } from 'utils/media';
 
 export default function AboutPage() {
   const { t, language } = useLanguage();
+  const seoTitle = t('seo.about.title');
+  const seoDescription = t('seo.about.description');
+  const seoKeywords = t('seo.about.keywords');
+  const twitterTitle = t('seo.about.title');
+  const twitterDescription = t('seo.about.description');
 
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'Tentang PT. Mitra Kawan Bersama | Perusahaan Sewa Heavy Equipment Indonesia | Pengalaman 15+ Tahun' : 'About PT. Mitra Kawan Bersama | Heavy Equipment Rental Company Indonesia | 15+ Years Experience'}</title>
+        <title>{seoTitle}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'PT. Mitra Kawan Bersama - Perusahaan sewa heavy equipment terpercaya sejak 2010. Pengalaman 15+ tahun, 150+ proyek selesai, operator bersertifikat. Penyedia terkemuka untuk proyek oil & gas, mining, power plant & konstruksi di seluruh Indonesia.' : 'PT. Mitra Kawan Bersama - Established heavy equipment rental company since 2010. 15+ years experience, 150+ completed projects, certified operators. Leading provider for oil & gas, mining, power plant & construction projects across Indonesia.'}
+          content={seoDescription}
         />
-        <meta name="keywords" content={language === 'id' ? 'tentang mkb indonesia, perusahaan heavy equipment, perusahaan sewa crane, jasa konstruksi indonesia, kontraktor oil gas, penyedia equipment mining, support power plant' : 'about mkb indonesia, heavy equipment company, crane rental company, construction services indonesia, oil gas contractor, mining equipment provider, power plant support'} />
+        <meta name="keywords" content={seoKeywords} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'Tentang PT. Mitra Kawan Bersama | Perusahaan Sewa Heavy Equipment Indonesia' : 'About PT. Mitra Kawan Bersama | Heavy Equipment Rental Company Indonesia'} />
-        <meta property="og:description" content={language === 'id' ? 'Perusahaan sewa heavy equipment terpercaya sejak 2010. Pengalaman 15+ tahun, 150+ proyek selesai dengan operator bersertifikat di seluruh Indonesia.' : 'Established heavy equipment rental company since 2010. 15+ years experience, 150+ completed projects with certified operators across Indonesia.'} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mitrakawanbersama.co.id/about" />
         <meta property="og:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
@@ -31,8 +36,8 @@ export default function AboutPage() {
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'Tentang PT. Mitra Kawan Bersama | Perusahaan Heavy Equipment' : 'About PT. Mitra Kawan Bersama | Heavy Equipment Company'} />
-        <meta name="twitter:description" content={language === 'id' ? 'Perusahaan sewa heavy equipment terpercaya sejak 2010. Pengalaman 15+ tahun.' : 'Established heavy equipment rental company since 2010. 15+ years experience.'} />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
         <meta name="twitter:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
         
         {/* Additional SEO Meta Tags */}

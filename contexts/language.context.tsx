@@ -44,6 +44,8 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.title': 'Proyek Kami',
     'projects.overtitle': 'Pencapaian Utama',
     'projects.cta': 'Lihat Semua Pencapaian',
+    'projects.description.p1': 'Kami bangga memberikan layanan Heavy Duty Equipment (HDE) berkualitas tinggi yang mendukung keberhasilan setiap operasi. Mulai dari dukungan pengeboran darat hingga heavy lifting dan transportasi, setiap proyek mencerminkan komitmen kami terhadap presisi, keselamatan, dan kinerja terbaik.',
+    'projects.description.p2': 'Telusuri bagaimana kami bermitra dengan pemimpin industri untuk menyelesaikan proyek pengeboran, konstruksi, dan infrastruktur yang kompleks secara efisien dan tepat waktu. Setiap pencapaian menunjukkan keahlian, keandalan, dan dedikasi kami dalam melampaui ekspektasi klien.',
     
     // Quick Contact
     'contact.title': 'Siap Memulai Proyek Anda?',
@@ -59,14 +61,48 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About Page
     'about.title': 'Tentang PT Mitra Kawan Bersama',
-    'about.subtitle': 'Partner terpercaya untuk solusi heavy equipment rental dan construction support di Indonesia sejak 2010',
+    'about.subtitle': 'PT Mitra Kawan Bersama berdiri pada 2021 sebagai perusahaan penyedia heavy-duty equipment, kendaraan ringan dan mini bus untuk drilling rig, workover rig, serta layanan rig yang diakui karena inovasi di oil field services. Bertumpu pada budaya pelayanan prima dan komitmen terhadap kepuasan pelanggan, nilai tersebut menjadi pondasi pertumbuhan kami. Selain layanan peralatan, kami juga menyediakan mobilisasi/de-mobilisasi serta solusi manpower profesional, menghadirkan tenaga terampil dan berpengalaman untuk mendukung kebutuhan operasional industri migas.',
     'about.vision.title': 'Visi',
-    'about.vision.content': 'Menjadi perusahaan heavy equipment rental terdepan di Asia Tenggara yang memberikan nilai tambah optimal kepada stakeholders.',
+    'about.vision.content': 'Menjadi tolok ukur baru di industri dengan terus mendorong batasan lewat inovasi dan komitmen kuat terhadap keberlanjutan. Kami bertekad memimpin dengan tujuan, menghadirkan solusi berdampak bagi masa depan sektor oil dan gas.',
     'about.mission.title': 'Misi',
-    'about.mission.content': 'Menyediakan layanan heavy equipment rental berkualitas tinggi dengan standar keselamatan internasional untuk mendukung pembangunan infrastruktur Indonesia.',
+    'about.mission.content': 'Memberdayakan klien melalui solusi transformatif berdampak tinggi sambil membangun budaya perbaikan berkelanjutan dan keunggulan. Prinsip ini menuntun setiap aspek operasional kami, menginspirasi kami untuk melampaui ekspektasi klien sekaligus memberi kontribusi nyata bagi komunitas yang kami layani.',
     'about.management.title': 'Tim Manajemen',
     'about.partners.title': 'Mitra Strategis',
     
+    // Privacy Policy
+    'privacy.pageTitle': 'Kebijakan Privasi',
+    'privacy.heading': 'Kebijakan Privasi',
+    'privacy.intro': 'PT Mitra Kawan Bersama ("kami", "perusahaan", atau "kita") menghormati privasi dan berkomitmen melindungi informasi pribadi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi pribadi Anda saat Anda menggunakan website dan layanan kami.',
+    'privacy.section1.title': '1. Informasi yang Kami Kumpulkan',
+    'privacy.section1.body': 'Kami dapat mengumpulkan tipe informasi pribadi berikut dari Anda:',
+    'privacy.section1.items': 'Informasi Identitas::Nama lengkap, nama perusahaan, alamat email, nomor telepon, dan informasi kontak lain yang Anda berikan melalui formulir atau komunikasi dengan kami.|Informasi Teknis::Alamat IP, jenis browser, sistem operasi, dan informasi perangkat yang digunakan untuk mengakses website.|Informasi Penggunaan::Data tentang bagaimana Anda menggunakan website, termasuk halaman yang dikunjungi, waktu kunjungan, dan interaksi dengan konten.|Informasi Transaksi::Detail layanan yang Anda minta atau sewa dari kami, termasuk informasi proyek dan kebutuhan peralatan.',
+    'privacy.section2.title': '2. Cara Kami Menggunakan Informasi',
+    'privacy.section2.body': 'Informasi yang kami kumpulkan digunakan untuk:',
+    'privacy.section2.items': 'Memproses dan memenuhi permintaan layanan sewa heavy equipment Anda.|Berkomunikasi mengenai layanan, penawaran, dan informasi penting lainnya.|Meningkatkan serta mengoptimalkan website dan pengalaman pengguna.|Memenuhi kewajiban hukum dan peraturan yang berlaku.|Mencegah penipuan dan menjaga keamanan informasi.|Mengirimkan komunikasi pemasaran dengan persetujuan Anda.',
+    'privacy.section3.title': '3. Pembagian Informasi',
+    'privacy.section3.body': 'Kami dapat membagikan informasi pribadi Anda dalam situasi berikut:',
+    'privacy.section3.items': 'Penyedia Layanan::Berbagi informasi dengan mitra pihak ketiga yang membantu operasional kami seperti hosting, analitik, dan komunikasi.|Kewajiban Hukum::Mengungkapkan informasi apabila diwajibkan oleh hukum, peraturan, atau proses hukum.|Perlindungan Hak::Mengungkapkan informasi untuk melindungi hak, properti, atau keselamatan kami, pelanggan, maupun pihak lain.|Persetujuan::Membagikan informasi dengan persetujuan eksplisit Anda.',
+    'privacy.section4.title': '4. Keamanan Data',
+    'privacy.section4.body': 'Kami menerapkan langkah-langkah keamanan teknis dan organisasi yang wajar untuk melindungi informasi pribadi Anda dari akses, perubahan, pengungkapan, atau penghancuran yang tidak sah. Namun, tidak ada metode transmisi internet atau penyimpanan elektronik yang 100% aman, sehingga kami tidak dapat menjamin keamanan absolut.',
+    'privacy.section5.title': '5. Retensi Data',
+    'privacy.section5.body': 'Kami menyimpan informasi pribadi Anda selama diperlukan untuk memenuhi tujuan dalam Kebijakan Privasi ini, kecuali apabila periode retensi yang lebih lama diwajibkan atau diizinkan oleh hukum.',
+    'privacy.section6.title': '6. Hak Anda',
+    'privacy.section6.body': 'Anda memiliki hak-hak berikut terkait informasi pribadi Anda:',
+    'privacy.section6.items': 'Hak untuk mengakses informasi pribadi yang kami simpan.|Hak untuk memperbaiki informasi pribadi yang tidak akurat atau tidak lengkap.|Hak untuk menghapus informasi pribadi Anda (hak untuk dilupakan).|Hak untuk membatasi pemrosesan informasi pribadi Anda.|Hak untuk menolak pemrosesan informasi pribadi Anda.|Hak atas portabilitas data.',
+    'privacy.section6.footer': 'Untuk menggunakan hak-hak tersebut, silakan hubungi kami melalui informasi kontak yang tersedia di website ini.',
+    'privacy.section7.title': '7. Cookie dan Teknologi Pelacakan',
+    'privacy.section7.body': 'Website kami dapat menggunakan cookie dan teknologi pelacakan serupa untuk meningkatkan pengalaman pengguna dan menganalisis penggunaan website. Anda dapat mengatur browser untuk menolak cookie, namun hal ini dapat membatasi beberapa fungsi website.',
+    'privacy.section8.title': '8. Tautan ke Website Pihak Ketiga',
+    'privacy.section8.body': 'Website kami dapat berisi tautan ke website pihak ketiga. Kami tidak bertanggung jawab atas praktik privasi atau konten dari website tersebut. Kami merekomendasikan Anda membaca kebijakan privasi setiap website yang dikunjungi.',
+    'privacy.section9.title': '9. Privasi Anak-anak',
+    'privacy.section9.body': 'Website kami tidak ditujukan untuk anak-anak di bawah 18 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak. Jika kami mengetahui bahwa informasi tersebut terkumpul tanpa persetujuan orang tua, kami akan mengambil langkah untuk menghapusnya.',
+    'privacy.section10.title': '10. Perubahan Kebijakan Privasi',
+    'privacy.section10.body': 'Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan dipublikasikan di halaman ini beserta tanggal revisi terbaru. Kami menyarankan Anda meninjau kebijakan ini secara berkala untuk mengetahui bagaimana kami melindungi informasi Anda.',
+    'privacy.section11.title': '11. Kontak Kami',
+    'privacy.section11.body': 'Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan terkait Kebijakan Privasi ini atau praktik privasi kami, silakan hubungi kami melalui informasi berikut:',
+    'privacy.contact.details': 'PT Mitra Kawan Bersama|Email: info@mk.bersama.com|Alamat: PT Mitra Kawan Bersama The East, Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Barat, Kecamatan Setiabudi, Kota Jakarta Selatan, DKI Jakarta 12950',
+    'privacy.updated': 'Terakhir diperbarui: {year}',
+
     // Services Page
     'services.title': 'Layanan Kami',
     'services.subtitle': 'Solusi lengkap heavy equipment rental dan construction support untuk berbagai kebutuhan industri',
@@ -102,12 +138,35 @@ const translations: Record<Language, Record<string, string>> = {
     'services.manpower.item3': 'Perawatan dan inspeksi – melakukan preventive maintenance dan pemeriksaan operasional untuk menjamin keandalan peralatan dan kepatuhan keselamatan.',
     'services.manpower.item4': 'Implementasi HSE – memperkuat praktik terbaik K3L sesuai ISO 45001 dan kebijakan perusahaan.',
 
+    // Achievements Page - Services Section
+    'services.achievment.title': 'Dukungan Operasional Lapangan & Penyediaan Manpower',
+    'services.achievment.desc': 'PT Mitra Kawan Bersama (MKB) memahami bahwa keberhasilan setiap proyek tidak hanya bergantung pada performa peralatan, tetapi juga pada efisiensi, keahlian, dan dedikasi tim yang mendukungnya. Layanan Field Operations Support & Manpower Supply kami dirancang untuk memberikan dukungan operasional menyeluruh, memastikan setiap aktivitas di lokasi berjalan mulus, aman, dan tepat waktu.',
+
+    'services.manpowerachivement.title': 'Manpower Supply',
+    'services.manpowerachivement.desc': 'MKB menyediakan tenaga kerja terampil, terlatih, dan tersertifikasi untuk memenuhi beragam kebutuhan proyek. Solusi manpower kami mengutamakan fleksibilitas, kepatuhan, dan kinerja, sehingga setiap penempatan meningkatkan produktivitas sekaligus menjaga standar keselamatan dan operasional.',
+    'services.manpowerachivement.scopeTitle': 'Kategori manpower kami meliputi:',
+    'services.manpowerachivement.item1': 'Tenaga teknis terampil (mekanik, operator, rigger, teknisi listrik, welder)',
+    'services.manpowerachivement.item2': 'Staf profesional dan administrasi (supervisor, koordinator logistik, petugas HSE, administrator proyek)',
+    'services.manpowerachivement.item3': 'Personel pendukung (pengemudi, helper, kru camp, dan staf pendukung lainnya) dengan database pengalaman yang siap untuk kebutuhan proyek jangka pendek maupun kontrak jangka panjang di seluruh Indonesia',
+
+    'strengthsachievment.title': 'Mengapa Memilih PT Mitra Kawan Bersama',
+    'strengthsachievment.overtitle': 'Kekuatan Inti Kami',
+    'strengthsachievment.experience.title': 'Keahlian Operasi Lapangan',
+    'strengthsachievment.experience.desc': 'Berpengalaman dalam operasi lapangan terpencil dan koordinasi logistik.',
+    'strengthsachievment.fleet.title': 'Manpower Tersertifikasi',
+    'strengthsachievment.fleet.desc': 'Akses ke pool manpower bersertifikat dan berpengalaman.',
+    'strengthsachievment.safety.title': 'Keselamatan & Kepatuhan',
+    'strengthsachievment.safety.desc': 'Fokus kuat pada keselamatan, kualitas, dan kepatuhan.',
+    'strengthsachievment.trusted.title': 'Sumber Daya Armada & Peralatan',
+    'strengthsachievment.trusted.desc': 'Didukung oleh armada internal dan peralatan yang lengkap.',
+
     // Services: Additional sections
     'services.lightvehicle.title': 'Dukungan Operasi Rental Kendaraan Ringan',
     'services.lightvehicle.desc': 'Kami menyediakan pilihan kendaraan ringan berkualitas untuk mendukung berbagai kebutuhan proyek, termasuk Double Cabin, Mini Bus, dan Elf Bus. Seluruh kendaraan dirawat sesuai standar tinggi untuk memastikan keandalan, kenyamanan, dan keselamatan selama operasional.',
 
     'services.mobilization.title': 'Mobilisasi dan De‑Mobilisasi Rig Moving',
     'services.mobilization.desc': 'Kami menyediakan layanan mobilisasi dan de‑mobilisasi yang efisien untuk memastikan pemindahan peralatan, kendaraan, dan personel ke dan dari lokasi proyek dengan aman dan tepat waktu.',
+    'services.mobilization.includes': 'Layanan ini mencakup:',
     'services.mobilization.item1.title': 'Respon Cepat',
     'services.mobilization.item1.desc': 'Perencanaan rute dan perizinan',
     'services.mobilization.item2.title': 'Penanganan Alat Berat',
@@ -126,25 +185,25 @@ const translations: Record<Language, Record<string, string>> = {
     'services.rental.lattice.desc': 'Lattice Crawler Crane kami dirancang untuk performa pengangkatan maksimum pada proyek konstruksi skala besar dan operasi rig. Dibangun untuk stabilitas dan kapasitas tinggi, crane ini memberikan daya angkat dan presisi yang luar biasa di medan menantang, memastikan performa optimal untuk pengangkatan berat dan pekerjaan instalasi.',
 
     'services.rental.telescopic.brands': 'Merek: XCMG, Zoomlion, Shantui, dll',
-    'services.rental.telescopic.desc': 'Telescopic Crawler Crane MKB menggabungkan mobilitas sistem crawler dengan fleksibilitas boom teleskopik. Dirancang untuk setup cepat dan operasi yang mulus, ideal untuk area terbatas dan lingkungan proyek dinamis yang menuntut tenaga dan fleksibilitas.',
+    'services.rental.telescopic.desc': 'MKB Telescopic Crawler Cranes combine the mobility of a crawler system with the versatility of a telescopic boom. Designed for rapid setup and smooth operation, they are ideal for confined spaces and dynamic project environments that demand both power and flexibility.',
 
     'services.rental.mobile.brands': 'Merek: SANY, XCMG, dll',
     'services.rental.mobile.desc': 'Mobile Crane kami dari SANY, XCMG, dll merupakan solusi pengangkatan yang efisien dan dapat berjalan di jalan raya, menawarkan mobilisasi cepat dan kemampuan angkat yang kuat. Cocok untuk proyek onshore maupun industri, memberikan operasi yang aman, andal, dan fleksibel untuk beragam kebutuhan.',
 
     'services.rental.bulldozer.brands': 'Merek: Caterpillar, Komatsu, Shantui, HOWO, dll',
-    'services.rental.bulldozer.desc': 'Dilengkapi untuk pekerjaan pemindahan tanah dan persiapan lahan, Bulldozer MKB memberikan daya dan traksi yang unggul. Didukung merek terkemuka seperti Caterpillar, Komatsu, Shantui, dll, armada kami memastikan performa optimal untuk grading, clearing, dan material handling di berbagai medan.',
+    'services.rental.bulldozer.desc': 'Equipped for earthmoving and site preparation, MKB Bulldozers deliver superior power and traction. Supported by industry-leading brands like Caterpillar, Komatsu, Shantui, etc our fleet ensures optimal performance in grading, clearing, and material handling across various terrains.',
 
     'services.rental.foco.brands': 'Merek: HOWO, FAW, Sinotruck, dll',
     'services.rental.foco.desc': 'FOCO Truck kami dilengkapi crane hidrolik pemuat, memberikan solusi pengangkatan dan transportasi yang efisien. Sempurna untuk logistik di lokasi, mobilisasi peralatan, dan penanganan material, menawarkan fleksibilitas dan keselamatan untuk kebutuhan operasional harian.',
 
     'services.rental.lowbed.brands': 'Merek: FAW, Volvo, HOWO, Sinotruck, dll',
-    'services.rental.lowbed.desc': 'Lowbed Truck MKB dirancang untuk transportasi yang aman dan efisien bagi alat berat dan muatan berukuran besar. Dengan kualitas konstruksi yang tangguh dan penggerak andal dari FAW dan Volvo, truk ini memastikan mobilitas yang mulus dan pengiriman peralatan berat yang aman.',
+    'services.rental.lowbed.desc': 'MKB Lowbed Trucks are designed for the safe and efficient transport of heavy machinery and oversized loads. With durable build quality and trusted powertrains from FAW and Volvo, these trucks ensure smooth mobility and secure delivery of heavy equipment.',
 
     'services.rental.highbed.brands': 'Merek: Volvo, Sinotruck, HOWO, dll',
     'services.rental.highbed.desc': 'Highbed Truck kami menyediakan kemampuan angkut yang kuat untuk material curah dan kargo umum. Didukung teknologi Volvo, Sino, dll, unit ini menawarkan durabilitas, stabilitas, dan adaptabilitas untuk berbagai operasi logistik lapangan.',
 
     'services.rental.vacuum.brands': 'Merek: Howo, Mitsubishi, Isuzu, FAW, Sinotruck, dll',
-    'services.rental.vacuum.desc': 'Vacuum Truck dalam armada MKB terspesialisasi untuk pembersihan industri, penanganan limbah, dan penghisapan fluida. Didukung mesin yang andal dan sistem vakum yang kuat, unit ini memastikan operasi yang efisien dan ramah lingkungan di area onshore maupun lokasi terpencil.',
+    'services.rental.vacuum.desc': 'The Vacuum Trucks in the MKB fleet are specialized for industrial cleaning, waste handling, and fluid removal. Backed by reliable engines and robust suction systems, these units ensure efficient and environmentally safe operations in both onshore and remote field sites.',
 
     'services.rental.cargo.brands': 'Merek: Isuzu, Mitsubishi, Sinotruck, SANY, dll',
     'services.rental.cargo.desc': 'Cargo Truck kami merupakan solusi transportasi serbaguna untuk material, peralatan, dan logistik umum. Dibangun dengan performa andal dan efisiensi bahan bakar, truk ini mendukung kelancaran operasional harian di berbagai lokasi proyek.',
@@ -169,6 +228,33 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.stats.safety': 'Safety Record',
     'projects.featured.title': 'Proyek Unggulan',
     
+    // ISO Certifications
+    'certification.iso9001.title': 'Sertifikasi ISO 9001:2015',
+    'certification.iso9001.desc': 'Dengan ini disertifikasi bahwa Sistem Manajemen Mutu PT MITRA KAWAN BERSAMA telah dinilai secara independen dan memenuhi persyaratan ISO 9001:2015. Sertifikat ini Berlaku untuk Rentang Produk atau Layanan Berikut: Penyediaan Rental dan Trading Fee Heavy Equipment untuk Perusahaan Minyak dan Gas.',
+    
+    'certification.iso14001.title': 'Sertifikasi ISO 14001:2015',
+    'certification.iso14001.desc': 'Dengan ini disertifikasi bahwa Sistem Manajemen Lingkungan PT MITRA KAWAN BERSAMA telah dinilai secara independen dan memenuhi persyaratan ISO 14001:2015. Sertifikat ini Berlaku untuk Rentang Produk atau Layanan Berikut: Penyediaan Rental dan Trading Fee Heavy Equipment untuk Perusahaan Minyak dan Gas.',
+    
+    'certification.iso45001.title': 'Sertifikasi ISO 45001:2018',
+    'certification.iso45001.desc': 'Dengan ini disertifikasi bahwa Sistem Manajemen Keselamatan dan Kesehatan Kerja PT MITRA KAWAN BERSAMA telah dinilai secara independen dan memenuhi persyaratan ISO 45001:2018. Sertifikat ini Berlaku untuk Rentang Produk atau Layanan Berikut: Penyediaan Rental dan Trading Fee Heavy Equipment untuk Perusahaan Minyak dan Gas.',
+    
+    // Clients & Achievements Page
+    'clients.meta.title': 'Klien & Pencapaian | Heavy Equipment Partner Terpercaya | PT. Mitra Kawan Bersama',
+    'clients.meta.description': 'Partner terpercaya 50+ klien major: BP Indonesia, Pertamina, PLN, Freeport. 15+ tahun pengalaman, safety record 99,8%, total nilai proyek USD 500M+. Lihat testimoni dan pencapaian kami.',
+    'clients.meta.keywords': 'klien heavy equipment indonesia, partner bp indonesia, klien pertamina, klien pln, klien freeport, pencapaian heavy equipment, testimoni klien, safety record, partner terpercaya',
+    'clients.meta.ogTitle': 'Klien & Pencapaian | Heavy Equipment Partner Terpercaya | PT. MKB',
+    'clients.meta.ogDescription': 'Partner terpercaya 50+ klien major. 15+ tahun pengalaman, 99,8% safety record, total nilai proyek USD 500M+.',
+    'clients.meta.twitterTitle': 'Klien & Pencapaian | PT. Mitra Kawan Bersama',
+    'clients.meta.twitterDescription': 'Partner terpercaya 50+ klien major termasuk BP Indonesia, Pertamina, PLN, Freeport. 15+ tahun track record terbukti.',
+    'clients.header.overtitle': 'Klien & Pencapaian Kami',
+    'clients.header.title': 'Keunggulan Kemitraan Terpercaya',
+    'clients.header.description': 'Kami membangun kemitraan yang kuat dan berjangka panjang berdasarkan kepercayaan, keandalan, dan kinerja yang terbukti. Kolaborasi berkelanjutan kami dengan Greatwall Drilling Asia Pacific mencerminkan komitmen kami untuk memberikan kualitas yang konsisten dan layanan yang dapat diandalkan.',
+    'clients.projects.overtitle': 'Daftar Pekerjaan',
+    'clients.projects.title': 'Pekerjaan yang Telah Dilakukan',
+    'clients.projects.items': 'Layanan HDE untuk Rig Pengeboran Darat 550HP - 336|Layanan HDE untuk Rig Pengeboran Darat 550HP - 337|Layanan HDE untuk Rig Pengeboran Darat 550HP - 338|Layanan HDE untuk Rig Pengeboran Darat 550HP - 339|Layanan HDE untuk Workover Rig 450HP - 363|Layanan HDE untuk Workover Rig 450HP - 364|Layanan HDE untuk Workover Rig 450HP - 365|Layanan HDE untuk Workover Rig 450HP - 366|Layanan HDE untuk Workover Rig 450HP - 367|Layanan Transportasi Rig Darat|Layanan Transportasi Rig Laut|Sewa Kendaraan Ringan dan Bus untuk Proyek Pengeboran|Sewa Kendaraan Ringan dan Bus untuk Proyek Workover',
+    'clients.clients.overtitle': 'Klien Kami',
+    'clients.clients.title': 'Dipercaya Pemimpin Industri',
+
     // News Page
     'news.title': 'Berita & Update',
     'news.subtitle': 'Berita terbaru, update proyek, dan insights industri dari PT Mitra Kawan Bersama',
@@ -310,6 +396,8 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.title': 'Our Projects',
     'projects.overtitle': 'Key Achievements',
     'projects.cta': 'View All Achievements',
+    'projects.description.p1': 'We take pride in delivering high-quality Heavy Duty Equipment (HDE) services that drive success in every operation. From land drilling support to heavy lifting and transport, each project reflects our commitment to precision, safety, and performance excellence.',
+    'projects.description.p2': 'Explore how we have partnered with industry leaders to complete complex drilling, construction, and infrastructure projects efficiently and on time. Every achievement showcases our expertise, reliability, and dedication to exceeding client expectations.',
 
     // Quick Contact
     'contact.title': 'Ready to Start Your Project?',
@@ -333,6 +421,40 @@ const translations: Record<Language, Record<string, string>> = {
     'about.management.title': 'Management Team',
     'about.partners.title': 'Strategic Partners',
     
+    // Privacy Policy
+    'privacy.pageTitle': 'Privacy Policy',
+    'privacy.heading': 'Privacy Policy',
+    'privacy.intro': 'PT Mitra Kawan Bersama ("we", "the company", or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you access our website and services.',
+    'privacy.section1.title': '1. Information We Collect',
+    'privacy.section1.body': 'We may collect the following types of personal information from you:',
+    'privacy.section1.items': 'Identity Information::Full name, company name, email address, phone number, and other contact details you provide through forms or direct communication.|Technical Information::IP address, browser type, operating system, and device information used to access the website.|Usage Information::Data on how you interact with the website, including pages visited, visit times, and content engagement.|Transaction Information::Details about the services you request or rent from us, including project information and equipment requirements.',
+    'privacy.section2.title': '2. How We Use Information',
+    'privacy.section2.body': 'We use the information we collect to:',
+    'privacy.section2.items': 'Process and fulfill your heavy equipment rental requests.|Communicate important updates, offers, and service information.|Improve and optimize the website experience.|Comply with applicable legal and regulatory requirements.|Detect and prevent fraud while maintaining information security.|Send marketing communications with your consent.',
+    'privacy.section3.title': '3. Information Sharing',
+    'privacy.section3.body': 'We may share your personal information under the following circumstances:',
+    'privacy.section3.items': 'Service Providers::We may share information with trusted third-party partners that support our operations such as hosting, analytics, and communications services.|Legal Obligations::We may disclose information if required by law, regulation, or legal process.|Protection of Rights::We may share information to protect the rights, property, or safety of our company, customers, or others.|Consent::We may share information with your explicit consent.',
+    'privacy.section4.title': '4. Data Security',
+    'privacy.section4.body': 'We implement reasonable technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.',
+    'privacy.section5.title': '5. Data Retention',
+    'privacy.section5.body': 'We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.',
+    'privacy.section6.title': '6. Your Rights',
+    'privacy.section6.body': 'You have the following rights regarding your personal information:',
+    'privacy.section6.items': 'The right to access the personal information we hold about you.|The right to correct inaccurate or incomplete personal information.|The right to request deletion of your personal information (right to be forgotten).|The right to restrict the processing of your personal information.|The right to object to the processing of your personal information.|The right to data portability.',
+    'privacy.section6.footer': 'To exercise these rights, please contact us using the information provided on this website.',
+    'privacy.section7.title': '7. Cookies and Tracking Technologies',
+    'privacy.section7.body': 'Our website may use cookies and similar tracking technologies to enhance user experience and analyze website usage. You can configure your browser to refuse cookies, but this may limit certain features of the website.',
+    'privacy.section8.title': '8. Links to Third-Party Websites',
+    'privacy.section8.body': 'Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those websites. We encourage you to review the privacy policies of any site you visit.',
+    'privacy.section9.title': '9. Children\'s Privacy',
+    'privacy.section9.body': 'Our website is not intended for children under the age of 18. We do not knowingly collect personal information from children. If we learn that such information has been collected without parental consent, we will take steps to delete it.',
+    'privacy.section10.title': '10. Changes to This Privacy Policy',
+    'privacy.section10.body': 'We may update this Privacy Policy from time to time. Changes will be posted on this page along with the latest revision date. We encourage you to review this policy periodically to stay informed about how we protect your information.',
+    'privacy.section11.title': '11. Contact Us',
+    'privacy.section11.body': 'If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us using the following details:',
+    'privacy.contact.details': 'PT Mitra Kawan Bersama|Email: info@mk.bersama.com|Address: PT Mitra Kawan Bersama The East, Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Barat, Setiabudi, South Jakarta, DKI Jakarta 12950',
+    'privacy.updated': 'Last updated: {year}',
+
     // Services Page
     'services.title': 'Our Services',
     'services.subtitle': 'Complete heavy equipment rental and construction support solutions for various industrial needs',
@@ -381,6 +503,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'services.mobilization.title': 'Mobilization and De‑Mobilization Rig Moving',
     'services.mobilization.desc': 'We provide efficient mobilization and de‑mobilization services to ensure the timely and safe transfer of equipment, vehicles, and personnel to and from project sites.',
+    'services.mobilization.includes': 'This service includes:',
     'services.mobilization.item1.title': 'Rapid Response',
     'services.mobilization.item1.desc': 'Route and permit planning',
     'services.mobilization.item2.title': 'Heavy Equipment Handling',
@@ -402,25 +525,25 @@ const translations: Record<Language, Record<string, string>> = {
     'services.rental.lattice.desc': 'Our Lattice Crawler Cranes are engineered for maximum lifting performance in large-scale construction and rig operations. Built for stability and high capacity, these cranes deliver exceptional lifting power and precision in challenging terrains, ensuring optimal performance for heavy lifting and installation projects.',
 
     'services.rental.telescopic.brands': 'Brands: XCMG, Zoomlion, Shantui, etc',
-    'services.rental.telescopic.desc': 'MKB’s Telescopic Crawler Cranes combine the mobility of a crawler system with the versatility of a telescopic boom. Designed for rapid setup and smooth operation, they are ideal for confined spaces and dynamic project environments that demand both power and flexibility.',
+    'services.rental.telescopic.desc': 'MKB Telescopic Crawler Cranes combine the mobility of a crawler system with the versatility of a telescopic boom. Designed for rapid setup and smooth operation, they are ideal for confined spaces and dynamic project environments that demand both power and flexibility.',
 
     'services.rental.mobile.brands': 'Brands: Sany, XCMG, etc',
     'services.rental.mobile.desc': 'Our Mobile Cranes from SANY, XCMG, etc are highly efficient, roadable lifting solutions that offer rapid deployment and strong lifting capabilities. Suitable for both onshore and industrial projects, they provide safe, reliable, and flexible operations to meet diverse project needs.',
 
     'services.rental.bulldozer.brands': 'Brands: Caterpillar, Komatsu, Shantui, HOWO, etc',
-    'services.rental.bulldozer.desc': 'Equipped for earthmoving and site preparation, MKB’s Bulldozers deliver superior power and traction. Supported by industry-leading brands like Caterpillar, Komatsu, Shantui, etc our fleet ensures optimal performance in grading, clearing, and material handling across various terrains.',
+    'services.rental.bulldozer.desc': 'Equipped for earthmoving and site preparation, MKB Bulldozers deliver superior power and traction. Supported by industry-leading brands like Caterpillar, Komatsu, Shantui, etc our fleet ensures optimal performance in grading, clearing, and material handling across various terrains.',
 
     'services.rental.foco.brands': 'Brands: HOWO, FAW, Sinotruck, etc',
     'services.rental.foco.desc': 'Our FOCO Trucks are equipped with hydraulic loading cranes, providing efficient lifting and transport solutions. Perfect for on-site logistics, equipment mobilization, and material handling, they offer versatility and safety for daily operational demands.',
 
     'services.rental.lowbed.brands': 'Brands: FAW, Volvo, HOWO, Sinotruck, etc',
-    'services.rental.lowbed.desc': 'MKB’s Lowbed Trucks are designed for the safe and efficient transport of heavy machinery and oversized loads. With durable build quality and trusted powertrains from FAW and Volvo, these trucks ensure smooth mobility and secure delivery of heavy equipment.',
+    'services.rental.lowbed.desc': 'MKB Lowbed Trucks are designed for the safe and efficient transport of heavy machinery and oversized loads. With durable build quality and trusted powertrains from FAW and Volvo, these trucks ensure smooth mobility and secure delivery of heavy equipment.',
 
     'services.rental.highbed.brands': 'Brands: Volvo, Sinotruck, HOWO, etc',
     'services.rental.highbed.desc': 'Our Highbed Trucks provide strong hauling capabilities for bulk materials and general cargo. Supported by Volvo, Sino, etc technology, they offer durability, stability, and adaptability for a wide range of field logistics operations.',
 
     'services.rental.vacuum.brands': 'Brands: Howo, Mitsubishi, Isuzu, FAW, Sinotruck, etc',
-    'services.rental.vacuum.desc': 'The Vacuum Trucks in MKB’s fleet are specialized for industrial cleaning, waste handling, and fluid removal. Backed by reliable engines and robust suction systems, these units ensure efficient and environmentally safe operations in both onshore and remote field sites.',
+    'services.rental.vacuum.desc': 'The Vacuum Trucks in the MKB fleet are specialized for industrial cleaning, waste handling, and fluid removal. Backed by reliable engines and robust suction systems, these units ensure efficient and environmentally safe operations in both onshore and remote field sites.',
 
     'services.rental.cargo.brands': 'Brands: Isuzu, Mitsubishi, Sinotruck, SANY, etc',
     'services.rental.cargo.desc': 'Our Cargo Trucks are versatile transport solutions for materials, tools, and general logistics. Built with dependable performance and fuel efficiency in mind, these trucks support seamless day-to-day operations across project locations.',
@@ -446,6 +569,33 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.stats.safety': 'Safety Record',
     'projects.featured.title': 'Featured Projects',
     
+    // ISO Certifications
+    'certification.iso9001.title': 'Certification of ISO 9001:2015',
+    'certification.iso9001.desc': 'This is to Certify that the Quality Management System of PT MITRA KAWAN BERSAMA has been independently assessed and is complying with the requirements of ISO 9001:2015. This Certificate is Applicable to the Following Product or Service Ranges: Provision of Rental and Trading Fees Heavy Equipment for Oil and Gas Companies.',
+    
+    'certification.iso14001.title': 'Certification of ISO 14001:2015',
+    'certification.iso14001.desc': 'This is to Certify that the Environmental Management System of PT MITRA KAWAN BERSAMA has been independently assessed and is complying with the requirements of ISO 14001:2015. This Certificate is Applicable to the Following Product or Service Ranges: Provision of Rental and Trading Fees Heavy Equipment for Oil and Gas Companies.',
+    
+    'certification.iso45001.title': 'Certification of ISO 45001:2018',
+    'certification.iso45001.desc': 'This is to Certify that the Occupational Health and Safety Management System of PT MITRA KAWAN BERSAMA has been independently assessed and is complying with the requirements of ISO 45001:2018. This Certificate is Applicable to the Following Product or Service Ranges: Provision of Rental and Trading Fees Heavy Equipment for Oil and Gas Companies.',
+    
+    // Clients & Achievements Page
+    'clients.meta.title': 'Our Clients & Achievements | Trusted Heavy Equipment Partner | PT. Mitra Kawan Bersama',
+    'clients.meta.description': 'Trusted partner of 50+ major clients including BP Indonesia, Pertamina, PLN, and Freeport. 15+ years of experience, 99.8% safety record, and USD 500M+ total project value. Explore our testimonials and achievements.',
+    'clients.meta.keywords': 'heavy equipment clients indonesia, bp indonesia partner, pertamina client, pln client, freeport client, heavy equipment achievements, client testimonials, safety record, trusted partner',
+    'clients.meta.ogTitle': 'Our Clients & Achievements | Trusted Heavy Equipment Partner | PT. MKB',
+    'clients.meta.ogDescription': 'Trusted partner of 50+ major clients. 15+ years experience, 99.8% safety record, USD 500M+ total project value.',
+    'clients.meta.twitterTitle': 'Our Clients & Achievements | PT. Mitra Kawan Bersama',
+    'clients.meta.twitterDescription': 'Trusted partner of 50+ major clients including BP Indonesia, Pertamina, PLN, and Freeport. Over 15 years of proven track record.',
+    'clients.header.overtitle': 'Our Clients & Achievements',
+    'clients.header.title': 'Trusted Partnership Excellence',
+    'clients.header.description': 'We build strong, long-term partnerships based on trust, reliability, and proven performance. Our ongoing collaboration with Greatwall Drilling Asia Pacific reflects our commitment to delivering consistent quality and dependable service.',
+    'clients.projects.overtitle': 'Project List',
+    'clients.projects.title': 'Completed Projects',
+    'clients.projects.items': 'HDE Services for Land Drilling Rig 550HP - 336|HDE Services for Land Drilling Rig 550HP - 337|HDE Services for Land Drilling Rig 550HP - 338|HDE Services for Land Drilling Rig 550HP - 339|HDE Services for Workover Rig 450HP - 363|HDE Services for Workover Rig 450HP - 364|HDE Services for Workover Rig 450HP - 365|HDE Services for Workover Rig 450HP - 366|HDE Services for Workover Rig 450HP - 367|Rig Land Transport Services|Rig Sea Transport Services|Light Vehicle and Bus Rent Services for Drilling Project|Light Vehicle and Bus Rent Services for Workover Project',
+    'clients.clients.overtitle': 'Our Clients',
+    'clients.clients.title': 'Trusted by Industry Leaders',
+
     // News Page
     'news.title': 'News & Updates',
     'news.subtitle': 'Latest news, project updates, and industry insights from PT Mitra Kawan Bersama',

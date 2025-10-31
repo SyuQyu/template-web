@@ -76,6 +76,11 @@ const EQUIPMENT_CATEGORIES = [
 
 export default function FleetPage() {
   const { t, language } = useLanguage();
+  const seoTitle = t('seo.fleet.title');
+  const seoDescription = t('seo.fleet.description');
+  const seoKeywords = t('seo.fleet.keywords');
+  const twitterTitle = t('seo.fleet.title');
+  const twitterDescription = t('seo.fleet.description');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   
@@ -99,24 +104,24 @@ export default function FleetPage() {
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'Armada Heavy Equipment - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama' : 'Heavy Equipment Fleet - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama'}</title>
+        <title>{seoTitle}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'Armada lengkap heavy equipment PT. Mitra Kawan Bersama dengan 200+ unit peralatan premium termasuk crane Liebherr hingga 2300 ton, excavator, bulldozer, dan lowbed truck untuk proyek konstruksi besar.' : 'Complete heavy equipment fleet of PT. Mitra Kawan Bersama with 200+ premium equipment units including Liebherr cranes up to 2300 tons, excavators, bulldozers, and lowbed trucks for major construction projects.'}
+          content={seoDescription}
         />
-        <meta name="keywords" content={language === 'id' ? 'armada heavy equipment, crane Liebherr, excavator, bulldozer, lowbed truck, heavy equipment Jakarta, construction equipment rental' : 'heavy equipment fleet, Liebherr crane, excavator, bulldozer, lowbed truck, heavy equipment Jakarta, construction equipment rental'} />
+        <meta name="keywords" content={seoKeywords} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'Armada Heavy Equipment - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama' : 'Heavy Equipment Fleet - Crane, Excavator, Bulldozer | PT. Mitra Kawan Bersama'} />
-        <meta property="og:description" content={language === 'id' ? 'Armada lengkap heavy equipment dengan 200+ unit peralatan premium untuk proyek konstruksi besar.' : 'Complete heavy equipment fleet with 200+ premium equipment units for major construction projects.'} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mitrakawanbersama.co.id/fleet" />
         <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'Armada Heavy Equipment | PT. Mitra Kawan Bersama' : 'Heavy Equipment Fleet | PT. Mitra Kawan Bersama'} />
-        <meta name="twitter:description" content={language === 'id' ? 'Armada lengkap heavy equipment dengan 200+ unit peralatan premium.' : 'Complete heavy equipment fleet with 200+ premium equipment units.'} />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />

@@ -3,8 +3,8 @@
 
 import Head from 'next/head';
 import styled from 'styled-components';
-import BasicSection4 from 'components/BasicSection4';
 import BasicSection from 'components/BasicSection';
+import BasicSection4 from 'components/BasicSection4';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
@@ -52,47 +52,43 @@ const MAJOR_CLIENTS = [
 export default function ClientsAchievementsPage() {
 	const { t, language } = useLanguage();
 
+	const metaTitle = t('clients.meta.title');
+	const metaDescription = t('clients.meta.description');
+	const metaKeywords = t('clients.meta.keywords');
+	const metaOgTitle = t('clients.meta.ogTitle');
+	const metaOgDescription = t('clients.meta.ogDescription');
+	const metaTwitterTitle = t('clients.meta.twitterTitle');
+	const metaTwitterDescription = t('clients.meta.twitterDescription');
+	const headerOverTitle = t('clients.header.overtitle');
+	const headerTitle = t('clients.header.title');
+	const headerDescription = t('clients.header.description');
+	const projectItems = t('clients.projects.items').split('|');
+	const projectsOverTitle = t('clients.projects.overtitle');
+	const projectsTitle = t('clients.projects.title');
+	const clientsOverTitle = t('clients.clients.overtitle');
+	const clientsTitle = t('clients.clients.title');
+
 	return (
 		<>
 			<Head>
-				<title>
-					{language === 'id'
-						? 'Klien & Pencapaian | Heavy Equipment Partner Terpercaya | PT. Mitra Kawan Bersama'
-						: 'Our Clients & Achievements | Trusted Heavy Equipment Partner | PT. Mitra Kawan Bersama'}
-				</title>
+				<title>{metaTitle}</title>
 				<meta
 					name="description"
-					content={
-						language === 'id'
-							? 'Partner terpercaya 50+ klien major: BP Indonesia, Pertamina, PLN, Freeport. pengalaman, safety record, USD 500M+ total project value. Lihat testimoni dan pencapaian kami.'
-							: 'Trusted partner of 50+ major clients: BP Indonesia, Pertamina, PLN, Freeport. experience, safety record, USD 500M+ total project value. See our testimonials and achievements.'
-					}
+					content={metaDescription}
 				/>
 				<meta
 					name="keywords"
-					content={
-						language === 'id'
-							? 'klien heavy equipment indonesia, partner bp indonesia, klien pertamina, klien pln, klien freeport, pencapaian heavy equipment, testimoni klien, safety record, partner terpercaya'
-							: 'heavy equipment clients indonesia, bp indonesia partner, pertamina client, pln client, freeport client, heavy equipment achievements, client testimonials, safety record, trusted partner'
-					}
+					content={metaKeywords}
 				/>
 
 				{/* Open Graph Meta Tags */}
 				<meta
 					property="og:title"
-					content={
-						language === 'id'
-							? 'Klien & Pencapaian | Heavy Equipment Partner Terpercaya | PT. MKB'
-							: 'Our Clients & Achievements | Trusted Heavy Equipment Partner | PT. MKB'
-					}
+					content={metaOgTitle}
 				/>
 				<meta
 					property="og:description"
-					content={
-						language === 'id'
-							? 'Partner terpercaya 50+ klien major. pengalaman, safety record, USD 500M+ project value.'
-							: 'Trusted partner of 50+ major clients. 15+ years experience, 99.8% safety record, USD 500M+ total project value.'
-					}
+					content={metaOgDescription}
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://mitrakawanbersama.co.id/clients" />
@@ -105,8 +101,8 @@ export default function ClientsAchievementsPage() {
 
 				{/* Twitter Card Meta Tags */}
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="Our Clients & Achievements | PT. Mitra Kawan Bersama" />
-				<meta name="twitter:description" content="Trusted partner of 50+ major clients including BP Indonesia, Pertamina, PLN, Freeport. 15+ years proven track record." />
+				<meta name="twitter:title" content={metaTwitterTitle} />
+				<meta name="twitter:description" content={metaTwitterDescription} />
 				<meta name="twitter:image" content="https://mkb.co.id/demo-illustration-1.svg" />
 
 				{/* Additional SEO Meta Tags */}
@@ -152,53 +148,45 @@ export default function ClientsAchievementsPage() {
 			<ClientsWrapper>
 				<Container>
 					<HeaderSection>
-						<OverTitle>
-							{language === 'id'
-								? 'Klien & Pencapaian Kami'
-								: 'Our Clients & Achievements'}
-						</OverTitle>
-						<SectionTitle>Trusted Partnership Excellence</SectionTitle>
-						<Description>
-							{language === 'id'
-								? 'Kami membangun kemitraan yang kuat dan berjangka panjang berdasarkan kepercayaan, keandalan, dan kinerja yang terbukti. Kolaborasi berkelanjutan kami dengan Greatwall Drilling Asia Pacific mencerminkan komitmen kami untuk memberikan kualitas yang konsisten dan layanan yang dapat diandalkan.'
-								: 'We build strong, long-term partnerships based on trust, reliability, and proven performance. Our ongoing collaboration with Greatwall Drilling Asia Pacific reflects our commitment to delivering consistent quality and dependable service.'}
-						</Description>
+						<OverTitle>{headerOverTitle}</OverTitle>
+						<SectionTitle>{headerTitle}</SectionTitle>
+						<Description>{headerDescription}</Description>
 					</HeaderSection>
 				</Container>
 
 				<BasicSection4 
 					imageUrl="/Iso/iso-1.jpg" 
-					title="Certification of ISO 9001:2015" 
+					title={t('certification.iso9001.title')}
 					>
 					<ServiceDescription>
-						<h4>Certification of ISO 9001:2015</h4>
+						<h4>{t('certification.iso9001.title')}</h4>
 						<ServiceList>
-							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+							<li>{t('certification.iso9001.desc')}</li>
 						</ServiceList>
 					</ServiceDescription>
 				</BasicSection4>				
 
 				<BasicSection4 
 					imageUrl="/Iso/iso-2.jpg" 
-					title="Certification of ISO 14001:2015"
+					title={t('certification.iso14001.title')}
 					reversed 
 					>
 					<ServiceDescription>
-						<h4>Certification of ISO 14001:2015</h4>
+						<h4>{t('certification.iso14001.title')}</h4>
 						<ServiceList>
-							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+							<li>{t('certification.iso14001.desc')}</li>
 						</ServiceList>
 					</ServiceDescription>
 				</BasicSection4>	
 
 				<BasicSection4 
 					imageUrl="/Iso/iso-3.jpg" 
-					title="Certification of ISO 45001:2018" 
+					title={t('certification.iso45001.title')}
 					>
 					<ServiceDescription>
-						<h4>Certification of ISO 45001:2018</h4>
+						<h4>{t('certification.iso45001.title')}</h4>
 						<ServiceList>
-							<li>DLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+							<li>{t('certification.iso45001.desc')}</li>
 						</ServiceList>
 					</ServiceDescription>
 				</BasicSection4>
@@ -254,36 +242,18 @@ export default function ClientsAchievementsPage() {
 				<Container>
 
 					<ClientsSection>
-						<OverTitle>
-							{language === 'id' ? 'Daftar Pekerjaan' : 'Project List'}
-						</OverTitle>
-						<SectionTitle>{language === 'id' ? 'Pekerjaan yang Telah Dilakukan' : 'Completed Projects'}</SectionTitle>
+						<OverTitle>{projectsOverTitle}</OverTitle>
+						<SectionTitle>{projectsTitle}</SectionTitle>
 						<ProjectsGrid>
-							{[
-								"HDE Services for Land Drilling Rig 550HP - 336",
-								"HDE Services for Land Drilling Rig 550HP - 337",
-								"HDE Services for Land Drilling Rig 550HP - 338",
-								"HDE Services for Land Drilling Rig 550HP - 339",
-								"HDE Services for Workover Rig 450HP - 363",
-								"HDE Services for Workover Rig 450HP - 364",
-								"HDE Services for Workover Rig 450HP - 365",
-								"HDE Services for Workover Rig 450HP - 366",
-								"HDE Services for Workover Rig 450HP - 367",
-								"Rig Land Transport Services",
-								"Rig Sea Transport Services",
-								"Light Vehicle and Bus Rent Services for Drilling Project",
-								"Light Vehicle and Bus Rent Services for Workover Project"
-							].map((project, idx) => (
-								<ProjectGridItem key={idx}>{project}</ProjectGridItem>
+							{projectItems.map((project, idx) => (
+								<ProjectGridItem key={idx}>{project.trim()}</ProjectGridItem>
 							))}
 						</ProjectsGrid>
 					</ClientsSection>
 
 					<ClientLogosSection>
-						<OverTitle>
-							{language === 'id' ? 'Klien Kami' : 'Our Clients'}
-						</OverTitle>
-						<SectionTitle>Trusted by Industry Leaders</SectionTitle>
+						<OverTitle>{clientsOverTitle}</OverTitle>
+						<SectionTitle>{clientsTitle}</SectionTitle>
 
 						<ClientsGrid>
 							{MAJOR_CLIENTS.map((client, idx) => (

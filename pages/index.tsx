@@ -15,26 +15,32 @@ import Partners from 'views/HomePage/Partners';
 export default function Homepage({ posts }: any) {
   const { t, language } = useLanguage();
 
+  const seoTitle = t('seo.home.title');
+  const seoDescription = t('seo.home.description');
+  const seoKeywords = t('seo.home.keywords');
+  const twitterTitle = t('seo.home.title');
+  const twitterDescription = t('seo.home.description');
+
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'PT Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'}</title>
+        <title>{seoTitle}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'PT Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman. Melayani crane rental, heavy lift operations untuk oil & gas, power plant, dan industrial projects.' : 'PT Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience. Serving crane rental, heavy lift operations for oil & gas, power plant, and industrial projects.'}
+          content={seoDescription}
         />
-        <meta name="keywords" content={language === 'id' ? 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia' : 'heavy equipment rental, crane rental, construction equipment, oil gas equipment, power plant construction, industrial equipment, Jakarta Indonesia'} />
+        <meta name="keywords" content={seoKeywords} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'PT Mitra Kawan Bersama - Heavy Equipment Rental & Construction Support Terpercaya' : 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental & Construction Support'} />
-        <meta property="og:description" content={language === 'id' ? 'PT Mitra Kawan Bersama adalah perusahaan heavy equipment rental terpercaya dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'PT. Mitra Kawan Bersama is a trusted heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content={language === 'id' ? 'id_ID' : 'en_US'} />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'PT Mitra Kawan Bersama - Heavy Equipment Rental Terpercaya' : 'PT Mitra Kawan Bersama - Trusted Heavy Equipment Rental'} />
-        <meta name="twitter:description" content={language === 'id' ? 'Perusahaan heavy equipment rental dengan 200+ unit equipment dan 15+ tahun pengalaman.' : 'Heavy equipment rental company with 200+ equipment units and 15+ years of experience.'} />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
@@ -201,10 +207,10 @@ export default function Homepage({ posts }: any) {
             </SectionHeader>
             <ProjectsDescription>
               <ProjectsParagraph>
-                We take pride in delivering high-quality Heavy Duty Equipment (HDE) services that drive success in every operation. From land drilling support to heavy lifting and transport, each project reflects our commitment to precision, safety, and performance excellence.
+                {t('projects.description.p1')}
               </ProjectsParagraph>
               <ProjectsParagraph>
-                Explore how we&apos;ve partnered with industry leaders to complete complex drilling, construction, and infrastructure projects efficiently and on time. Every achievement showcases our expertise, reliability, and dedication to exceeding client expectations.
+                {t('projects.description.p2')}
               </ProjectsParagraph>
             </ProjectsDescription>
             

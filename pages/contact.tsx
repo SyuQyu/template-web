@@ -11,20 +11,25 @@ import InformationSection from 'views/ContactPage/InformationSection';
 
 export default function ContactPage() {
   const { t, language } = useLanguage();
+  const seoTitle = t('seo.contact.title');
+  const seoDescription = t('seo.contact.description');
+  const seoKeywords = t('seo.contact.keywords');
+  const twitterTitle = t('seo.contact.title');
+  const twitterDescription = t('seo.contact.description');
   
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'Kontak Kami - Hubungi PT. Mitra Kawan Bersama untuk Sewa Heavy Equipment' : 'Contact Us - Reach PT. Mitra Kawan Bersama for Heavy Equipment Rental'}</title>
+        <title>{seoTitle}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'Hubungi PT. Mitra Kawan Bersama untuk kebutuhan sewa heavy equipment. Kantor Jakarta di The East Building, Mega Kuningan. Telp: +62-21-578-0505. Emergency support 24/7 tersedia untuk semua proyek.' : 'Contact PT. Mitra Kawan Bersama for heavy equipment rental needs. Jakarta office at The East Building, Mega Kuningan. Tel: +62-21-578-0505. 24/7 emergency support available for all projects.'}
+          content={seoDescription}
         />
-        <meta name="keywords" content={language === 'id' ? 'kontak mkb, hubungi mitra kawan bersama, sewa crane jakarta, kontak heavy equipment, alamat mkb jakarta, telpon mkb, emergency crane support' : 'contact mkb, reach mitra kawan bersama, crane rental jakarta, heavy equipment contact, mkb jakarta address, mkb phone, emergency crane support'} />
+        <meta name="keywords" content={seoKeywords} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'Kontak Kami - PT. Mitra Kawan Bersama | Heavy Equipment Rental' : 'Contact Us - PT. Mitra Kawan Bersama | Heavy Equipment Rental'} />
-        <meta property="og:description" content={language === 'id' ? 'Hubungi PT. Mitra Kawan Bersama untuk kebutuhan sewa heavy equipment. Kantor Jakarta, support 24/7.' : 'Contact PT. Mitra Kawan Bersama for heavy equipment rental needs. Jakarta office, 24/7 support.'} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mitrakawanbersama.co.id/contact" />
         <meta property="og:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
@@ -33,8 +38,8 @@ export default function ContactPage() {
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'Kontak PT. Mitra Kawan Bersama | Heavy Equipment Rental' : 'Contact PT. Mitra Kawan Bersama | Heavy Equipment Rental'} />
-        <meta name="twitter:description" content={language === 'id' ? 'Hubungi kami untuk kebutuhan sewa heavy equipment. Support 24/7.' : 'Contact us for heavy equipment rental needs. 24/7 support available.'} />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
         <meta name="twitter:image" content="https://mitrakawanbersama.co.id/mkb_logo_png_new.png" />
         
         {/* Additional SEO Meta Tags */}

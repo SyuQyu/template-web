@@ -11,20 +11,27 @@ import { media } from 'utils/media';
 export default function ServicesPage() {
   const { t, language } = useLanguage();
 
+  const seoTitle = t('seo.services.title');
+  const seoDescription = t('seo.services.description');
+  const seoKeywords = t('seo.services.keywords');
+  const twitterTitle = t('seo.services.title');
+  const twitterDescription = t('seo.services.description');
+  const serviceIncludesLabel = t('services.mobilization.includes');
+
 
   return (
     <>
       <Head>
-        <title>{language === 'id' ? 'Layanan Heavy Equipment | Sewa Crane, Heavy Lift, Support Konstruksi | PT. Mitra Kawan Bersama' : 'Heavy Equipment Services | Crane Rental, Heavy Lift, Construction Support | PT. Mitra Kawan Bersama'}</title>
+        <title>{seoTitle}</title>
         <meta
           name="description"
-          content={language === 'id' ? 'Layanan heavy equipment komprehensif di Indonesia: sewa crane, operasi heavy lift, transportasi equipment, maintenance support, rigging services. Support profesional 24/7 untuk proyek oil & gas, mining, power plant & konstruksi.' : 'Comprehensive heavy equipment services in Indonesia: crane rental, heavy lift operations, equipment transportation, maintenance support, rigging services. 24/7 professional support for oil & gas, mining, power plant & construction projects.'}
+          content={seoDescription}
         />
-        <meta name="keywords" content={language === 'id' ? 'layanan sewa crane, operasi heavy lift, transportasi equipment, rigging services, maintenance support, layanan konstruksi, support oil gas, layanan mining, konstruksi power plant' : 'crane rental services, heavy lift operations, equipment transportation, rigging services, maintenance support, construction services, oil gas support, mining services, power plant construction'} />
+        <meta name="keywords" content={seoKeywords} />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={language === 'id' ? 'Layanan Heavy Equipment | Sewa Crane & Operasi Heavy Lift | PT. MKB' : 'Heavy Equipment Services | Crane Rental & Heavy Lift Operations | PT. MKB'} />
-        <meta property="og:description" content={language === 'id' ? 'Layanan heavy equipment komprehensif: sewa crane, operasi heavy lift, transportasi equipment dengan support profesional 24/7 di seluruh Indonesia.' : 'Comprehensive heavy equipment services: crane rental, heavy lift operations, equipment transportation with 24/7 professional support across Indonesia.'} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mitrakawanbersama.co.id/services" />
         <meta property="og:image" content="https://mitrakawanbersama.co.id/demo-illustration-2.svg" />
@@ -33,8 +40,8 @@ export default function ServicesPage() {
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={language === 'id' ? 'Layanan Heavy Equipment | PT. Mitra Kawan Bersama' : 'Heavy Equipment Services | PT. Mitra Kawan Bersama'} />
-        <meta name="twitter:description" content={language === 'id' ? 'Sewa crane profesional, operasi heavy lift & transportasi equipment dengan support 24/7.' : 'Professional crane rental, heavy lift operations & equipment transportation services with 24/7 support.'} />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
         <meta name="twitter:image" content="https://mitrakawanbersama.co.id/demo-illustration-2.svg" />
         
         {/* Additional SEO Meta Tags */}
@@ -248,10 +255,10 @@ export default function ServicesPage() {
             </ServicesGrid>
           </AdditionalServicesSection>
 
-          <AdvantagesSection>
+            <AdvantagesSection>
             <SectionTitle>{t('services.mobilization.title')}</SectionTitle>
             <h4>{t('services.mobilization.desc')}</h4>
-            <h4>{language === 'id' ? 'Layanan ini mencakup:' : 'This service includes:'}</h4>
+            <h4>{serviceIncludesLabel}</h4>
             <AdvantagesGrid>
               <AdvantageCard>
                 <AdvantageIcon>⚡</AdvantageIcon>
