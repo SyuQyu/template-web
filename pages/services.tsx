@@ -141,7 +141,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
           <BasicSection3 
-            imageUrl="/operational/26.JPG" 
+            imageUrl="/operational/6.JPG" 
             title="Lowbed Truck" 
           >
             <ServiceDescription>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
         <BasicSection3 
-            imageUrl="/operational/6.JPG" 
+            imageUrl="/operational/28.JPG" 
             title="Highbed Truck" 
           >
             <ServiceDescription>
@@ -178,17 +178,26 @@ export default function ServicesPage() {
               <h4>{t('services.rental.cargo.desc')}</h4>
             </ServiceDescription>
           </BasicSection3>
+          <BasicSection3 
+            imageUrl="/operational/26.JPG" 
+            title="Tandem Truck" 
+          >
+            <ServiceDescription>
+              <p><em>{t('services.rental.tandem.brands')}</em></p>
+              <h4>{t('services.rental.tandem.desc')}</h4>
+            </ServiceDescription>
+          </BasicSection3>
         </SectionsWrapper>
           
 
-        <Container>
+        {/* <Container>
           <HeaderSection>
             <SectionTitle>{t('services.header.title')}</SectionTitle>
             <Description>
               {t('services.subtitle')}
             </Description>
           </HeaderSection>
-        </Container>
+        </Container> */}
 
         <BasicSection 
           imageUrl="/rigmoving.JPG" 

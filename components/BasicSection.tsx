@@ -41,6 +41,9 @@ const Title = styled.h1`
   /* Hide desktop title on small screens; we use MobileTitle there */
   ${media('<=desktop')} {
     display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 `;
 

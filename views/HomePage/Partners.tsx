@@ -90,14 +90,16 @@ const LogosWrapper = styled.div`
   }
   
   ${media('<=tablet')} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 2.5rem;
     padding: 3rem 1.5rem;
-    max-width: 700px;
+    max-width: 500px;
   }
   
   ${media('<=phone')} {
     grid-template-columns: 1fr;
+    justify-items: center;
     gap: 2rem;
     padding: 2.5rem 1.5rem;
     max-width: 400px;

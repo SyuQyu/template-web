@@ -149,6 +149,9 @@ const translations: Record<Language, Record<string, string>> = {
     'services.rental.cargo.brands': 'Merek: Isuzu, Mitsubishi, Sinotruck, SANY, dll',
     'services.rental.cargo.desc': 'Cargo Truck kami merupakan solusi transportasi serbaguna untuk material, peralatan, dan logistik umum. Dibangun dengan performa andal dan efisiensi bahan bakar, truk ini mendukung kelancaran operasional harian di berbagai lokasi proyek.',
 
+    'services.rental.tandem.brands': 'Merek: FAW, Hino, Mitsubishi, Isuzu, Volvo, dan lainnya.',
+    'services.rental.tandem.desc': 'Tandem Truck kami memberikan performa yang andal dan daya tahan untuk transportasi material berat di berbagai proyek konstruksi, pertambangan, dan infrastruktur. Dirancang untuk stabilitas dan kapasitas muatan tinggi, mereka memastikan pengangkutan yang efisien dan produktivitas di setiap lokasi proyek.',
+
     // Fleet Page
     'fleet.title': 'Armada / Peralatan',
     'fleet.subtitle': '200+ unit heavy equipment modern dari brand terkemuka dunia dengan maintenance berkala dan operator bersertifikat',
@@ -421,6 +424,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     'services.rental.cargo.brands': 'Brands: Isuzu, Mitsubishi, Sinotruck, SANY, etc',
     'services.rental.cargo.desc': 'Our Cargo Trucks are versatile transport solutions for materials, tools, and general logistics. Built with dependable performance and fuel efficiency in mind, these trucks support seamless day-to-day operations across project locations.',
+
+    'services.rental.tandem.brands': 'Brands: FAW, Hino, Mitsubishi, Isuzu, Volvo, and more.',
+    'services.rental.tandem.desc': 'Our Tandem Trucks deliver reliable performance and durability for heavy material transport across construction, mining, and infrastructure projects. Designed for stability and high load capacity, they ensure efficient hauling and productivity on every site.',
 
     
     // Fleet Page

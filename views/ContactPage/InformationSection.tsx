@@ -9,6 +9,31 @@ export default function InformationSection() {
     <Wrapper>
       <SectionTitle>{t('contact.info.title')}</SectionTitle>
       
+      {/* Main Office */}
+      <OfficeSection>
+        <OfficeTitle>Main Office</OfficeTitle>
+        <ContactDetails>
+          <ContactItem>
+            <Label>📍 Alamat:</Label>
+            <Value>
+              PT Mitra Kawan Bersama The East
+              <br />
+              Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Bar., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950
+            </Value>
+          </ContactItem>
+          <ContactItem>
+            <Label>📧 Email:</Label>
+            <Value>
+              Semua email yang dikirim dari client dikirim ke{' '}
+              <EmailLink href="mailto:info@mk.bersama.com?cc=darren@mk-bersama.com&subject=Inquiry%20from%20Website">
+                info@mk.bersama.com
+              </EmailLink>
+              <EmailNote>*automatically cc ke darren@mk-bersama.com</EmailNote>
+            </Value>
+          </ContactItem>
+        </ContactDetails>
+      </OfficeSection>
+      
       {/* Jakarta Head Office */}
       <OfficeSection>
         <OfficeTitle>{t('contact.jakarta.title')}</OfficeTitle>
@@ -17,19 +42,6 @@ export default function InformationSection() {
             <Label>📍 Alamat:</Label>
             <Value>{t('contact.jakarta.address')}</Value>
           </ContactItem>
-          {/* <ContactItem>
-            <Label>📧 Email:</Label>
-            <a
-              href="mailto:info@mk-bersama.com?cc=darren@mk-bersama.com&subject=Inquiry%20from%20Client"
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              info@mk.bersama.com
-            </a>
-          </ContactItem> */}
-          {/* <ContactItem>
-            <Label>📠 Fax:</Label>
-            <Value>{t('contact.jakarta.fax')}</Value>
-          </ContactItem> */}
         </ContactDetails>
       </OfficeSection>
     </Wrapper>
@@ -96,7 +108,8 @@ const Label = styled.span`
 const Value = styled.span`
   color: rgba(var(--text), 0.8);
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.6;
+  white-space: pre-line;
   
   a {
     color: rgb(var(--primary));
@@ -108,4 +121,24 @@ const Value = styled.span`
       text-decoration: underline;
     }
   }
+`;
+
+const EmailLink = styled.a`
+  color: rgb(var(--primary));
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: rgba(var(--primary), 0.8);
+    text-decoration: underline;
+  }
+`;
+
+const EmailNote = styled.span`
+  display: block;
+  font-size: 1.3rem;
+  color: rgba(var(--text), 0.6);
+  font-style: italic;
+  margin-top: 0.5rem;
 `;

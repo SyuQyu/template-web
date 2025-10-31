@@ -199,11 +199,14 @@ export default function Homepage({ posts }: any) {
               <OverTitle>{t('projects.overtitle')}</OverTitle>
               <SectionTitle>{t('projects.title')}</SectionTitle>
             </SectionHeader>
-            <ProjectsGrid>
-              <ProjectGridItem>HDE Services for Land Drilling Rig 550HP - 336</ProjectGridItem>
-              <ProjectGridItem>HDE Services for Land Drilling Rig 550HP - 337</ProjectGridItem>
-              <ProjectGridItem>HDE Services for Land Drilling Rig 550HP - 338</ProjectGridItem>
-            </ProjectsGrid>
+            <ProjectsDescription>
+              <ProjectsParagraph>
+                We take pride in delivering high-quality Heavy Duty Equipment (HDE) services that drive success in every operation. From land drilling support to heavy lifting and transport, each project reflects our commitment to precision, safety, and performance excellence.
+              </ProjectsParagraph>
+              <ProjectsParagraph>
+                Explore how we&apos;ve partnered with industry leaders to complete complex drilling, construction, and infrastructure projects efficiently and on time. Every achievement showcases our expertise, reliability, and dedication to exceeding client expectations.
+              </ProjectsParagraph>
+            </ProjectsDescription>
             
             <ProjectsCTA>
               <Link href="/our-client-achievements">
@@ -221,32 +224,6 @@ export default function Homepage({ posts }: any) {
                 <ContactSubtitle>
                   {t('contact.subtitle')}
                 </ContactSubtitle>
-                
-                <ContactOptions>
-                  <ContactOption href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
-                    <ContactIcon>📱</ContactIcon>
-                    <ContactDetails>
-                      <ContactLabel>{t('contact.whatsapp')}</ContactLabel>
-                      <ContactValue>+62 812 3456 7890</ContactValue>
-                    </ContactDetails>
-                  </ContactOption>
-                  
-                  <ContactOption href="mailto:info@mkb.co.id">
-                    <ContactIcon>📧</ContactIcon>
-                    <ContactDetails>
-                      <ContactLabel>{t('contact.email')}</ContactLabel>
-                      <ContactValue>info@mkb.co.id</ContactValue>
-                    </ContactDetails>
-                  </ContactOption>
-                  
-                  <ContactOption href="tel:+622155550123">
-                    <ContactIcon>📞</ContactIcon>
-                    <ContactDetails>
-                      <ContactLabel>{t('contact.call')}</ContactLabel>
-                      <ContactValue>+62 21 5555 0123</ContactValue>
-                    </ContactDetails>
-                  </ContactOption>
-                </ContactOptions>
                 
                 <ContactCTA>
                   <Link href="/contact">
@@ -373,35 +350,26 @@ const KeyProjectsSection = styled.div`
   background: rgb(var(--secondBackground));
 `;
 
-const ProjectsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-  font-size: 1.5rem;
-  color: var(--text-secondary);
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
+const ProjectsDescription = styled.div`
+  max-width: 90rem;
+  margin: 4rem auto 0;
 `;
 
-const ProjectGridItem = styled.div`
-  background: var(--cardBackground);
-  border-radius: 0.8rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  text-align: center;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s cubic-bezier(.4,2,.3,1);
-  cursor: pointer;
-  &:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    background: var(--cardBackground);
+const ProjectsParagraph = styled.p`
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  text-align: justify;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  ${media('<=tablet')} {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    text-align: left;
   }
 `;
 
