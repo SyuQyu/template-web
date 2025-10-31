@@ -91,7 +91,7 @@ export default function ServicesPage() {
 
         <SectionsWrapper>
           <BasicSection3 
-            imageUrl="/services/crane.jpg" 
+            imageUrl="/services/lattice.jpg" 
             title="Lattice Crawler Crane" 
           >
             <ServiceDescription>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
           <BasicSection3 
-            imageUrl="/services/telescopic.jpg" 
+            imageUrl="/services/telescopicc.jpg" 
             title="Telescopic Crawler Crane" 
           >
             <ServiceDescription>
@@ -111,7 +111,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
           <BasicSection3 
-            imageUrl="/services/mobilecrane.jpg" 
+            imageUrl="/services/cranee.jpg" 
             title="Mobile Crane" 
           >
             <ServiceDescription>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
         <BasicSection3 
-            imageUrl="/operational/6.JPG" 
+            imageUrl="/services/highbed.JPG" 
             title="Highbed Truck" 
           >
             <ServiceDescription>
@@ -170,7 +170,7 @@ export default function ServicesPage() {
             </ServiceDescription>
           </BasicSection3>
            <BasicSection3 
-            imageUrl="/services/cargo.jpg" 
+            imageUrl="/services/cargo.JPG" 
             title="Cargo Truck" 
           >
             <ServiceDescription>
@@ -191,7 +191,7 @@ export default function ServicesPage() {
         </Container>
 
         <BasicSection 
-          imageUrl="/rigmoving.JPG" 
+          imageUrl="/services/field.jpg" 
           title={t('services.fieldops.title')} 
           reversed={true}
         >
@@ -210,7 +210,7 @@ export default function ServicesPage() {
         </BasicSection>
 
         <BasicSection 
-          imageUrl="/maintenance.webp" 
+          imageUrl="/services/manpower.jpg" 
           title={t('services.manpower.title')} 
         >
           <ServiceDescription>

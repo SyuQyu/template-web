@@ -217,7 +217,7 @@ export default function ClientsAchievementsPage() {
 						</Container>
 
 						<BasicSection 
-						  imageUrl="/rigmoving.JPG" 
+						  imageUrl="/services/field.jpg" 
 						  title={t('services.fieldops.title')} 
 						  reversed={true}
 						>
@@ -236,7 +236,7 @@ export default function ClientsAchievementsPage() {
 						</BasicSection>
 				
 						<BasicSection 
-						  imageUrl="/maintenance.webp" 
+						  imageUrl="/services/manpower.jpg"
 						  title={t('services.manpower.title')} 
 						>
 						  <ServiceDescription>
