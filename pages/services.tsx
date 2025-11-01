@@ -158,11 +158,7 @@ export default function ServicesPage() {
           </BasicSection3>
 
         <BasicSection3 
-<<<<<<< HEAD
-            imageUrl="/operational/28.JPG" 
-=======
             imageUrl="/services/highbed.JPG" 
->>>>>>> b7d97d90530a47a4efabb875c37f38793305a681
             title="Highbed Truck" 
           >
             <ServiceDescription>
