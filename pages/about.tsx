@@ -183,16 +183,26 @@ export default function AboutPage() {
         </Container>
 
         <BasicSection2 
-          title="Core Strengths" 
-          overTitle="Our Strength"
+          title={t('about.coreStrengths.title')} 
+          overTitle={t('about.coreStrengths.overTitle')}
           reversed
         >
           <CoreStrengthsList>
-            <li><strong>Fleet Terlengkap:</strong> 200+ unit heavy equipment dari berbagai kategori dan kapasitas</li>
-            <li><strong>Tim Berpengalaman:</strong> Operator, teknisi, dan engineer bersertifikat dan berpengalaman</li>
-            <li><strong>Coverage Area Luas:</strong> Melayani seluruh Indonesia dengan base operation di Jakarta dan Duri</li>
-            <li><strong>Quality Assurance:</strong> Sistem QAQC terintegrasi untuk memastikan standar kualitas terbaik</li>
-            <li><strong>24/7 Support:</strong> Layanan maintenance dan emergency response siap 24 jam</li>
+            <li>
+              <strong>{t('about.coreStrengths.fleet.title')}</strong> {t('about.coreStrengths.fleet.desc')}
+            </li>
+            <li>
+              <strong>{t('about.coreStrengths.team.title')}</strong> {t('about.coreStrengths.team.desc')}
+            </li>
+            <li>
+              <strong>{t('about.coreStrengths.coverage.title')}</strong> {t('about.coreStrengths.coverage.desc')}
+            </li>
+            <li>
+              <strong>{t('about.coreStrengths.quality.title')}</strong> {t('about.coreStrengths.quality.desc')}
+            </li>
+            <li>
+              <strong>{t('about.coreStrengths.support.title')}</strong> {t('about.coreStrengths.support.desc')}
+            </li>
           </CoreStrengthsList>
         </BasicSection2>
       </AboutWrapper>

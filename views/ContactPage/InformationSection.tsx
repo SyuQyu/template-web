@@ -28,7 +28,6 @@ export default function InformationSection() {
               <EmailLink href="mailto:info@mk.bersama.com?cc=darren@mk-bersama.com&subject=Inquiry%20from%20Website">
                 info@mk.bersama.com
               </EmailLink>
-              <EmailNote>*automatically cc ke darren@mk-bersama.com</EmailNote>
             </Value>
           </ContactItem>
         </ContactDetails>

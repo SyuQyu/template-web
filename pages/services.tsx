@@ -177,7 +177,7 @@ export default function ServicesPage() {
             </ServiceDescription>
           </BasicSection3>
            <BasicSection3 
-            imageUrl="/services/cargo.JPG" 
+            imageUrl="/operational/29.JPG" 
             title="Cargo Truck" 
           >
             <ServiceDescription>
