@@ -11,7 +11,7 @@ type ListItemProps = {
 
 const footerLinks = [
   { title: 'Privacy Policy', href: '/privacy-policy' },
-  { title: 'Career', href: '/career' },
+  { title: 'Career', href: 'https://www.jobstreet.co.id/en/companies/mkb' },
   { title: 'Contact', href: '/contact' },
 ];
 
@@ -54,6 +54,16 @@ export default function Footer() {
 }
 
 function ListItem({ title, href }: ListItemProps) {
+  const isExternal = href.startsWith('http://') || href.startsWith('https://');
+  
+  if (isExternal) {
+    return (
+      <ListItemWrapper>
+        <a href={href} target="_blank" rel="noopener noreferrer">{title}</a>
+      </ListItemWrapper>
+    );
+  }
+  
   return (
     <ListItemWrapper>
       <NextLink href={href} passHref>

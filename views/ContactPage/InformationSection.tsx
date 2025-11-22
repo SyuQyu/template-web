@@ -16,7 +16,9 @@ export default function InformationSection() {
           <ContactItem>
             <Label>📍 Alamat:</Label>
             <Value>
-              PT Mitra Kawan Bersama The East
+              PT Mitra Kawan Bersama
+              <br />
+              The East Tower 35th Floor, Unit 3
               <br />
               Jalan Doktor Ide Anak Agung Gde Agung, Jl. Kuningan Barat Raya No.1, RT.5/RW.2, Kuningan, Kuningan Bar., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950
             </Value>
@@ -24,7 +26,6 @@ export default function InformationSection() {
           <ContactItem>
             <Label>📧 Email:</Label>
             <Value>
-              Semua email yang dikirim dari client dikirim ke{' '}
               <EmailLink href="mailto:info@mk.bersama.com?cc=darren@mk-bersama.com&subject=Inquiry%20from%20Website">
                 info@mk.bersama.com
               </EmailLink>
@@ -132,12 +133,4 @@ const EmailLink = styled.a`
     color: rgba(var(--primary), 0.8);
     text-decoration: underline;
   }
-`;
-
-const EmailNote = styled.span`
-  display: block;
-  font-size: 1.3rem;
-  color: rgba(var(--text), 0.6);
-  font-style: italic;
-  margin-top: 0.5rem;
 `;

@@ -244,7 +244,7 @@ export default function Homepage({ posts }: any) {
         {/* <DarkerBackgroundContainer>
           <Features />
         </DarkerBackgroundContainer> */}
-        <Partners/>
+        {/* <Partners/> */}
 
       </HomepageWrapper>
     </>
@@ -254,14 +254,6 @@ export default function Homepage({ posts }: any) {
 const HomepageWrapper = styled.div`
   & > :last-child {
     margin-bottom: 15rem;
-  }
-`;
-
-const DarkerBackgroundContainer = styled.div`
-  background: rgb(var(--background));
-
-  & > *:not(:first-child) {
-    margin-top: 15rem;
   }
 `;
 
