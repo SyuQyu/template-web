@@ -45,9 +45,12 @@ const ProjectGridItem = styled.div`
 `;
 
 
+/* NOTE (ID): Blok logo klien ("Klien Kami" / "Dipercaya Pemimpin Industri") sementara dinonaktifkan.
+   Uncomment array + const clientsOverTitle/clientsTitle + ClientLogosSection di bawah saat siap ditampilkan lagi.
 const MAJOR_CLIENTS = [
 	{ name: 'Great Wall Drilling Asia', logo: '/partners/gdap.png' }
 ];
+*/
 
 export default function ClientsAchievementsPage() {
 	const { t, language } = useLanguage();
@@ -65,8 +68,8 @@ export default function ClientsAchievementsPage() {
 	const projectItems = t('clients.projects.items').split('|');
 	const projectsOverTitle = t('clients.projects.overtitle');
 	const projectsTitle = t('clients.projects.title');
-	const clientsOverTitle = t('clients.clients.overtitle');
-	const clientsTitle = t('clients.clients.title');
+	// const clientsOverTitle = t('clients.clients.overtitle'); // see NOTE on MAJOR_CLIENTS — client logos section
+	// const clientsTitle = t('clients.clients.title');
 
 	return (
 		<>
@@ -251,6 +254,7 @@ export default function ClientsAchievementsPage() {
 						</ProjectsGrid>
 					</ClientsSection>
 
+					{/* NOTE: Client logos section disabled — same as block comment on MAJOR_CLIENTS at top of file.
 					<ClientLogosSection>
 						<OverTitle>{clientsOverTitle}</OverTitle>
 						<SectionTitle>{clientsTitle}</SectionTitle>
@@ -260,11 +264,11 @@ export default function ClientsAchievementsPage() {
 								<ClientLogo key={idx}>
 									<img src={client.logo} alt={client.name} />
 									<ClientName>{client.name}</ClientName>
-									{/* <ClientSector>{client.sector}</ClientSector> */}
 								</ClientLogo>
 							))}
 						</ClientsGrid>
 					</ClientLogosSection>
+					*/}
 				</Container>
 
 						<CoreStrengthsSection>
@@ -369,6 +373,7 @@ const ClientsSection = styled.div`
 `;
 
 
+/* Paired with disabled ClientLogosSection + MAJOR_CLIENTS above — uncomment together.
 const ClientLogosSection = styled.div`
 	text-align: center;
 	margin: 8rem 0;
@@ -419,6 +424,7 @@ const ClientSector = styled.div`
 	color: var(--text-secondary);
 	text-align: center;
 `;
+*/
 
 const ServiceList = styled.ul`
   list-style: none;
