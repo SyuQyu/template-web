@@ -61,7 +61,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About Page
     'about.title': 'Tentang PT Mitra Kawan Bersama',
-    'about.subtitle': 'PT Mitra Kawan Bersama berdiri pada 2021 sebagai perusahaan penyedia heavy-duty equipment, kendaraan ringan dan mini bus untuk drilling rig, workover rig, serta layanan rig yang diakui karena inovasi di oil field services. Bertumpu pada budaya pelayanan prima dan komitmen terhadap kepuasan pelanggan, nilai tersebut menjadi pondasi pertumbuhan kami. Selain layanan peralatan, kami juga menyediakan mobilisasi/de-mobilisasi serta solusi manpower profesional, menghadirkan tenaga terampil dan berpengalaman untuk mendukung kebutuhan operasional industri migas.',
+    'about.subtitle': 'PT Mitra Kawan Bersama merupakan perusahaan yang telah lama beroperasi sebagai penyedia heavy-duty equipment, kendaraan ringan, dan mini bus untuk kebutuhan drilling dan workover rig serta layanan oil field services lainnya.\n\nDengan pengalaman dan kompetensi yang teruji, perusahaan berkomitmen memberikan pelayanan prima serta mengutamakan kepuasan pelanggan sebagai landasan utama dalam setiap kegiatan operasional.\n\nSelain penyediaan peralatan, PT Mitra Kawan Bersama juga menawarkan layanan mobilisasi–demobilisasi serta penyediaan tenaga kerja profesional yang berpengalaman guna mendukung kelancaran operasional industri migas.',
     'about.vision.title': 'Visi',
     'about.vision.content': 'Menjadi tolok ukur baru di industri dengan terus mendorong batasan lewat inovasi dan komitmen kuat terhadap keberlanjutan. Kami bertekad memimpin dengan tujuan, menghadirkan solusi berdampak bagi masa depan sektor oil dan gas.',
     'about.mission.title': 'Misi',
@@ -454,7 +454,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About Page
     'about.title': 'About PT Mitra Kawan Bersama',
-    'about.subtitle': 'Established in 2021, Mitra Kawan Bersama Group is a company specializing in heavy-duty equipment, light vehicle and mini bus provider for drilling rig, workovers rig, rig services, recognized for its innovation in the oil field services. Built on a strong foundation of excellence and a deep commitment to customer satisfaction, these core values have played a key role in driving our growth and success. In addition to equipment services, we also provide mobilizations de-mobilizations and professional manpower solutions, offering highly skilled and experienced personnel to support various operational needs in the oil and gas industry.',
+    'about.subtitle': 'PT Mitra Kawan Bersama is a company with a long-standing operating history as a provider of heavy-duty equipment, light vehicles, and minibuses for drilling and workover rig requirements and other oil field services.\n\nWith proven experience and competence, the company is committed to delivering excellent service and placing customer satisfaction at the foundation of every operational activity.\n\nBeyond equipment supply, PT Mitra Kawan Bersama also offers mobilization–demobilization services and the provision of experienced professional manpower to support smooth operations across the oil and gas industry.',
     'about.vision.title': 'Vision',
     'about.vision.content': 'Our vision is to set a new benchmark in the industry by continuously pushing boundaries—driven by innovation and a deep commitment to sustainability. We strive to lead with purpose, creating impactful solutions that shape the future of the oil and gas sector.',
     'about.mission.title': 'Mission',

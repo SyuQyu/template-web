@@ -229,6 +229,7 @@ const Description = styled.p`
   line-height: 1.6;
   margin-top: 2rem;
   color: rgb(var(--text-secondary));
+  white-space: pre-line;
 `;
 
 const VissionList = styled.p`
